@@ -9,4 +9,4 @@ Not all the algorithms will be remade at 2021 folder. However, fews will be remo
 
 Further: the algorithms with "incompleto" on name surely will be remade
 
-Last but no least: all these assumptions can be changed over the time;
+Last but no least: all these assumptions can be changed over the time accordingly;
