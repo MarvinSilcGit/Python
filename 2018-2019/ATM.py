@@ -1,26 +1,26 @@
-ced = [2, 5, 10, 20, 50, 100]
+tipoCedulas = [2, 5, 10, 20, 50, 100]
 
 while True:
 
     print()
 
-    valor = input("Digite o valor: ")
+    valorSaque = input("Digite o valor: ")
 
     print()
 
-    if valor.isdigit() == False:
+    if valorSaque.isdigit() == False:
 
         print("Digite somente números!")
 
         continue
 
-    elif valor == "0" or valor == "3" or valor == "1":
+    elif valorSaque == "0" or valorSaque == "3" or valorSaque == "1":
 
         print("Digite somente valores válidos")
 
         continue
 
-    elif valor[0] == "0":
+    elif valorSaque[0] == "0":
 
         print("Números começando por 0 não são válidos!")
 
@@ -36,33 +36,33 @@ while True:
 
         p = 0
 
-        w = len(ced)-1
+        w = len(tipoCedulas)-1
 
-        tot = int(valor)
+        tot = int(valorSaque)
 
         while w != -1:
 
-            if ced[w]+p <= tot:
+            if tipoCedulas[w]+p <= tot:
 
-                if ced[w]+p+1 == tot:
+                if tipoCedulas[w]+p+1 == tot:
 
                     if a != 0:
 
                         z.append(a)
 
-                        y.append(ced[w])
+                        y.append(tipoCedulas[w])
 
                     w -= 1
 
                     a= 0
 
-                elif ced[w]+p+3 == tot:
+                elif tipoCedulas[w]+p+3 == tot:
 
                     if a != 0:
 
                         z.append(a)
 
-                        y.append(ced[w])
+                        y.append(tipoCedulas[w])
 
                     w -= 1
 
@@ -70,7 +70,7 @@ while True:
 
                 else:
 
-                    p += ced[w]
+                    p += tipoCedulas[w]
 
                     a += 1
 
@@ -80,7 +80,7 @@ while True:
 
                     z.append(a)
 
-                    y.append(ced[w])
+                    y.append(tipoCedulas[w])
 
                 a = 0
 
