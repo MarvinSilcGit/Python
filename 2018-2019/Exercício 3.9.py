@@ -8,7 +8,7 @@ segundos = int(input("Digite a quantidade de segundos: "))
 
 horas = dias * 24 + horas
 
-minutos = horas * 60+ minutos
+minutos = horas * 60 + minutos
 
 segundos = minutos * 60 + segundos
 
