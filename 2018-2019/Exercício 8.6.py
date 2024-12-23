@@ -1,17 +1,19 @@
-def soma(L):
+def soma(lista):
 
     total = 0
-    x = 0
 
-    while x<5:
+    contador = 0
 
-		total += L[x]
-		x += 1
+    while contador < len(lista):
+
+        total += lista[contador]
+
+        contador += 1
 
     return total
 
-L=[1,7,2,9,15]
+lista = [1, 7, 2, 9, 15]
 
-print(soma(L))
+print(soma(lista))
 
-print(soma([7,9,12,3,100,20,4]))
+print(soma([7, 9, 12, 3, 100, 20, 4]))
