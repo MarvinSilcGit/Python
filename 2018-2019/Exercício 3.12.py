@@ -1,7 +1,7 @@
-Distancia = int(input("Qual foi a distância percorrida em kilômetros? "))
+distancia = float(input("Qual foi a distância percorrida em kilômetros? "))
 
-Vmedia = float(input("Digite a velocidade média em km/h: "))
+velocidadeMedia = float(input("Digite a velocidade média: "))
 
-Tempo = Distancia/Vmedia
+tempo = distancia / velocidadeMedia
 
-print("O tempo necessário para a viagem foi de %d horas" % Tempo)
+print("O tempo necessário para a viagem foi de %.1f hora(s)" % tempo)
