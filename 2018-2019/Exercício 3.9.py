@@ -1,17 +1,15 @@
-dias = int(input("DIGITE A QUANTIDADE DE DIAS: "))
+dias = int(input("Digite a quantidade de dia: "))
 
-horas = int(input("DIGITE A QUANTIDADE DE HORAS: "))
+horas = int(input("Digite a quantidade de horas: "))
 
-minutos = int(input("DIGITE A QUANTIDADE DE MINUTOS: "))
+minutos = int(input("Digite a quantidade de minutos: "))
 
-segundos = int(input("DIGITE A QUANTIDADE DE SEGUNDOS: "))
+segundos = int(input("Digite a quantidade de segundos: "))
 
-horas = dias*24+horas
+horas = dias * 24 + horas
 
-minutos = horas*60+minutos
+minutos = horas * 60+ minutos
 
-segundos = minutos*60+segundos
+segundos = minutos * 60 + segundos
 
-print("%d dias dura ao equivalente à %d segundos" % (dias, segundos))
-
-print(minutos)
+print("%d dia(s) dura ao equivalente à %d segundos" % (dias, segundos))
