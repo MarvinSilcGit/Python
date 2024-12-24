@@ -1,9 +1,9 @@
 cigarrosDia = int(input("Quantos cigarros você fumou por dia? "))
 
-cigarrosAnos = int(input("Quantos anos você já fomou? "))
+cigarrosAnos = int(input("Por quantos anos você fomou? "))
 
-cigarrosAnos = 365 * cigarrosAnos
+cigarrosTotal = 365 * cigarrosAnos * cigarrosDia
 
-DiasPerdidos = (cigarrosDia * cigarrosAnos * 10) / 60 / 24
+DiasPerdidos = cigarrosTotal * 10 / 60 / 24
 
-print("Você já perdeu %d dias fumando %d cigarros por dia" % (DiasPerdidos, cigarrosDia))
+print("Você já perdeu %d dias fumando %d cigarro(s) por dia, por %d anos" % (DiasPerdidos, cigarrosDia, cigarrosAnos))
