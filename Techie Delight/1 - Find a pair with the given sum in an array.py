@@ -2,59 +2,61 @@
 
 import random
 
-Counter1, Counter2, Array, RandomLen, par = 0, 0, [], [], []
+# Fix this code. It should only find a pair with sum, not sum and sub
 
-Goal = random.randint(1, 30)
+counter1, counter2, array, randomLen, par = 0, 0, [], [], []
+
+goal = random.randint(1, 30)
 
 for Counter in range(15):
 
-    RandomLen.append(random.randint(1, 15))
+    randomLen.append(random.randint(1, 15))
 
-    if RandomLen[Counter] in Array:
+    if randomLen[Counter] in array:
 
         continue
 
     else:
 
-        Array.append(RandomLen[Counter])
+        array.append(randomLen[Counter])
 
-while Counter1 != len(Array):
+while counter1 != len(array):
 
-    if Array[Counter1] == Array[Counter2]:
+    if array[counter1] == array[counter2]:
 
-        Counter1 += 1
+        counter1 += 1
 
         continue
 
-    elif Array[Counter1] + Array[Counter2] == Goal or Array[Counter1] - Array[Counter2] == Goal:
+    elif array[counter1] + array[counter2] == goal or array[counter1] - array[counter2] == goal:
 
-        if Array[Counter2] and Array[Counter1] not in par:
+        if array[counter2] and array[counter1] not in par:
 
-            par.append(Array[Counter1])
+            par.append(array[counter1])
 
-            par.append(Array[Counter2])
+            par.append(array[counter2])
 
         else:
 
             pass
 
-    if Counter1 == len(Array)-1:
+    if counter1 == len(array)-1:
 
-        Counter2 += 1
+        counter2 += 1
 
-        Counter1 = 0
+        counter1 = 0
 
         continue
 
     else:
 
-        Counter1 += 1
+        counter1 += 1
 
-print("The Bullseye-Array", Array)
+print("The Bullseye-Array", array)
 
 print()
 
-print("The Goal is", Goal)
+print("The Goal is", goal)
 
 print()
 
