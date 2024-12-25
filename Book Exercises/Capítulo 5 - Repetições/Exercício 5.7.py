@@ -1,7 +1,15 @@
-inicioTabuada = int(input("Digite o valor inicial da tabuada: "))
+contador = 0
 
-fimTabuada = int(input("Digite o valor final da tabuada: "))
+while contador != 1:
 
-for contador in range(inicioTabuada, fimTabuada + 1):
+    inicioTabuada = int(input("Digite o valor inicial da tabuada: "))
 
-    print(contador * 2)
+    fimTabuada = int(input("Digite o valor final da tabuada: "))
+
+    for contador in range(inicioTabuada, fimTabuada + 1):
+
+        print(contador * 2)
+
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))

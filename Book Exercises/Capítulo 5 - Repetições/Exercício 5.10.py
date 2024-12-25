@@ -1,6 +1,6 @@
-cont = 1
+contador = 1
 
-while cont != 0:
+while contador != 0:
 
     pontos = 0
 
@@ -28,4 +28,4 @@ while cont != 0:
 
     print()
 
-    cont = int(input("Digite 0 para interromper a execução: "))
+    contador = int(input("Digite 0 para interromper a execução: "))
