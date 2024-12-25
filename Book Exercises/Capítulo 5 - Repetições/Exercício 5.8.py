@@ -1,16 +1,18 @@
-contador = 0
+contador = 1
 
-while contador != 1:
+resultado = 0
+
+while contador != 0:
 
     valor1 = int(input("Digite um valor: "))
 
     valor2 = int(input("Digite outro valor: "))
 
-    for contador2 in range(valor1, valor2):
+    for contador2 in range(0, valor2):
 
-        valor1 += valor2
+        print("%d + %d = %d" % (resultado, valor1, resultado + valor1))
 
-        print(valor1)
+        resultado += valor1
 
     print()
 
