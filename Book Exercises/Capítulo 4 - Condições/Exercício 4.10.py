@@ -54,6 +54,6 @@ elif tipo == 3:
 
         print("A quantidade consumida custou %.2f" % faixa)
 
-elif tipo != 1 and tipo != 2 and tipo != 3:
+else:
 
     print("Digite um valor entre 1 e 3 para proseguir para o próximo menu")
