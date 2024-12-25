@@ -16,7 +16,7 @@ if tipo == 1:
 
         print("A quantidade consumida custou R$ %.2f" % faixa)
 
-    elif consumo > 500:
+    else:
 
         faixa = consumo * 0.65
 
@@ -32,7 +32,7 @@ elif tipo == 2:
 
         print("A quanidade consumida custou R$ %.2f" % faixa)
 
-    elif consumo > 1000:
+    else:
 
         faixa = consumo*0.60
 
@@ -48,7 +48,7 @@ elif tipo == 3:
 
         print("A quantidade consumida custou %.2f" % faixa)
 
-    elif consumo > 5000:
+    else:
 
         faixa = consumo*0.60
 
