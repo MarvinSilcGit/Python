@@ -1,19 +1,7 @@
-cont = 1
+inicioTabuada = int(input("Digite o valor inicial da tabuada: "))
 
-while cont != 0:
+fimTabuada = int(input("Digite o valor final da tabuada: "))
 
-    valor1 = int(input("tabuada de: "))
+for contador in range(11, fimTabuada, 1):
 
-    valor2 = 1
-
-    while valor2 <= 10:
-
-        valor3 = valor1*valor2
-
-        print("%dx%d = %d" % (valor1, valor2, valor3))
-
-        valor2 = valor2+1
-
-    print()
-
-    cont = int(input("Digite 0 para interromper a execução: "))
+    print(contador * 2)
