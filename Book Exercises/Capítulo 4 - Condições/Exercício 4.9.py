@@ -1,19 +1,19 @@
-casaValor = float(input("Qual o valor da casa? "))
+valorCasa = float(input("Qual o valor da casa? "))
 
 salario = float(input("Qual o seu salário? "))
 
 anos = int(input("Irá pagar em quantos anos? "))
 
-anos = anos * 12
+anos *= 12
 
-parcelas = casaValor / anos
+parcelasMensais = valorCasa / anos
 
-porcentagem = salario * 0.3
+porcentagem = salario / 100 * 30
 
-if parcelas > porcentagem:
+if valorCasa / anos  < porcentagem:
 
-    print("O usuário em questão não está apto para realizar um financiamento, pois possui um renda que não é 70% superior ao valor do financiamento")
+    print("O usuário poderá contratar o financiamento, pois parcela não é superior a um terço de sua renda mensal. As parcelas serão de R$ %.2f" % parcelasMensais)
 
-elif parcelas <= porcentagem:
+else:
 
-    print("O usuário em questão está apto para aderir a um financiamento, pois possui uma renda 70% superior ao valor do financiamento")
+    print("O usuário não poderá contratar o financiamento, pois parcela é superior a um terço de sua renda mensal. As parcelas seriam de R$ %.2f" % parcelasMensais)
