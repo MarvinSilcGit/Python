@@ -1,11 +1,11 @@
-velocidade = int(input("qual a velocidade do veículo? "))
+velocidade = int(input("Qual a velocidade do veículo? "))
 
 if velocidade > 80:
 
     multa = (velocidade - 80) * 5
 
-    print("o condutor foi multado em R$ %.2f , por estar acima do limite de velodade" % multa)
+    print("O condutor foi multado em R$ %.2f por estar %.0f quilômetro(s) acima do limite de velodade" % (multa, velocidade - 80))
 
 if velocidade <= 80:
 
-    print("o condutor não foi multado por estar no limite de velocidade")
+    print("O condutor não foi multado por estar dentro do limite de velocidade")
