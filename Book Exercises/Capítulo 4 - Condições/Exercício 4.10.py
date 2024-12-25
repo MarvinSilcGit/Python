@@ -8,9 +8,9 @@ print()
 
 tipo = input("Qual o tipo de instalação? ")
 
-if tipo == "1":
+consumo = float(input("Quanto foi consumido? "))
 
-    consumo = float(input("Quanto foi consumido? "))
+if tipo == "1":
 
     if consumo <= 500:
 
@@ -26,33 +26,29 @@ if tipo == "1":
 
 elif tipo == "2":
 
-    consumo = float(input("Quanto foi consumido? "))
-
     if consumo <= 1000:
 
-        faixaConsumo = consumo*0.55
+        faixaConsumo = consumo * 0.55
 
         print("A quanidade consumida custou R$ %.2f" % faixaConsumo)
 
     else:
 
-        faixaConsumo = consumo*0.60
+        faixaConsumo = consumo * 0.60
 
         print("A quantidade consumida custou R$ %.2f" % faixaConsumo)
 
 elif tipo == "3":
 
-    consumo = float(input("Quanto foi consumido? "))
-
     if consumo <= 5000:
 
-        faixaConsumo = consumo*0.55
+        faixaConsumo = consumo * 0.55
 
         print("A quantidade consumida custou %.2f" % faixaConsumo)
 
     else:
 
-        faixaConsumo = consumo*0.60
+        faixaConsumo = consumo * 0.60
 
         print("A quantidade consumida custou %.2f" % faixaConsumo)
 
