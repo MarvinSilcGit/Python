@@ -14,25 +14,25 @@ numero2 = float(input("Digite o segundo valor: "))
 
 if operadores == 1:
 
-    soma = numero1+numero2
+    soma = numero1 + numero2
 
     print("O resultado da soma entre %.2f e %.2f é %.2f" % (numero1, numero2, soma))
 
 elif operadores == 2:
 
-    soma = numero1-numero2
+    soma = numero1 - numero2
 
     print("O resultado da subtração entre %.2f e %.2f é %.2f" % (numero1, numero2, soma))
 
 elif operadores == 3:
 
-    soma = numero1*numero2
+    soma = numero1 * numero2
 
     print("O resultado da multiplicação entre %.f e %.2f é %.2f" % (numero1, numero2, soma))
 
 elif operadores == 4:
 
-    soma = numero1/numero2
+    soma = numero1 / numero2
 
     print("O resultado da divisão entre %.2f e %.2f é %.2f" % (numero1, numero2, soma))
 

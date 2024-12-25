@@ -4,11 +4,11 @@ salario = float(input("Qual o seu salário? "))
 
 anos = int(input("Irá pagar em quantos anos? "))
 
-anos = anos*12
+anos = anos * 12
 
-parcelas = casaValor/anos
+parcelas = casaValor / anos
 
-porcentagem = salario*0.3
+porcentagem = salario * 0.3
 
 if parcelas > porcentagem:
 
