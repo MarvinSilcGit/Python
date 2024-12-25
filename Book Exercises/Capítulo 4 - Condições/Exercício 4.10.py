@@ -4,55 +4,57 @@ print("Digite 2 para comércios")
 
 print("Digite 3 para indústrias")
 
-tipo = int(input("Qual o tipo de instalação? "))
+print()
 
-if tipo == 1:
+tipo = input("Qual o tipo de instalação? ")
+
+if tipo == "1":
 
     consumo = float(input("Quanto foi consumido? "))
 
     if consumo <= 500:
 
-        faixa = consumo * 0.40
+        faixaConsumo = consumo * 0.40
 
-        print("A quantidade consumida custou R$ %.2f" % faixa)
+        print("A quantidade consumida custou R$ %.2f" % faixaConsumo)
 
     else:
 
-        faixa = consumo * 0.65
+        faixaConsumo = consumo * 0.65
 
-        print("A quantidade consumida custou R$ %.2f" % faixa)
+        print("A quantidade consumida custou R$ %.2f" % faixaConsumo)
 
-elif tipo == 2:
+elif tipo == "2":
 
     consumo = float(input("Quanto foi consumido? "))
 
     if consumo <= 1000:
 
-        faixa = consumo*0.55
+        faixaConsumo = consumo*0.55
 
-        print("A quanidade consumida custou R$ %.2f" % faixa)
+        print("A quanidade consumida custou R$ %.2f" % faixaConsumo)
 
     else:
 
-        faixa = consumo*0.60
+        faixaConsumo = consumo*0.60
 
-        print("A quantidade consumida custou R$ %.2f" % faixa)
+        print("A quantidade consumida custou R$ %.2f" % faixaConsumo)
 
-elif tipo == 3:
+elif tipo == "3":
 
     consumo = float(input("Quanto foi consumido? "))
 
     if consumo <= 5000:
 
-        faixa = consumo*0.55
+        faixaConsumo = consumo*0.55
 
-        print("A quantidade consumida custou %.2f" % faixa)
+        print("A quantidade consumida custou %.2f" % faixaConsumo)
 
     else:
 
-        faixa = consumo*0.60
+        faixaConsumo = consumo*0.60
 
-        print("A quantidade consumida custou %.2f" % faixa)
+        print("A quantidade consumida custou %.2f" % faixaConsumo)
 
 else:
 
