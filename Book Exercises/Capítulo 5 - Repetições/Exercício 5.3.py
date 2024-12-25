@@ -1,19 +1,15 @@
-cont = 1
+contador = 1
 
-while cont != 0:
+contagem = 11
 
-    um = 11
+while contador != 0:
 
-    while um <= 11 and um>1:
+    while contagem != 1:
 
-        um = um-1
+        contagem -= 1
 
-        print(um)
+        print(contagem)
 
-        if um == 1:
+    print("Fogo!")
 
-            print("Fogo!")
-
-    print()
-
-    cont = int(input("Digite 0 para interromper a execução: "))
+    contador = int(input("Digite 0 para interromper a execução: "))

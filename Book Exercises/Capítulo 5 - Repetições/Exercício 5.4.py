@@ -1,27 +1,25 @@
-cont = 1
+contador1 = 1
 
-while cont != 0:
+while contador1 != 0:
 
-    valor1 = int(input("Digite o valor inicial: "))
+    valorInicial = int(input("Digite o valor inicial: "))
 
-    valor2 = int(input("Digite o valor final: "))
-
-    if valor1 != 1:
+    if valorInicial != 1:
 
         print("Número incorreto")
 
-        break
+        continue
 
-    elif valor1 == 1:
+    else:
 
-        cont1 = 0
+        valorFinal = int(input("Digite o valor final: "))
 
-        while valor1 < valor2:
+        while valorInicial < valorFinal:
 
-            print(valor1)
+            print(valorInicial)
 
-            valor1 = valor1+2
+            valorInicial += 2
 
-    print()
+        print()
 
-    cont = int(input("Digite 0 para interromper a execução: "))
+        contador1 = int(input("Digite 0 para interromper a execução: "))
