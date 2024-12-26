@@ -1,22 +1,22 @@
-cont1 = 1
+contador = 1
 
-while cont1 != 0:
+while contador != 0:
 
-    valori = float(input("Qual o valor inicial da dívida? "))
+    valorInicial = float(input("Qual o valor inicial da dívida? "))
 
     juros = float(input("Qual o juros mensal? "))
 
-    vpago = float(input("Qual o valor a ser pago mensalmente? "))
+    valorPagoMensal = float(input("Qual o valor a ser pago mensalmente? "))
 
     div = 0
 
     cont = 1
 
-    pmeses = vpago
+    pmeses = valorPagoMensal
 
-    meses = (valori/100)*juros
+    meses = (valorInicial / 100) * juros
 
-    if vpago == juros:
+    if valorPagoMensal == juros:
 
         print()
 
@@ -26,26 +26,26 @@ while cont1 != 0:
 
         continue
 
-    while vpago < valori:
+    while valorPagoMensal < valorInicial:
 
-        vpago += pmeses
+        valorPagoMensal += pmeses
 
-        valori += meses
+        valorInicial += meses
 
         cont = cont+1
 
-    div = vpago-valori
+    div = valorPagoMensal - valorInicial
 
     juros = juros*cont
 
     print()
 
-    print("A dívida foi paga em %d meses, com um total de: %2.2f R$. Contendo um juros total de %.0f por cento " % (cont, vpago, juros))
+    print("A dívida foi paga em %d meses, com um total de: %2.2f R$. Contendo um juros total de %.0f por cento " % (cont, valorPagoMensal, juros))
 
     print("Sendo amortizados %2.2f R$ na próxima fatura, por ter ultrapassado o valor da dívida" % div)
 
     print()
 
-    cont1 = int(input("Digite 0 para interromper a execução: "))
+    contador = int(input("Digite 0 para interromper a execução: "))
 
     print()

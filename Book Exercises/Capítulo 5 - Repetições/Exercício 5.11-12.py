@@ -14,19 +14,21 @@ while contador1 != 0:
 
     ganhoTotal = depositoInicial
 
-    ganhoJuros = depositoMensal + (ganhoTotal / 100 * taxaJuros / 12)
+    ganhoJuros = 0
 
     for contador2 in range(1, periodo + 1):
 
-        ganhoTotal += ganhoJuros
+        ganhoTotal += ganhoTotal / 100 * taxaJuros / 12
 
-        print("O valor na conta no %d° mês era de %.2f. Com uma taxa de %.2f por cento, gerou o valor de R$ %.2f " % (contador2, ganhoTotal, taxaJuros, ganhoJuros))
+        ganhoJuros += ganhoTotal / 100 * taxaJuros / 12
 
-        ganhoJuros += depositoMensal + (ganhoTotal / 100 * taxaJuros / 12)
+        print("O valor na conta no %d° mês era de %.2f. Com uma taxa de %.2f por cento, gerou o valor de R$ %.2f em juros" % (contador2, ganhoTotal, taxaJuros, ganhoJuros))
 
-    print()
+        ganhoTotal += depositoMensal
 
     ganhoTotal = 0
+
+    print()
 
     contador1 = int(input("Digite 0 para interromper a execução: "))
 
