@@ -1,7 +1,5 @@
 contador1 = 1
 
-contador2 = 0
-
 restoInteiro = 0
 
 resto = 0
@@ -12,45 +10,71 @@ while contador1 != 0:
 
     valor2 = float(input("Digite o segundo valor: "))
 
-    print()
+    if valor1 == valor2:
 
-    while True:
+        restoInteiro = (valor1 - valor2) + 1
 
-        if valor1 > valor2:
+        resto = valor1 - valor2
 
-            restoInteiro += valor2
+        print()
 
-            contador2 += 1
+        print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
 
-            if restoInteiro + valor2 == valor1:
+        restoInteiro = 0
 
-                restoInteiro = contador2 + 1
+    elif valor1 > valor2:
 
-                contador2 = 0
+        resto = 0
 
-                print("O resto inteiro da divisão entre %d e %d é %d e o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
+        while valor1 > resto:
+
+            restoInteiro += 1
+
+            resto += valor2
+
+            if valor2 + resto > valor1:
 
                 break
 
-        elif valor1 == valor2:
+        resto = valor1 - resto
 
-            restoInteiro = 1
+        print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
 
-            resto = 0
+        restoInteiro = 0
 
-            print("O resto inteiro da divisão entre %d e %d é %d e o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
+        resto = 0
 
-            break
+    elif valor2 > valor1:
 
-        else:
+        resto = 0
 
-            restoInteiro = 0
+        while valor2 > resto:
+
+            restoInteiro += 1
+
+            resto += valor1
+
+            if valor1 + resto > valor2:
+
+                break
+
+        while resto != valor2:
+
+            resto += 1
+
+            if resto == valor2:
+
+                break
+
+        restoInteiro = 0
+
+        print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
+
+        restoInteiro = 0
+
+        resto = 0
 
     print()
-
-    restoInteiro = 0
-
-    resto = 0
 
     contador1 = int(input("Digite 0 para interromper a execução: "))
 
