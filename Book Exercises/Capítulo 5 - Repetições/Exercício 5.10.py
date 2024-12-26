@@ -4,9 +4,7 @@ while contador != 0:
 
     pontos = 0
 
-    questao = 1
-
-    while questao <= 3:
+    for questao in range (1, 4):
 
         resposta = input("Digite a reposta da questao %d : " % questao)
 
@@ -14,17 +12,17 @@ while contador != 0:
 
             pontos = pontos + 1
 
-        if questao == 2 and resposta == "a" or resposta == "A":
+        elif questao == 2 and resposta == "a" or resposta == "A":
 
             pontos = pontos + 1
 
-        if questao == 3 and resposta == "d" or resposta == "D":
+        elif questao == 3 and resposta == "d" or resposta == "D":
 
             pontos = pontos + 1
 
         questao += 1
 
-        print(" O aluno fez %d pontos(s) " % pontos)
+        print("O aluno fez %d pontos(s)" % pontos)
 
     print()
 
