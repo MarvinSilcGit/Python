@@ -1,41 +1,47 @@
-valor = 1
+contador = 1
 
-contador1 = 0
+while contador != 0:
 
-contador2 = 0
+    valor = 1
 
-mediaValor = 0
+    contador1 = 0
 
-while True:
+    contador2 = 0
 
-    valor = int(input("Digite um número: "))
+    mediaValor = 0
 
-    if valor == 0 and contador2 == 0:
+    while True:
 
-        print("Não foi feito nenhum cálculo")
-
-        print()
-
-        continue
-
-    else:
+        valor = int(input("Digite um número ou digite 0 para interromper: "))
 
         contador1 += valor
 
         contador2 += 1
 
-        zero = input("Digite zero para finalizar: ")
+        if valor == 0 and contador2 == 1:
 
-        if zero == "0":
+            print("A iteração parou e não foi realizado nenhum cálculo")
 
-            mediaValor = contador1 / contador2
+            break
 
-            print("A iteração parou por ter digitado o número 0")
+        else:
 
-            print("A média das somas dos números digitados é: %d. E o valor total da soma é: %d" % (mediaValor, contador1))
+            if valor == 0:
 
-            contador2 = 0
+                contador2 -= 1
 
-            valor = 0
+                mediaValor = contador1 / contador2
 
-            contador1 = 0
+                print()
+
+                print("A iteração parou por ter digitado o número %d" % valor)
+
+                print("A média das somas dos números digitados é: %.2f E o valor total da soma é: %d" % (mediaValor, contador1))
+
+                break
+
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))
+
+    print()
