@@ -2,6 +2,10 @@ contador1 = 1
 
 contador2 = 0
 
+restoInteiro = 0
+
+resto = 0
+
 while contador1 != 0:
 
     valor1 = float(input("Digite o primeiro valor: "))
@@ -10,13 +14,11 @@ while contador1 != 0:
 
     if valor1 == valor2:
 
-        soma = (valor1 - valor2) + 1
-
-        resto = valor1 - valor2
+        restoInteiro = 1
 
         print()
 
-        print("O resto inteiro da divisão entre %d e %d  é: %d. E o resto da divisão é: %d" % (valor1, valor2, soma,resto))
+        print("O resto inteiro da divisão entre %d e %d é %d e o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
 
     elif valor1 > valor2:
 
@@ -34,7 +36,7 @@ while contador1 != 0:
 
         valor3 = valor1 - valor3
 
-        print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, contador2, valor3))
+        print("O resto inteiro da divisão entre %d e %d é %d e o resto da divisão é: %d" % (valor1, valor2, contador2, valor3))
 
         contador2 = 0
 
@@ -64,7 +66,7 @@ while contador1 != 0:
 
         contador2 = 0
 
-        print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, contador2, valor3))
+        print("O resto inteiro da divisão entre %d e %d é %d e o resto da divisão é: %d" % (valor1, valor2, contador2, valor3))
 
         contador2 = 0
 
