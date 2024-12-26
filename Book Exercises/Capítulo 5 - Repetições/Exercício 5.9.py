@@ -10,36 +10,46 @@ while contador1 != 0:
 
     valor2 = float(input("Digite o segundo valor: "))
 
-    if valor1 == valor2:
+    if valor1 == 0 or valor2 == 0:
 
-        restoInteiro = 1
+        print("Divisão por zero inválida")
 
         print()
 
-    elif valor1 > valor2:
-
-        while valor2 + resto < valor1:
-
-            restoInteiro += 1
-
-            resto += valor2
-
-        resto = valor1 - resto
+        continue
 
     else:
 
-        while valor1 + resto < valor2:
+        if valor1 == valor2:
 
-            resto += valor1
+            restoInteiro = 1
 
-        while resto != valor2:
+            print()
 
-            resto += 1
+        elif valor1 > valor2:
 
-    print("O resto inteiro da divisão entre %d e %d é: %d. E o resto da divisão é: %d" % (valor1, valor2, restoInteiro, resto))
+            while valor2 + resto < valor1:
 
-    print()
+                restoInteiro += 1
 
-    contador1 = int(input("Digite 0 para interromper a execução: "))
+                resto += valor2
 
-    print()
+            resto = valor1 - resto
+
+        else:
+
+            while valor1 + resto < valor2:
+
+                resto += valor1
+
+            while resto != valor2:
+
+                resto += 1
+
+        print("O resto inteiro da divisão entre %.1f e %.1f é: %.1f. E o resto da divisão é: %.1f" % (valor1, valor2, restoInteiro, resto))
+
+        print()
+
+        contador1 = int(input("Digite 0 para interromper a execução: "))
+
+        print()
