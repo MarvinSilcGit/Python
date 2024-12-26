@@ -10,13 +10,13 @@ while contador1 != 0:
 
     ganhoTotal = 0
 
-    for contador2 in range(24):
+    for contador2 in range(1, 25):
 
         ganhoTotal = depositoInicial + (depositoInicial / 100) * taxaJuros
 
         if ganhoTotal > depositoInicial:
 
-            print("O valor do depósito no %d° mês era de %.2f, com uma taxa de %.2f por cento, resultando no valor de %.2f R$ reais " % (contador2, depositoInicial, taxaJuros, ganhoTotal))
+            print("O valor do depósito no %d° mês era de %.2f. Com uma taxa de %.2f por cento, gerou o valor de R$ %.2f " % (contador2, depositoInicial, taxaJuros, ganhoTotal))
 
             depositoInicial = ganhoTotal
 
