@@ -46,8 +46,6 @@ while contador1 != 0:
 
             restoInteiro = 0
 
-
-
     print()
 
     restoInteiro = 0
