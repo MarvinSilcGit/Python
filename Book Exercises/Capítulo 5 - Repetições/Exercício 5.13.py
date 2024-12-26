@@ -1,22 +1,28 @@
-contador = 1
+contador1 = 1
 
-while contador != 0:
+while contador1 != 0:
 
     valorInicial = float(input("Qual o valor inicial da dívida? "))
 
-    juros = float(input("Qual o juros mensal? "))
+    jurosMensal = float(input("Qual o juros mensal? "))
 
-    valorPagoMensal = float(input("Qual o valor a ser pago mensalmente? "))
+    tempoPagamento = int(input("Qual será o número de parcelas? "))
 
-    div = 0
+    dividaTotal = valorInicial
 
-    cont = 1
+    for contadorDivida in range(1, tempoPagamento + 1):
 
-    pmeses = valorPagoMensal
+        dividaTotal += dividaTotal / 100 * jurosMensal
 
-    meses = (valorInicial / 100) * juros
 
-    if valorPagoMensal == juros:
+    print(dividaTotal)
+    contador2 = 1
+
+    pmeses = tempoPagamento
+
+    meses = (valorInicial / 100) * jurosMensal
+
+    if tempoPagamento == jurosMensal:
 
         print()
 
@@ -26,26 +32,26 @@ while contador != 0:
 
         continue
 
-    while valorPagoMensal < valorInicial:
+    while tempoPagamento < valorInicial:
 
-        valorPagoMensal += pmeses
+        tempoPagamento += pmeses
 
         valorInicial += meses
 
-        cont = cont+1
+        contador2 = contador2 + 1
 
-    div = valorPagoMensal - valorInicial
+    dividaTotal = tempoPagamento - valorInicial
 
-    juros = juros*cont
-
-    print()
-
-    print("A dívida foi paga em %d meses, com um total de: %2.2f R$. Contendo um juros total de %.0f por cento " % (cont, valorPagoMensal, juros))
-
-    print("Sendo amortizados %2.2f R$ na próxima fatura, por ter ultrapassado o valor da dívida" % div)
+    jurosMensal = jurosMensal * contador2
 
     print()
 
-    contador = int(input("Digite 0 para interromper a execução: "))
+    print("A dívida foi paga em %d meses, com um total de: %2.2f R$. Contendo um juros total de %.0f por cento " % (contador2, tempoPagamento, jurosMensal))
+
+    print("Sendo amortizados %2.2f R$ na próxima fatura, por ter ultrapassado o valor da dívida" % dividaTotal)
+
+    print()
+
+    contador1 = int(input("Digite 0 para interromper a execução: "))
 
     print()
