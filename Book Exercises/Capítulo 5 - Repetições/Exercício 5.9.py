@@ -28,13 +28,9 @@ while contador1 != 0:
 
     else:
 
-        while valor2 > resto:
+        while valor1 + resto < valor2:
 
             resto += valor1
-
-            if valor1 + resto > valor2:
-
-                break
 
         while resto != valor2:
 
