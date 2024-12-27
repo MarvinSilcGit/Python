@@ -44,43 +44,37 @@ while contador1 != 0:
 
             break
 
-        elif codigoProduto == 1:
+        else:
 
-            quantidadeProduto = int(input("Digite a quantidade desejada do produto A: "))
+            quantidadeProduto = int(input(f"Digite a quantidade desejada do produto {codigoProduto:.{0}f} "))
 
-            total += quantidadeProduto * 0.5
+            if codigoProduto == 1:
 
-        elif codigoProduto == 2:
+                total += quantidadeProduto * 0.5
 
-            quantidadeProduto = int(input("Digite a quantidade desejada do produto B: "))
+            elif codigoProduto == 2:
 
-            total += quantidadeProduto * 1
+                total += quantidadeProduto * 1
 
-        elif codigoProduto == 3:
+            elif codigoProduto == 3:
 
-            quantidadeProduto = int(input("Digite a quantidade desejada do produto C: "))
+                total += quantidadeProduto * 4
 
-            total += quantidadeProduto * 4
+            elif codigoProduto == 5:
 
-        elif codigoProduto == 5:
+                total += quantidadeProduto * 7
 
-            quantidadeProduto = int(input("Digite a quantidade desejada do produto E: "))
+            elif codigoProduto == 9:
 
-            total += quantidadeProduto * 7
+                total += quantidadeProduto * 8
 
-        elif codigoProduto == 9:
+            elif codigoProduto != 0 or codigoProduto != 1 or codigoProduto != 2 or codigoProduto != 3 or codigoProduto != 5 or codigoProduto != 9:
 
-            quantidadeProduto = int(input("Digite a quantidade desejada do produto I: "))
+                print("Valor incorreto digitado")
 
-            total += quantidadeProduto * 8
+                continue
 
-        elif codigoProduto != 0 or codigoProduto != 1 or codigoProduto != 2 or codigoProduto != 3 or codigoProduto != 5 or codigoProduto != 9:
-
-            print("Valor incorreto digitado")
-
-            continue
-
-        print("O valor atual das compras é R$ %.2f:" % total)
+            print("O valor atual das compras é R$ %.2f:" % total)
 
     print()
 
