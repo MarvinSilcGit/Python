@@ -1,24 +1,22 @@
-cont = 1
+contador1 = 1
 
-cont2 = 0
+contador2 = 0
 
 cont3 = 0
 
-while cont != 0:
-
-    print("Um número ou uma letra para saber se é palíndromo.  É palíndromo quando, independente da ordem de leitura, é o mesmo. Ex: 545, 454, ovo, arara etc...")
+while contador1 != 0:
 
     valor1 = (input("Digite um número ou uma letra para saber se é palíndromo: "))
 
     valor2 = valor1
 
-    while cont2 != len(valor1):
+    while contador2 != len(valor1):
 
-        valor3 = (valor1[0+cont2])
+        valor3 = (valor1 [0 + contador2])
 
-        cont2 += 1
+        contador2 += 1
 
-        valor4 = (valor1[0-cont2])
+        valor4 = (valor1 [0 - contador2])
 
         if valor3 == valor4:
 
@@ -28,11 +26,11 @@ while cont != 0:
 
             cont3 += 0
 
-    if cont3 == cont2:
+    if cont3 == contador2:
 
         print("%s é palíndromo" % valor1)
 
-    elif cont3 != cont2:
+    elif cont3 != contador2:
 
         print("%s não é palíndromo" % valor1)
 
@@ -40,8 +38,8 @@ while cont != 0:
 
     cont3 = 0
 
-    cont2 = 0
+    contador2 = 0
 
-    cont = int(input("Digite 0 para interromper a execução: "))
+    contador1 = int(input("Digite 0 para interromper a execução: "))
 
     print()

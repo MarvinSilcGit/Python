@@ -73,3 +73,21 @@ def divisao_inteira_resto (valor1, valor2):
                 resto += 1
 
         return "O resto inteiro da divisão entre %.1f e %.1f é: %d. E o resto da divisão é %.1f" % (valor1, valor2,resto_inteiro, resto)
+
+def raiz_quadrada (valor):
+
+    base = 2
+
+    resultado_raiz_quadrada = (base + valor / base) / 2
+
+    resultado_raiz_quadrada = resultado_raiz_quadrada ** 2
+
+    while resultado_raiz_quadrada * resultado_raiz_quadrada - valor > 0.001:
+
+        base = resultado_raiz_quadrada
+
+        resultado_raiz_quadrada = (base + valor / base) / 2
+
+    return "A raiz aproximada de %d é: %.4f" % (valor, resultado_raiz_quadrada)
+
+print(raiz_quadrada(5))
