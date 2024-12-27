@@ -1,7 +1,5 @@
 def divisao_resto (valor1, valor2):
 
-    resto_inteiro = 0
-
     resto = 0
 
     if valor1 == 0 or valor2 == 0:
@@ -12,13 +10,11 @@ def divisao_resto (valor1, valor2):
 
         if valor1 == valor2:
 
-            resto_inteiro = 1
+            resto = 0
 
         elif valor1 > valor2:
 
-            while valor2 + resto < valor1:
-
-                resto_inteiro += 1
+            while valor2 + resto <= valor1:
 
                 resto += valor2
 
@@ -54,7 +50,7 @@ def divisao_inteira_resto (valor1, valor2):
 
         elif valor1 > valor2:
 
-            while valor2 + resto < valor1:
+            while valor2 + resto <= valor1:
 
                 resto_inteiro += 1
 
@@ -89,5 +85,3 @@ def raiz_quadrada (valor):
         resultado_raiz_quadrada = (base + valor / base) / 2
 
     return "A raiz aproximada de %d é: %.4f" % (valor, resultado_raiz_quadrada)
-
-print(raiz_quadrada(5))

@@ -2,8 +2,6 @@ contador1 = 1
 
 while contador1 != 0:
 
-    restoInteiro = 0
-
     resto = 0
 
     valor1 = float(input("Digite o primeiro valor: "))
@@ -22,15 +20,11 @@ while contador1 != 0:
 
         if valor1 == valor2:
 
-            restoInteiro = 1
-
             print()
 
         elif valor1 > valor2:
 
-            while valor2 + resto < valor1:
-
-                restoInteiro += 1
+            while valor2 + resto <= valor1:
 
                 resto += valor2
 

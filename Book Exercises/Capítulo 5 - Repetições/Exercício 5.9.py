@@ -28,7 +28,7 @@ while contador1 != 0:
 
         elif valor1 > valor2:
 
-            while valor2 + resto < valor1:
+            while valor2 + resto <= valor1:
 
                 restoInteiro += 1
 
