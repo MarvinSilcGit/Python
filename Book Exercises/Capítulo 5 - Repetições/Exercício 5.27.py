@@ -1,44 +1,34 @@
 contador1 = 1
 
-contador2 = 0
-
 contador3 = 0
 
 while contador1 != 0:
 
     valor1 = (input("Digite um número ou uma letra para saber se é palíndromo: "))
 
-    valor2 = valor1
+    for contador2 in range(0, len(valor1)):
 
-    while contador2 != len(valor1):
-
-        valor3 = (valor1 [0 + contador2])
+        posicao1 = (valor1 [0 + contador2])
 
         contador2 += 1
 
-        valor4 = (valor1 [0 - contador2])
+        posicao2 = (valor1 [0 - contador2])
 
-        if valor3 == valor4:
+        if posicao1 == posicao2:
 
             contador3 += 1
-
-        elif valor3 != valor4:
-
-            contador3 += 0
 
     if contador3 == contador2:
 
         print("%s é palíndromo" % valor1)
 
-    elif contador3 != contador2:
+    else:
 
         print("%s não é palíndromo" % valor1)
 
     print()
 
     contador3 = 0
-
-    contador2 = 0
 
     contador1 = int(input("Digite 0 para interromper a execução: "))
 
