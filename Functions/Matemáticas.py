@@ -1,6 +1,6 @@
 # How to import:
 
-# from
+# from Functions.Matemáticas import divisao_resto or import *
 
 def divisao_resto (valor1, valor2):
 

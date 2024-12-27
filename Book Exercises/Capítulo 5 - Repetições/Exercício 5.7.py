@@ -1,6 +1,6 @@
-contador = 0
+contador = 1
 
-while contador != 1:
+while contador != 0:
 
     inicioTabuada = int(input("Digite o valor inicial da tabuada: "))
 
