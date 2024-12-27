@@ -87,5 +87,3 @@ def raiz_quadrada (valor):
         resultado_raiz_quadrada = (base + valor / base) / 2
 
     return "A raiz aproximada de %d é: %.4f" % (valor, resultado_raiz_quadrada)
-
-print(raiz_quadrada(12))
