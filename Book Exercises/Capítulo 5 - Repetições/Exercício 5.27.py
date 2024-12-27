@@ -2,7 +2,7 @@ contador1 = 1
 
 contador2 = 0
 
-cont3 = 0
+contador3 = 0
 
 while contador1 != 0:
 
@@ -20,23 +20,23 @@ while contador1 != 0:
 
         if valor3 == valor4:
 
-            cont3 += 1
+            contador3 += 1
 
         elif valor3 != valor4:
 
-            cont3 += 0
+            contador3 += 0
 
-    if cont3 == contador2:
+    if contador3 == contador2:
 
         print("%s é palíndromo" % valor1)
 
-    elif cont3 != contador2:
+    elif contador3 != contador2:
 
         print("%s não é palíndromo" % valor1)
 
     print()
 
-    cont3 = 0
+    contador3 = 0
 
     contador2 = 0
 
