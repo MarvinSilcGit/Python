@@ -1,6 +1,6 @@
-cont1 = 1
+contador1 = 1
 
-while cont1 != 0:
+while contador1 != 0:
 
     print("Escolha dentre as opções abaixo: ")
 
@@ -16,11 +16,11 @@ while cont1 != 0:
 
     print()
 
-    valor = int(input("Digite o valor correspondente para a operação desejada: "))
+    mathOperator = int(input("Digite o valor correspondente para a operação desejada: "))
 
     print()
 
-    if valor == 1:
+    if mathOperator == 1:
 
         valor1 = float(input("Digite o primeiro valor: "))
 
@@ -28,19 +28,9 @@ while cont1 != 0:
 
         print()
 
-        print("O resultado da soma é: %.1f" % (valor1+valor2))
+        print("O resultado da soma é: %.1f" % (valor1 + valor2))
 
-    elif valor == 2:
-
-        valor1 = float(input("Digite o primeiro valor: "))
-
-        valor2 = float(input("Digite o segundo valor: "))
-
-        print()
-
-        print("O resultado da subtração é: %.1f" % (valor1-valor2))
-
-    elif valor == 3:
+    elif mathOperator == 2:
 
         valor1 = float(input("Digite o primeiro valor: "))
 
@@ -48,9 +38,9 @@ while cont1 != 0:
 
         print()
 
-        print("O resultado da divisão é: %.1f" % (valor1/valor2))
+        print("O resultado da subtração é: %.1f" % (valor1 - valor2))
 
-    elif valor == 4:
+    elif mathOperator == 3:
 
         valor1 = float(input("Digite o primeiro valor: "))
 
@@ -58,16 +48,26 @@ while cont1 != 0:
 
         print()
 
-        print("O resultado da multiplicação é: %.1f" % (valor1*valor2))
+        print("O resultado da divisão é: %.1f" % (valor1 / valor2))
 
-    elif valor != 1 and valor != 2 and valor != 3 and valor != 4:
+    elif mathOperator == 4:
 
-        print("opção inexistente")
+        valor1 = float(input("Digite o primeiro valor: "))
+
+        valor2 = float(input("Digite o segundo valor: "))
+
+        print()
+
+        print("O resultado da multiplicação é: %.1f" % (valor1 * valor2))
+
+    elif mathOperator != 1 and mathOperator != 2 and mathOperator != 3 and mathOperator != 4:
+
+        print("Opção inexistente")
 
         break
 
     print()
 
-    cont1 = int(input("Digite 0 para interromper a execução: "))
+    contador1 = int(input("Digite 0 para interromper a execução: "))
 
     print()

@@ -1,29 +1,29 @@
-cont = 0
+contador = 0
 
 while True:
 
     print()
 
-    primo = int(input("Digite um número para saber se ele é primo ou não: "))
+    numeroPrimo = int(input("Digite um número inteiro para saber se ele é primo ou não: "))
 
-    if primo % 2 == 0 and primo != 2:
+    if numeroPrimo % 2 == 0 and numeroPrimo != 2:
 
         print()
 
-        print("O número %d não é primo" % primo)
+        print("O número %d não é primo" % numeroPrimo)
 
         continue
 
-    if primo == 2:
+    if numeroPrimo == 2:
 
-        cont = cont+1
+        contador = contador + 1
 
     else:
 
-        primos = (primo % 2)
+        primos = (numeroPrimo % 2)
 
-        cont += 1
+        contador += 1
 
     print()
 
-    print("%d é um número primo" % primo)
+    print("%d é um número primo" % numeroPrimo)

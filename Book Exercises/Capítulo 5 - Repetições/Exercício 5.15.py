@@ -1,14 +1,12 @@
-cont1 = 1
+contador1 = 1
 
-cont = 0
+while contador1 != 0:
 
-total = 0
+    total = 0
 
-while cont1 != 0:
+    codigoProduto = 1
 
-    vcod = 1
-
-    while vcod != 0:
+    while codigoProduto != 0:
 
         print()
 
@@ -36,64 +34,54 @@ while cont1 != 0:
 
         print()
 
-        vcod = float(input("Digite o código do produto desejado: "))
+        codigoProduto = float(input("Digite o código do produto desejado: "))
 
-        if vcod == 0:
+        if codigoProduto == 0:
 
             print()
 
-            print("O valor total das compras foi de R$ %.2f"%total)
+            print("O valor total das compras foi de R$ %.2f" % total)
 
             break
 
-        elif vcod == 1:
+        elif codigoProduto == 1:
 
-            vqua = int(input("Digite a quantidade desejada do produto A: "))
+            quantidadeProduto = int(input("Digite a quantidade desejada do produto A: "))
 
-            vqua = vqua*0.5
+            total += quantidadeProduto * 0.5
 
-            total += vqua
+        elif codigoProduto == 2:
 
-        elif vcod == 2:
+            quantidadeProduto = int(input("Digite a quantidade desejada do produto B: "))
 
-            vqua = int(input("Digite a quantidade desejada do produto B: "))
+            total += quantidadeProduto * 1
 
-            vqua = vqua*1
+        elif codigoProduto == 3:
 
-            total += vqua
+            quantidadeProduto = int(input("Digite a quantidade desejada do produto C: "))
 
-        elif vcod == 3:
+            total += quantidadeProduto * 4
 
-            vqua = int(input("Digite a quantidade desejada do produto C: "))
+        elif codigoProduto == 5:
 
-            vqua = vqua*4
+            quantidadeProduto = int(input("Digite a quantidade desejada do produto E: "))
 
-            total += vqua
+            total += quantidadeProduto * 7
 
-        elif vcod == 5:
+        elif codigoProduto == 9:
 
-            vqua = int(input("Digite a quantidade desejada do produto E: "))
+            quantidadeProduto = int(input("Digite a quantidade desejada do produto I: "))
 
-            vqua = vqua*7
+            total += quantidadeProduto * 8
 
-            total += vqua
-
-        elif vcod == 9:
-
-            vqua = int(input("Digite a quantidade desejada do produto I: "))
-
-            vqua = vqua*8
-
-            total += vqua
-
-        elif vcod != 0 or vcod != 1 or vcod != 2 or vcod != 3 or vcod != 5 or vcod != 9:
+        elif codigoProduto != 0 or codigoProduto != 1 or codigoProduto != 2 or codigoProduto != 3 or codigoProduto != 5 or codigoProduto != 9:
 
             print("Valor incorreto digitado")
 
-            break
+            continue
 
-        print("O valor atual das compras é de %2.2f R$:" % total)
+        print("O valor atual das compras é R$ %.2f:" % total)
 
     print()
 
-    cont1 = int(input("Digite 0 para interromper a execução: "))
+    contador1 = int(input("Digite 0 para interromper a execução: "))
