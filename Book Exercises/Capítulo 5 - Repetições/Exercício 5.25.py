@@ -1,35 +1,25 @@
-cont1 = 1
+contador1 = 1
 
-while cont1 != 0:
+while contador1 != 0:
 
-    raiz = float(input("Digite um número para saber a sua raiz aproximada, utilizando o método Newtoniano: "))
+    numero = float(input("Digite um número para saber a sua raiz aproximada, utilizando o método Newtoniano: "))
 
     base = 2
 
-    produto = 0
+    raizQuadrada = (base + numero / base) / 2
 
-    cont = 0
+    raizQuadrada = raizQuadrada**2
 
-    produto = (base+(raiz/base))/2
+    while raizQuadrada * raizQuadrada - numero > 0.001:
 
-    produto = produto*produto
+        base = raizQuadrada
 
-    produto2 = produto*produto
+        raizQuadrada = (base + numero / base) / 2
 
-    while cont <= produto:
-
-        base = produto
-
-        produto = (base+(raiz/base))/2
-
-        if produto*produto-raiz <= 0.001:
-
-            break
-
-    print("A raiz aproximada de %d é: %.4f" % (raiz, produto))
+    print("A raiz aproximada de %d é: %.4f" % (numero, raizQuadrada))
 
     print()
 
-    cont1 = int(input("Digite 0 para interromper a execução: "))
+    contador1 = int(input("Digite 0 para interromper a execução: "))
 
     print()
