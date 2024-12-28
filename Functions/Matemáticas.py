@@ -92,7 +92,7 @@ def raiz_quadrada (numero):
 
 def numero_primo (numero):
 
-    contador2 = 5
+    confirmacao = 2
 
     if numero == 0 or numero == 1:
 
@@ -104,12 +104,16 @@ def numero_primo (numero):
 
     else:
 
-        for contador in range(contador2, numero + 1, 2):
+        for contador2 in range(2, numero + 1):
 
-            if numero % 2 != 0 and numero % 3 != 0 and contador2 != numero and numero % contador2 != 0:
+            if numero % contador2 != 0:
 
-                return "%d é um número primo" % numero
+                confirmacao += 1
 
-            else:
+        if confirmacao == numero:
 
-                return "%d não é um número primo" % numero
+            return "%d é um número primo" % numero
+
+        else:
+
+            return"%d não é um número primo" % numero
