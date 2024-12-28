@@ -159,4 +159,37 @@ def valor_palindromo (valor):
 
 def atm_machine (valor):
 
-    return 0
+    valor = valor
+
+    cedula200 = 0
+
+    cedula100 = 0
+
+    cedula50 = 0
+
+    cedula20 = 0
+
+    cedula10 = 0
+
+    cedula5 = 0
+
+    cedula2 = 0
+
+    valor_saque = valor
+
+    moeda50 = 0
+    moeda25 = 0
+    moeda10 = 0
+    moeda5 = 0
+
+    while True:
+
+        if valor < 2:
+
+            return "R$ %.2f é um valor inválido para saque" % valor_saque
+
+        else:
+
+            return 0
+
+print(atm_machine(3))

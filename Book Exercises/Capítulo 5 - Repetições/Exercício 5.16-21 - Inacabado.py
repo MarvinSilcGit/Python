@@ -25,7 +25,7 @@ while contador1 != 0:
 
         else:
 
-            print("%d cédula(s) de R$ %2.f reais" % (cedulas, atual))
+            print("%d cédula(s) de R$ %.2f" % (cedulas, atual))
 
             if apagar == 0:
 
