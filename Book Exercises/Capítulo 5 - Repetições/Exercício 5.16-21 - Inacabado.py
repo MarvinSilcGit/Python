@@ -53,7 +53,7 @@ while contador1 != 0:
 
             elif atual == 1:
 
-                atual = 0.5
+                atual = 0.50
 
                 moeda += 1
 
