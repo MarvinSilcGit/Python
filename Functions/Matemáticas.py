@@ -161,26 +161,11 @@ def atm_machine (valor):
 
     valor = valor
 
-    cedula200 = 0
+    cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2 = 0, 0, 0, 0, 0, 0, 0
 
-    cedula100 = 0
-
-    cedula50 = 0
-
-    cedula20 = 0
-
-    cedula10 = 0
-
-    cedula5 = 0
-
-    cedula2 = 0
+    moeda50, moeda25, moeda10, moeda5 = 0, 0, 0, 0
 
     valor_saque = valor
-
-    moeda50 = 0
-    moeda25 = 0
-    moeda10 = 0
-    moeda5 = 0
 
     while True:
 
