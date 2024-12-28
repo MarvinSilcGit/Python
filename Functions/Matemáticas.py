@@ -100,7 +100,7 @@ def numero_primo (numero):
 
     if numero ==  2 or numero == 3:
 
-        contador2 +=1
+        contador2 += 1
 
         return "%d é um número primo" % numero
 
@@ -108,9 +108,13 @@ def numero_primo (numero):
 
         for contador in range(5, numero + 1, 2):
 
-            if numero % 3 != 0:
+            if numero % 2 != 0 and numero % 3 != 0:
 
                 contador2 +=1
-            return "%d é um número primo" % numero
+                return "%d é um número primo" % numero
 
-print(numero_primo(1231))
+            else:
+
+                return "%d não é um número primo" % numero
+
+print(numero_primo(25))
