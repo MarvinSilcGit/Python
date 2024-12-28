@@ -162,62 +162,63 @@ def atm_machine (valor):
 
     valor = valor
 
-    cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2 = 0, 0, 0, 0, 0, 0, 0
+    if valor < 2 or valor == 3:
 
-    moeda50, moeda25, moeda10, moeda5 = 0, 0, 0, 0
+        return "R$ %.2f é um valor inválido para saque" % valor
 
-    valor_saque = 0
+    else:
 
-    while valor_saque!= valor:
+        cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2 = 0, 0, 0, 0, 0, 0, 0
 
-        if valor < 2 or valor == 3:
+        valor_saque = 0
 
-            return "R$ %.2f é um valor inválido para saque" % valor
+        while valor_saque != valor:
 
-        else:
-
-            if cedula200 + 1 * 200 + valor_saque <= valor:
+            if (cedula200 + 1) * 200 <= valor:
 
                 cedula200 += 1
 
                 valor_saque += 200
 
-            elif cedula100 + 1 * 100 + valor_saque <= valor:
+            elif (cedula100 + 1) * 100 <= valor:
 
                 cedula100 += 1
 
                 valor_saque += 100
 
-            elif cedula50 + 1 * 50 + valor_saque <= valor:
+            elif (cedula50 + 1) * 50 <= valor:
 
                 cedula50 += 1
 
                 valor_saque += 50
+                print(valor_saque)
 
-            elif cedula20 + 1 * 20 + valor_saque <= valor:
+            elif (cedula20 + 1) * 20 <= valor:
 
                 cedula20 += 1
 
                 valor_saque += 20
 
-            elif cedula10 + 1 * 10 + valor_saque <= valor:
+            elif (cedula10 + 1) * 10 <= valor:
 
                 cedula10 += 1
 
                 valor_saque += 10
 
-            elif cedula5 + 1 * 5 + valor_saque <= valor:
+            elif (cedula5 + 1) * 5 <= valor:
 
                 cedula5 += 1
 
                 valor_saque += 5
 
-            elif cedula2 + 1 * 2 + valor_saque <= valor:
+            elif (cedula2 + 1) * 2 <= valor:
 
                 cedula2 += 1
 
                 valor_saque += 2
 
-    return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2)
+        return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2 para sacar R$%.2f" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2, valor)
 
-print(atm_machine(250))
+for contadof in range(1, 7):
+
+    print(atm_machine(contadof))
