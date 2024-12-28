@@ -92,7 +92,7 @@ def raiz_quadrada (numero):
 
 def numero_primo (numero):
 
-    contador2 = 0
+    contador2 = 5
 
     if numero == 0 or numero == 1:
 
@@ -100,21 +100,16 @@ def numero_primo (numero):
 
     if numero ==  2 or numero == 3:
 
-        contador2 += 1
-
         return "%d é um número primo" % numero
 
     else:
 
-        for contador in range(5, numero + 1, 2):
+        for contador in range(contador2, numero + 1, 2):
 
-            if numero % 2 != 0 and numero % 3 != 0:
+            if numero % 2 != 0 and numero % 3 != 0 and contador2 != numero and numero % contador2 != 0:
 
-                contador2 +=1
                 return "%d é um número primo" % numero
 
             else:
 
                 return "%d não é um número primo" % numero
-
-print(numero_primo(25))
