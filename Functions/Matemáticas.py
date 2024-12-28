@@ -117,3 +117,42 @@ def numero_primo (numero):
         else:
 
             return"%d não é um número primo" % numero
+
+
+def numero_par (numero):
+
+    if numero % 2 == 0:
+
+        return "O número %d é par" % numero
+
+
+def numero_impar (numero):
+
+    if numero % 2 !=0:
+
+        return "O número %d é ímpar" % numero
+
+
+def valor_palindromo (valor):
+
+    contador2 = 0
+
+    if len(valor) < 2:
+
+        return "Tamanho insuficiente!"
+
+    else:
+
+        for contador1 in range(0, len(valor)):
+
+            if valor[0 + contador1] == valor[-1 - contador1]:
+
+                contador2 += 1
+
+        if contador2 == len(valor):
+
+            return "%s é palíndromo" % valor
+
+        else:
+
+            return "%s não é palíndromo" % valor
