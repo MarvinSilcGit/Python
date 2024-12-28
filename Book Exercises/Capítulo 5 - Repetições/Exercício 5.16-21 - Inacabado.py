@@ -1,6 +1,6 @@
-cont = 1
+contador1 = 1
 
-while cont != 0:
+while contador1 != 0:
 
     print()
 #Imprimir quantas cédulas são necessárias para pagar; sempre priorizando a cédulas e moedas de maoir valor;
@@ -21,7 +21,7 @@ while cont != 0:
 
             apagar -= atual
 
-            cedulas+=1
+            cedulas += 1
 
         else:
 
@@ -55,13 +55,13 @@ while cont != 0:
 
                 atual = 0.50
 
-                moeda =+ 1
+                moeda += 1
 
                 print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
 
                 cedulas = 0
 
-            elif atual == 0.50:
+            """elif atual == 0.50:
 
                 atual = 0.10
 
@@ -109,12 +109,10 @@ while cont != 0:
 
                 print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
 
-                cedulas=0
-
-                break
+                cedulas = 0"""
 
             cedulas = 0
 
     print()
 
-    cont = int(input("Digite 0 para interromper a execuão: "))
+    contador1 = int(input("Digite 0 para interromper a execuão: "))

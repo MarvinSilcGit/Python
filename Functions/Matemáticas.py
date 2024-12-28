@@ -156,3 +156,7 @@ def valor_palindromo (valor):
         else:
 
             return "%s não é palíndromo" % valor
+
+def atm_machine (valor):
+
+    return 0
