@@ -158,66 +158,66 @@ def valor_palindromo (valor):
             return "%s não é palíndromo" % valor
 
 
-def atm_machine (valor):
+def atm_machine (valor_saque):
 
-    valor = valor
+    valor_saque = valor_saque
 
-    if valor < 2 or valor == 3:
+    if valor_saque < 2 or valor_saque == 3:
 
-        return "R$ %.2f é um valor inválido para saque" % valor
+        return "R$ %.2f é um valor inválido para saque" % valor_saque
 
     else:
 
         cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2 = 0, 0, 0, 0, 0, 0, 0
 
-        valor_saque = 0
+        valor_retirada = 0
 
-        while valor_saque != valor:
+        while valor_retirada != valor_saque:
 
-            if (cedula200 + 1) * 200 <= valor:
+            if (cedula200 + 1) * 200 <= valor_saque:
 
                 cedula200 += 1
 
-                valor_saque += 200
+                valor_retirada += 200
 
-            elif (cedula100 + 1) * 100 <= valor:
+            elif (cedula100 + 1) * 100 <= valor_saque:
 
                 cedula100 += 1
 
-                valor_saque += 100
+                valor_retirada += 100
 
-            elif (cedula50 + 1) * 50 <= valor:
+            elif (cedula50 + 1) * 50 <= valor_saque:
 
                 cedula50 += 1
 
-                valor_saque += 50
-                print(valor_saque)
+                valor_retirada += 50
+                print(valor_retirada)
 
-            elif (cedula20 + 1) * 20 <= valor:
+            elif (cedula20 + 1) * 20 <= valor_saque:
 
                 cedula20 += 1
 
-                valor_saque += 20
+                valor_retirada += 20
 
-            elif (cedula10 + 1) * 10 <= valor:
+            elif (cedula10 + 1) * 10 <= valor_saque:
 
                 cedula10 += 1
 
-                valor_saque += 10
+                valor_retirada += 10
 
-            elif (cedula5 + 1) * 5 <= valor:
+            elif (cedula5 + 1) * 5 <= valor_saque:
 
                 cedula5 += 1
 
-                valor_saque += 5
+                valor_retirada += 5
 
-            elif (cedula2 + 1) * 2 <= valor:
+            elif (cedula2 + 1) * 2 <= valor_saque:
 
                 cedula2 += 1
 
-                valor_saque += 2
+                valor_retirada += 2
 
-        return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2 para sacar R$%.2f" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2, valor)
+        return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2 para sacar R$%.2f" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2, valor_saque)
 
 for contadof in range(1, 7):
 
