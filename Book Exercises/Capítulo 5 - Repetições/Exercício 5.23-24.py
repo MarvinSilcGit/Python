@@ -1,31 +1,41 @@
-contador = 0
+contador = 1
 
-while True:
+while contador != 0:
+
+    confirmacao = 2
 
     print()
 
-    numeroPrimo = int(input("Digite um número inteiro para saber se ele é primo ou não: "))
+    numero = int(input("Digite um número inteiro para saber se ele é primo ou não: "))
 
-    if numeroPrimo == 0 or numeroPrimo == 1:
+    contador2 = 5
+
+    if numero == 0 or numero == 1:
 
         print("Esse número é inválido")
 
         continue
 
+    if numero == 2 or numero == 3:
+
+        print("%d é um número primo" % numero)
+
     else:
 
-        if numeroPrimo % 2 == 0 and numeroPrimo != 2:
+        for contador2 in range(2, numero + 1):
 
-            print()
+            if numero % contador2 != 0:
 
-            print("%d não é primo" % numeroPrimo)
+                confirmacao += 1
 
-            continue
+        if confirmacao == numero:
 
-        if numeroPrimo == 2:
+            print("%d é um número primo" % numero)
 
-            contador += 1
+        else:
 
-        print()
+           print("%d não é um número primo" % numero)
 
-        print("%d é um número primo" % numeroPrimo)
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))
