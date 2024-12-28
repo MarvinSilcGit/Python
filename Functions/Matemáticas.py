@@ -191,7 +191,6 @@ def atm_machine (valor_saque):
                 cedula50 += 1
 
                 valor_retirada += 50
-                print(valor_retirada)
 
             elif (cedula20 + 1) * 20 <= valor_saque:
 
@@ -219,6 +218,6 @@ def atm_machine (valor_saque):
 
         return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2 para sacar R$%.2f" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2, valor_saque)
 
-for contadof in range(1, 7):
+for contadof in range(1, 100):
 
     print(atm_machine(contadof))
