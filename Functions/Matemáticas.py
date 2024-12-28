@@ -1,8 +1,7 @@
-# How to import:
+#How to import: from Functions.Matemáticas import resto_divisao or import *
 
-# from Functions.Matemáticas import divisao_resto or import *
 
-def divisao_resto (valor1, valor2):
+def resto_divisao (valor1, valor2):
 
     resto = 0
 
@@ -36,7 +35,8 @@ def divisao_resto (valor1, valor2):
 
         return "O resto da divisão entre %.1f e %.1f é: %.1f" % (valor1, valor2, resto)
 
-def divisao_inteira_resto (valor1, valor2):
+
+def resto_inteiro_divisao (valor1, valor2):
 
     resto_inteiro = 0
 
@@ -72,18 +72,43 @@ def divisao_inteira_resto (valor1, valor2):
 
         return "O resto inteiro da divisão entre %.1f e %.1f é: %d" % (valor1, valor2, resto_inteiro)
 
-def raiz_quadrada (valor):
+
+def raiz_quadrada (numero):
 
     base = 2
 
-    resultado_raiz_quadrada = (base + valor / base) / 2
+    resultado_raiz_quadrada = (base + numero / base) / 2
 
     resultado_raiz_quadrada = resultado_raiz_quadrada ** 2
 
-    while resultado_raiz_quadrada * resultado_raiz_quadrada - valor > 0.001:
+    while resultado_raiz_quadrada * resultado_raiz_quadrada - numero > 0.001:
 
         base = resultado_raiz_quadrada
 
-        resultado_raiz_quadrada = (base + valor / base) / 2
+        resultado_raiz_quadrada = (base + numero / base) / 2
 
-    return "A raiz aproximada de %d é: %.4f" % (valor, resultado_raiz_quadrada)
+    return "A raiz aproximada de %d é: %.4f" % (numero, resultado_raiz_quadrada)
+
+
+def numero_primo (numero):
+
+    if numero == 0 or numero == 1:
+
+        return "Esse número é inválido"
+
+    if numero ==  2:
+
+        return "%d é um número primo" % numero
+
+    else:
+
+        for contador in range(3, numero + 1, 2):
+
+            if contador % 2 == 0:
+
+                return "%d não é primo" % numero
+
+
+        return "%d é um número primo" % numero
+
+print(numero_primo(1231))
