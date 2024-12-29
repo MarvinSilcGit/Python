@@ -158,11 +158,11 @@ def valor_palindromo (valor):
             return "%s não é palíndromo" % valor
 
 
-def atm_machine (valor_saque):
+def atm_machine (valor_pagamento):
 
-    valor_saque = valor_saque
+    valor_pagamento = valor_pagamento
 
-    if valor_saque < 1:
+    if valor_pagamento < 1:
 
         return "Valor insuficiente para saque"
 
@@ -172,9 +172,11 @@ def atm_machine (valor_saque):
 
         limite_cedula = 200
 
-        valor_retirada = valor_saque
+        limite_moeda = 0.5
 
-        #moeda = 0
+        valor_retirada = valor_pagamento
+
+        moeda = 0
 
         resultado = []
 
@@ -218,64 +220,33 @@ def atm_machine (valor_saque):
 
                     limite_cedula = 1
 
-                """elif atual == 1:
-    
-                    atual = 0.50
-    
-                    moeda += 1
-    
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-    
-                    cedulas = 0
-    
-                elif atual == 0.50:
-        
-                    atual = 0.10
-        
-                    moeda =+ 1
-        
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-        
-                    cedulas = 0
-        
-                elif atual == 0.10:
-        
-                    atual = 0.05
-        
-                    moeda =+ 1
-        
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-        
-                    cedulas = 0
-        
-                elif atual == 0.05:
-        
-                    atual = 0.02
-        
-                    moeda =+ 1
-        
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-        
-                    cedulas = 0
-        
-                elif atual == 0.02:
-        
-                    atual = 0.01
-        
-                    moeda =+ 1
-        
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-        
-                    cedulas = 0
-        
-                elif atual == 0.01:
-        
-                    atual = 0.01
-        
-                    moeda =+ 1
-        
-                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
-        
-                    cedulas = 0"""
-
                 cedulas = 0
+
+                """elif limite_moeda == 1:
+    
+                    limite_moeda = 0.5
+    
+                elif limite_moeda == 0.50:
+        
+                    limite_moeda = 0.10
+        
+                elif limite_moeda == 0.10:
+        
+                    limite_moeda = 0.05
+
+                elif limite_moeda == 0.05:
+        
+                    limite_moeda = 0.02
+
+                elif limite_moeda == 0.02:
+        
+                    limite_moeda = 0.01"""
+
+"""Acessar Valores
+for contador2 in range(0, 10):
+
+    for contador in atm_machine(contador2):
+
+        print(contador)
+
+print(atm_machine(0))"""
