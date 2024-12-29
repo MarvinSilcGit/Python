@@ -158,9 +158,9 @@ def valor_palindromo (valor):
             return "%s não é palíndromo" % valor
 
 
-def atm_machine (valor_pagamento):
+def atm_machine (valor):
 
-    valor_pagamento = valor_pagamento
+    valor_pagamento = valor
 
     if valor_pagamento < 1:
 
@@ -172,15 +172,13 @@ def atm_machine (valor_pagamento):
 
         limite_cedula = 200
 
-        valor_retirada = valor_pagamento
-
         resultado = []
 
         while True:
 
-            if limite_cedula <= valor_retirada:
+            if limite_cedula <= valor_pagamento:
 
-                valor_retirada -= limite_cedula
+                valor_pagamento -= limite_cedula
 
                 cedulas += 1
 
@@ -188,9 +186,9 @@ def atm_machine (valor_pagamento):
 
                 resultado.append("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-                if valor_retirada < 1:
+                if valor_pagamento < 1:
 
-                    if valor_retirada > 0:
+                    if valor_pagamento > 0:
 
                         limite_moeda = 0.5
 
@@ -198,9 +196,9 @@ def atm_machine (valor_pagamento):
 
                         while True:
 
-                            if limite_moeda <= valor_retirada:
+                            if limite_moeda <= valor_pagamento:
 
-                                valor_retirada -= limite_moeda
+                                valor_pagamento -= limite_moeda
 
                                 moedas += 1
 
@@ -208,7 +206,7 @@ def atm_machine (valor_pagamento):
 
                                 resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
-                                if valor_retirada < 0.01:
+                                if valor_pagamento < 0.01:
 
                                     return resultado
 
@@ -275,4 +273,4 @@ def atm_machine (valor_pagamento):
 
         print(contador)"""
 
-print(atm_machine(77.80))
+print(atm_machine(10.6))
