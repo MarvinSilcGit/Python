@@ -162,62 +162,120 @@ def atm_machine (valor_saque):
 
     valor_saque = valor_saque
 
-    if valor_saque < 2 or valor_saque == 3:
+    if valor_saque < 1:
 
-        return "R$ %.2f é um valor inválido para saque" % valor_saque
+        return "Valor insuficiente para saque"
 
     else:
 
-        cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2 = 0, 0, 0, 0, 0, 0, 0
+        cedulas = 0
 
-        valor_retirada = 0
+        limite_cedula = 200
 
-        while valor_retirada != valor_saque:
+        valor_retirada = valor_saque
 
-            if (cedula200 + 1) * 200 <= valor_saque:
+        #moeda = 0
 
-                cedula200 += 1
+        resultado = []
 
-                valor_retirada += 200
+        while True:
 
-            elif (cedula100 + 1) * 100 <= valor_saque:
+            if limite_cedula <= valor_retirada:
 
-                cedula100 += 1
+                valor_retirada -= limite_cedula
 
-                valor_retirada += 100
+                cedulas += 1
 
-            elif (cedula50 + 1) * 50 <= valor_saque:
+            else:
 
-                cedula50 += 1
+                resultado.append("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-                valor_retirada += 50
+                if valor_retirada == 0:
 
-            elif (cedula20 + 1) * 20 <= valor_saque:
+                    return resultado
 
-                cedula20 += 1
+                if limite_cedula == 200:
 
-                valor_retirada += 20
+                    limite_cedula = 100
 
-            elif (cedula10 + 1) * 10 <= valor_saque:
+                elif limite_cedula == 100:
 
-                cedula10 += 1
+                    limite_cedula = 50
 
-                valor_retirada += 10
+                elif limite_cedula == 50:
 
-            elif (cedula5 + 1) * 5 <= valor_saque:
+                    limite_cedula = 20
 
-                cedula5 += 1
+                elif limite_cedula == 20:
 
-                valor_retirada += 5
+                    limite_cedula = 10
 
-            elif (cedula2 + 1) * 2 <= valor_saque:
+                elif limite_cedula == 10:
 
-                cedula2 += 1
+                    limite_cedula = 5
 
-                valor_retirada += 2
+                elif limite_cedula == 5:
 
-            return "Foram utilizadas %d cédula(s) de 200, %d cédula(s) de 100, %d cédula(s) de 50, %d cédula(s) de 20, %d cédula(s) 10, %d cédula(s) de 5 e %d cédula(s) 2 para sacar R$%.2f" % (cedula200, cedula100, cedula50, cedula20, cedula10, cedula5, cedula2, valor_saque)
+                    limite_cedula = 1
 
-for contadof in range(1, 100 + 1):
+                """elif atual == 1:
+    
+                    atual = 0.50
+    
+                    moeda += 1
+    
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+    
+                    cedulas = 0
+    
+                elif atual == 0.50:
+        
+                    atual = 0.10
+        
+                    moeda =+ 1
+        
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+        
+                    cedulas = 0
+        
+                elif atual == 0.10:
+        
+                    atual = 0.05
+        
+                    moeda =+ 1
+        
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+        
+                    cedulas = 0
+        
+                elif atual == 0.05:
+        
+                    atual = 0.02
+        
+                    moeda =+ 1
+        
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+        
+                    cedulas = 0
+        
+                elif atual == 0.02:
+        
+                    atual = 0.01
+        
+                    moeda =+ 1
+        
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+        
+                    cedulas = 0
+        
+                elif atual == 0.01:
+        
+                    atual = 0.01
+        
+                    moeda =+ 1
+        
+                    print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
+        
+                    cedulas = 0"""
 
-    print(atm_machine(contadof))
+                cedulas = 0
