@@ -197,7 +197,6 @@ def atm_machine (valor):
                         while True:
 
                             if limite_moeda <= valor_pagamento:
-                                print(valor_pagamento)
 
                                 valor_pagamento -= limite_moeda
 
@@ -273,5 +272,3 @@ def atm_machine (valor):
     for contador in atm_machine(contador2):
 
         print(contador)"""
-
-print(atm_machine(1.6))
