@@ -226,27 +226,53 @@ def atm_machine (valor):
 
                     cedulas = 0
 
-                    if limite_moeda == 0.5:
+                    """if valor_pagamento > 0 < 1:
 
-                        limite_moeda = 0.2
+                        print(valor_pagamento)
 
-                    elif limite_moeda == 0.2:
+                        if limite_moeda <= valor_pagamento:
 
-                        limite_moeda = 0.1
+                            valor_pagamento -= limite_moeda
 
-                    elif limite_moeda == 0.1:
+                            moedas += 1
 
-                        limite_moeda = 0.05
+                            if valor_pagamento == 0:
 
-                    elif limite_moeda == 0.05:
+                                resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
-                        limite_moeda = 0.02
+                                return resultado
 
-                    elif limite_moeda == 0.02:
+                        else:
 
-                        limite_moeda = 0.01
+                            resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
-                    moedas = 0
+                            if valor_pagamento == 0:
+
+                                return resultado
+
+                            else:
+
+                                if limite_moeda == 0.5:
+
+                                    limite_moeda = 0.2
+
+                                elif limite_moeda == 0.2:
+
+                                    limite_moeda = 0.1
+
+                                elif limite_moeda == 0.1:
+
+                                    limite_moeda = 0.05
+
+                                elif limite_moeda == 0.05:
+
+                                    limite_moeda = 0.02
+
+                                elif limite_moeda == 0.02:
+
+                                    limite_moeda = 0.01
+
+                                moedas = 0"""
 
 #Acessar Valores
 """for contador2 in range(1, 100):
@@ -255,4 +281,4 @@ def atm_machine (valor):
 
         print(contador)"""
 
-print(atm_machine(6.5))
+print(atm_machine(259))
