@@ -172,11 +172,7 @@ def atm_machine (valor_pagamento):
 
         limite_cedula = 200
 
-        limite_moeda = 0.5
-
         valor_retirada = valor_pagamento
-
-        moeda = 0
 
         resultado = []
 
@@ -192,61 +188,92 @@ def atm_machine (valor_pagamento):
 
                 resultado.append("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-                if valor_retirada == 0:
+                if valor_retirada < 1:
 
-                    return resultado
+                    if valor_retirada > 0:
 
-                if limite_cedula == 200:
+                        limite_moeda = 0.5
 
-                    limite_cedula = 100
+                        moedas = 0
 
-                elif limite_cedula == 100:
+                        while True:
 
-                    limite_cedula = 50
+                            if limite_moeda <= valor_retirada:
 
-                elif limite_cedula == 50:
+                                valor_retirada -= limite_moeda
 
-                    limite_cedula = 20
+                                moedas += 1
 
-                elif limite_cedula == 20:
+                            else:
 
-                    limite_cedula = 10
+                                resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
-                elif limite_cedula == 10:
+                                if valor_retirada == 0:
 
-                    limite_cedula = 5
+                                    return resultado
 
-                elif limite_cedula == 5:
+                                else:
 
-                    limite_cedula = 1
+                                    if limite_moeda == 0.5:
 
-                cedulas = 0
+                                        limite_moeda = 0.2
+                                        print("oi")
 
-                """elif limite_moeda == 1:
-    
-                    limite_moeda = 0.5
-    
-                elif limite_moeda == 0.50:
-        
-                    limite_moeda = 0.10
-        
-                elif limite_moeda == 0.10:
-        
-                    limite_moeda = 0.05
+                                    elif limite_moeda == 0.2:
 
-                elif limite_moeda == 0.05:
-        
-                    limite_moeda = 0.02
+                                        limite_moeda = 0.1
 
-                elif limite_moeda == 0.02:
-        
-                    limite_moeda = 0.01"""
+                                    elif limite_moeda == 0.1:
 
-"""Acessar Valores
-for contador2 in range(0, 10):
+                                        limite_moeda = 0.05
+
+                                    elif limite_moeda == 0.05:
+
+                                        limite_moeda = 0.02
+
+                                    elif limite_moeda == 0.02:
+
+                                        limite_moeda = 0.01
+
+                                    moedas = 0
+
+                    else:
+
+                        return resultado
+
+                else:
+
+                    if limite_cedula == 200:
+
+                        limite_cedula = 100
+
+                    elif limite_cedula == 100:
+
+                        limite_cedula = 50
+
+                    elif limite_cedula == 50:
+
+                        limite_cedula = 20
+
+                    elif limite_cedula == 20:
+
+                        limite_cedula = 10
+
+                    elif limite_cedula == 10:
+
+                        limite_cedula = 5
+
+                    elif limite_cedula == 5:
+
+                        limite_cedula = 1
+
+                    cedulas = 0
+
+#Acessar Valores
+""""for contador2 in range(1, 100):
 
     for contador in atm_machine(contador2):
 
-        print(contador)
+        print(contador)"""
 
-print(atm_machine(0))"""
+print(atm_machine(77.70))
