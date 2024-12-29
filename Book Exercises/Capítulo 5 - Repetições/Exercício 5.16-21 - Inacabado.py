@@ -54,6 +54,8 @@ while contador1 != 0:
 
                 limite_cedula = 1
 
+            cedulas = 0
+
             """elif atual == 1:
 
                 atual = 0.50
@@ -113,8 +115,6 @@ while contador1 != 0:
                 print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
 
                 cedulas = 0"""
-
-            cedulas = 0
 
     print()
 
