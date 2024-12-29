@@ -199,16 +199,16 @@ def atm_machine (valor_pagamento):
                         while True:
 
                             if limite_moeda <= valor_retirada:
-                                print(valor_retirada)
+
                                 valor_retirada -= limite_moeda
 
                                 moedas += 1
-                                print(valor_retirada)
+
                             else:
 
                                 resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
-                                if valor_retirada == 0:
+                                if valor_retirada < 0.01:
 
                                     return resultado
 
@@ -275,4 +275,4 @@ def atm_machine (valor_pagamento):
 
         print(contador)"""
 
-print(atm_machine(77.70))
+print(atm_machine(77.80))
