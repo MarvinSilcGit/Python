@@ -3,65 +3,68 @@ contador1 = 1
 while contador1 != 0:
 
     print()
-#Imprimir quantas cédulas são necessárias para pagar; sempre priorizando a cédulas e moedas de maoir valor;
 
-    valor = float(input("Digite o valor a pagar: "))
+    valorSaque = float(input("Digite o valor que deseja sacar: "))
 
     cedulas = 0
 
-    atual = 100
+    limite_cedula = 100
 
-    apagar = valor
+    valorRetirada = valorSaque
 
-    moeda = 0
+    #moeda = 0
 
     while True:
 
-        if atual <= apagar:
+        if limite_cedula <= valorRetirada:
 
-            apagar -= atual
+            valorRetirada -= limite_cedula
 
             cedulas += 1
 
         else:
 
-            print("%d cédula(s) de R$ %.2f" % (cedulas, atual))
+            print("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-            if apagar == 0:
+            if valorRetirada == 0:
 
                 break
 
-            elif atual == 100:
+            elif limite_cedula == 200:
 
-                atual = 50
+                limite_cedula = 100
 
-            elif atual == 50:
+            elif limite_cedula == 100:
 
-                atual = 20
+                limite_cedula = 50
 
-            elif atual == 20:
+            elif limite_cedula == 50:
 
-                atual = 10
+                limite_cedula = 20
 
-            elif atual == 10:
+            elif limite_cedula == 20:
 
-                atual = 5
+                limite_cedula = 10
 
-            elif atual == 5:
+            elif limite_cedula == 10:
 
-                atual = 1
+                limite_cedula = 5
 
-            elif atual == 1:
+            elif limite_cedula == 5:
+
+                limite_cedula = 1
+
+            """elif atual == 1:
 
                 atual = 0.50
 
-                moeda += 1
+                #moeda += 1
 
                 print("%d moeda(s) de R$ %1.2f centavos" % (moeda, atual))
 
                 cedulas = 0
 
-            """elif atual == 0.50:
+            elif atual == 0.50:
 
                 atual = 0.10
 
