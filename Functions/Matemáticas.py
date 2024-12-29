@@ -197,6 +197,7 @@ def atm_machine (valor):
                         while True:
 
                             if limite_moeda <= valor_pagamento:
+                                print(valor_pagamento)
 
                                 valor_pagamento -= limite_moeda
 
@@ -267,10 +268,10 @@ def atm_machine (valor):
                     cedulas = 0
 
 #Acessar Valores
-""""for contador2 in range(1, 100):
+"""for contador2 in range(1, 100):
 
     for contador in atm_machine(contador2):
 
         print(contador)"""
 
-print(atm_machine(10.6))
+print(atm_machine(1.6))
