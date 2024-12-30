@@ -306,8 +306,6 @@ def calculo_tbm (peso, altura, idade, genero):
 
     else:
 
-        tbm = 0
-
         peso = peso
 
         altura = altura
