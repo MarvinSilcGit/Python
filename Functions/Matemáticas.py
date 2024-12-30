@@ -270,3 +270,27 @@ def raio_circulo (area):
     area_circulo = 3.14 * (area ** 2)
 
     return area_circulo
+
+def fahrenheit_celsius (temperatura):
+
+    fahrenheit = temperatura
+
+    celsius = (fahrenheit - 32) / 1.8
+
+    return "A temperatura em %.1f° fahrenheit equivale à %.1f° celsius" % (fahrenheit, celsius)
+
+
+def celsius_fahrenheit (temperatura):
+
+    celsius = temperatura
+
+    fahrenheit = (celsius * 1.8) + 32
+
+    return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (celsius, fahrenheit)
+
+print(celsius_fahrenheit(49))
+
+
+def calculo_imc (peso, altura):
+
+    return 0
