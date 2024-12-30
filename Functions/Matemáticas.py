@@ -168,6 +168,8 @@ def atm_machine (valor):
 
     else:
 
+        #if valor_pagamento - 0.5
+
         cedulas = 0
 
         limite_cedula = 200
@@ -226,9 +228,7 @@ def atm_machine (valor):
 
                     cedulas = 0
 
-                    """if valor_pagamento > 0 < 1:
-
-                        print(valor_pagamento)
+                    if valor_pagamento > 0 and valor_pagamento < 1:
 
                         if limite_moeda <= valor_pagamento:
 
@@ -250,29 +250,7 @@ def atm_machine (valor):
 
                                 return resultado
 
-                            else:
-
-                                if limite_moeda == 0.5:
-
-                                    limite_moeda = 0.2
-
-                                elif limite_moeda == 0.2:
-
-                                    limite_moeda = 0.1
-
-                                elif limite_moeda == 0.1:
-
-                                    limite_moeda = 0.05
-
-                                elif limite_moeda == 0.05:
-
-                                    limite_moeda = 0.02
-
-                                elif limite_moeda == 0.02:
-
-                                    limite_moeda = 0.01
-
-                                moedas = 0"""
+                            moedas = 0
 
 #Acessar Valores
 """for contador2 in range(1, 100):
@@ -281,4 +259,9 @@ def atm_machine (valor):
 
         print(contador)"""
 
-print(atm_machine(259))
+print(atm_machine(299.5))
+
+
+def fatorial (numero):
+
+    return 0
