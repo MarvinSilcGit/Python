@@ -247,9 +247,9 @@ def atm_machine (valor):
 
     for contador in atm_machine(contador2):
 
-        print(contador)"""
+        print(contador)
 
-print(atm_machine(299.5))
+print(atm_machine(11.5))"""
 
 
 def calculo_fatorial (numero):
