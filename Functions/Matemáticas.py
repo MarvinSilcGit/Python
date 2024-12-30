@@ -263,3 +263,10 @@ def calculo_fatorial (numero):
         resultado_fatorial *= contador - 1
 
     return "Fatorial de %d é %d" % (numero, resultado_fatorial)
+
+
+def raio_circulo (area):
+
+    area_circulo = 3.14 * (area ** 2)
+
+    return area_circulo
