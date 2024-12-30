@@ -1,7 +1,7 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
 
 
-def resto_divisao (valor1, valor2):
+def resto_divisao (valor1: float, valor2: float):
 
     resto = 0
 
@@ -36,7 +36,7 @@ def resto_divisao (valor1, valor2):
         return "O resto da divisão entre %.1f e %.1f é: %.1f" % (valor1, valor2, resto)
 
 
-def resto_inteiro_divisao (valor1, valor2):
+def resto_inteiro_divisao (valor1: float, valor2: float):
 
     resto_inteiro = 0
 
@@ -73,7 +73,7 @@ def resto_inteiro_divisao (valor1, valor2):
         return "O resto inteiro da divisão entre %.1f e %.1f é: %d" % (valor1, valor2, resto_inteiro)
 
 
-def raiz_quadrada (numero):
+def raiz_quadrada (numero: float):
 
     base = 2
 
@@ -90,7 +90,7 @@ def raiz_quadrada (numero):
     return "A raiz aproximada de %d é: %.4f" % (numero, resultado_raiz_quadrada)
 
 
-def numero_primo (numero):
+def numero_primo (numero: int):
 
     confirmacao = 2
 
@@ -119,14 +119,14 @@ def numero_primo (numero):
             return"%d não é um número primo" % numero
 
 
-def numero_par (numero):
+def numero_par (numero: int):
 
     if numero % 2 == 0:
 
         return "O número %d é par" % numero
 
 
-def numero_impar (numero):
+def numero_impar (numero: int):
 
     if numero % 2 !=0:
 
@@ -158,7 +158,7 @@ def valor_palindromo (valor):
             return "%s não é palíndromo" % valor
 
 
-def atm_machine (valor):
+def atm_machine (valor: float):
 
     valor_pagamento = valor
 
@@ -250,7 +250,7 @@ def atm_machine (valor):
 print(atm_machine(11.5))"""
 
 
-def calculo_fatorial (numero):
+def calculo_fatorial (numero: int):
 
     numero = numero
 
@@ -263,14 +263,14 @@ def calculo_fatorial (numero):
     return "Fatorial de %d é %d" % (numero, resultado_fatorial)
 
 
-def raio_circulo (area):
+def raio_circulo (area: float):
 
     area_circulo = 3.14 * (area ** 2)
 
     return area_circulo
 
 
-def fahrenheit_celsius (temperatura):
+def fahrenheit_celsius (temperatura: float):
 
     fahrenheit = temperatura
 
@@ -279,7 +279,7 @@ def fahrenheit_celsius (temperatura):
     return "A temperatura em %.1f° fahrenheit equivale à %.1f° celsius" % (fahrenheit, celsius)
 
 
-def celsius_fahrenheit (temperatura):
+def celsius_fahrenheit (temperatura: float):
 
     celsius = temperatura
 
@@ -288,14 +288,14 @@ def celsius_fahrenheit (temperatura):
     return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (celsius, fahrenheit)
 
 
-def calculo_imc (peso, altura):
+def calculo_imc (peso: float, altura: float):
 
     indice_massa_corporea = peso / altura ** 2
 
     return indice_massa_corporea
 
 
-def calculo_tbm (peso, altura, idade, genero):
+def calculo_tbm (peso: float, altura: float, idade: int, genero: str):
 
     lista_generos = ["Masculino", "masculino", "Feminino", "feminino"]
 
