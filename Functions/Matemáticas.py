@@ -264,5 +264,3 @@ def calculo_fatorial (numero):
         resultado_fatorial *= contador - 1
 
     return "Fatorial de %d é %d" % (numero, resultado_fatorial)
-
-print(calculo_fatorial(12))
