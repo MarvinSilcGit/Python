@@ -4,7 +4,13 @@ while contador != 0:
 
     tamanhoArquivo = float(input("Digite o tamanho do arquivo em Megabytes: "))
 
-    velecidadeLink = float(input("Digite a velocidade da conexão em megabits: "))
+    if tamanhoArquivo < 1:
+
+        print("Valor inválido!")
+
+        continue
+
+    velecidadeLink = float(input("Digite a velocidade de sua conexão em megabits: "))
 
     tempoDownload = (tamanhoArquivo / (velecidadeLink / 8))
 
@@ -20,6 +26,6 @@ while contador != 0:
 
     print()
 
-    contador =int(input("Digite 0 para interromper a execução: "))
+    contador = int(input("Digite 0 para interromper a execução: "))
 
     print()
