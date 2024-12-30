@@ -1,4 +1,5 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
+from sympy import numer
 
 
 def resto_divisao (valor1, valor2):
@@ -254,4 +255,14 @@ print(atm_machine(11.5))"""
 
 def calculo_fatorial (numero):
 
-    return 0
+    numero = numero
+
+    resultado_fatorial = numero
+
+    for contador in range(numero, 1, -1):
+
+        resultado_fatorial *= contador - 1
+
+    return "Fatorial de %d é %d" % (numero, resultado_fatorial)
+
+print(calculo_fatorial(12))
