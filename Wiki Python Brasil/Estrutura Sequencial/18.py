@@ -1,31 +1,19 @@
-contador = 1
+tamanhoArquivo = float(input("Digite o tamanho do arquivo em Megabytes: "))
 
-while contador != 0:
+if tamanhoArquivo < 1:
 
-    tamanhoArquivo = float(input("Digite o tamanho do arquivo em Megabytes: "))
+    print("Valor inválido!")
 
-    if tamanhoArquivo < 1:
+velecidadeLink = float(input("Digite a velocidade de sua conexão em megabits: "))
 
-        print("Valor inválido!")
+tempoDownload = (tamanhoArquivo / (velecidadeLink / 8))
 
-        continue
+if tempoDownload >= 60:
 
-    velecidadeLink = float(input("Digite a velocidade de sua conexão em megabits: "))
+    tempoDownload = tempoDownload / 60
 
-    tempoDownload = (tamanhoArquivo / (velecidadeLink / 8))
+    print("O tempo de Download será de no mínimo %.1f minutos" % tempoDownload)
 
-    if tempoDownload >= 60:
+else:
 
-        tempoDownload = tempoDownload / 60
-
-        print("O tempo de Download será de no mínimo %.1f minutos e %d segundos" % (tempoDownload, tempoDownload))
-
-    else:
-
-        print("O tempo de Download será de no mínimo %.1f segundos" % tempoDownload)
-
-    print()
-
-    contador = int(input("Digite 0 para interromper a execução: "))
-
-    print()
+    print("O tempo de Download será de no mínimo %.1f segundos" % tempoDownload)

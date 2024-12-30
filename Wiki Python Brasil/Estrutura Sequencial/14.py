@@ -1,25 +1,15 @@
-contador = 1
+pesoPeixe = float(input("Digite o peso do peixe: "))
 
-while contador != 0:
+if pesoPeixe > 50:
 
-    pesoPeixe = float(input("Digite o peso do peixe: "))
+    pesoLimite = 50
 
-    if pesoPeixe > 50:
+    pesoAdicional = pesoPeixe - pesoLimite
 
-        pesoLimite = 50
+    multa = pesoAdicional * 4
 
-        pesoAdicional = pesoPeixe - pesoLimite
+    print("A multa será R$ %.2f por exceder o peso limite em %.2f quilos " %(multa, pesoAdicional))
 
-        multa = pesoAdicional * 4
+else:
 
-        print("A multa será R$ %.2f por exceder o peso limite em %.2f quilos " %(multa, pesoAdicional))
-
-    else:
-
-        print("Não haverá pagamento de multa")
-
-    print()
-
-    contador = int(input("Digite 0 para interromper a execução: "))
-
-    print()
+    print("Não haverá pagamento de multa")
