@@ -168,8 +168,6 @@ def atm_machine (valor):
 
     else:
 
-        #if valor_pagamento - 0.5
-
         cedulas = 0
 
         limite_cedula = 200
@@ -271,6 +269,7 @@ def raio_circulo (area):
 
     return area_circulo
 
+
 def fahrenheit_celsius (temperatura):
 
     fahrenheit = temperatura
@@ -291,9 +290,9 @@ def celsius_fahrenheit (temperatura):
 
 def calculo_imc (peso, altura):
 
-    imc = peso / altura ** 2
+    indice_massa_corporea = peso / altura ** 2
 
-    return imc
+    return indice_massa_corporea
 
 
 def calculo_tbm (peso, altura, idade, genero):
@@ -316,12 +315,12 @@ def calculo_tbm (peso, altura, idade, genero):
 
         if genero == "Masculino" or genero == "masculino":
 
-            tbm = 66 + (13.8 * peso) + (5 * altura) - (6.8 * idade)
+            taxa_basal_metabolica = 66 + (13.8 * peso) + (5 * altura) - (6.8 * idade)
 
-            return tbm
+            return taxa_basal_metabolica
 
         elif genero == "Feminino" or genero == " feminino":
 
-            tbm = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
+            taxa_basal_metabolica = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
 
-            return tbm
+            return taxa_basal_metabolica
