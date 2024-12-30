@@ -288,9 +288,42 @@ def celsius_fahrenheit (temperatura):
 
     return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (celsius, fahrenheit)
 
-print(celsius_fahrenheit(49))
-
 
 def calculo_imc (peso, altura):
 
-    return 0
+    imc = peso / altura ** 2
+
+    return imc
+
+
+def calculo_tbm (peso, altura, idade, genero):
+
+    lista_generos = ["Masculino", "masculino", "Feminino", "feminino"]
+
+    if genero not in lista_generos:
+
+        return "Genêro inválido"
+
+    else:
+
+        tbm = 0
+
+        peso = peso
+
+        altura = altura
+
+        idade = idade
+
+        genero = genero
+
+        if genero == "Masculino" or genero == "masculino":
+
+            tbm = 66 + (13.8 * peso) + (5 * altura) - (6.8 * idade)
+
+            return tbm
+
+        elif genero == "Feminino" or genero == " feminino":
+
+            tbm = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
+
+            return tbm
