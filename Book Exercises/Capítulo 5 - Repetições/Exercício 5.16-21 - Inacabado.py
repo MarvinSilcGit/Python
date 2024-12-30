@@ -4,57 +4,85 @@ while contador1 != 0:
 
     print()
 
-    valorSaque = float(input("Digite o valor que deseja sacar: "))
+    valor_pagamento = float(input("Digite o valor que deseja sacar: "))
 
-    cedulas = 0
+    if valor_pagamento < 1:
 
-    limite_cedula = 100
+        print("Valor insuficiente para saque")
 
-    valorRetirada = valorSaque
+        continue
 
-    #moeda = 0
+    else:
 
-    while True:
+        cedulas = 0
 
-        if limite_cedula <= valorRetirada:
+        limite_cedula = 200
 
-            valorRetirada -= limite_cedula
+        limite_moeda = 0.5
 
-            cedulas += 1
+        moedas = 0
 
-        else:
+        while True:
 
-            print("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
+            if limite_cedula <= valor_pagamento:
 
-            if valorRetirada == 0:
+                valor_pagamento -= limite_cedula
 
-                break
+                cedulas += 1
 
-            elif limite_cedula == 200:
+            else:
 
-                limite_cedula = 100
+                print("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-            elif limite_cedula == 100:
+                if valor_pagamento == 0:
 
-                limite_cedula = 50
+                    break
 
-            elif limite_cedula == 50:
+                else:
 
-                limite_cedula = 20
+                    if limite_cedula == 200:
 
-            elif limite_cedula == 20:
+                        limite_cedula = 100
 
-                limite_cedula = 10
+                    elif limite_cedula == 100:
 
-            elif limite_cedula == 10:
+                        limite_cedula = 50
 
-                limite_cedula = 5
+                    elif limite_cedula == 50:
 
-            elif limite_cedula == 5:
+                        limite_cedula = 20
 
-                limite_cedula = 1
+                    elif limite_cedula == 20:
 
-            cedulas = 0
+                        limite_cedula = 10
+
+                    elif limite_cedula == 10:
+
+                        limite_cedula = 5
+
+                    elif limite_cedula == 5:
+
+                        limite_cedula = 2
+
+                    elif limite_cedula == 2:
+
+                        limite_cedula = 1
+
+                    cedulas = 0
+
+                    if valor_pagamento > 0 and valor_pagamento < 1:
+
+                        if limite_moeda <= valor_pagamento:
+
+                            valor_pagamento -= limite_moeda
+
+                            moedas += 1
+
+                            if valor_pagamento == 0:
+
+                                print("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
+
+                                break
 
     print()
 

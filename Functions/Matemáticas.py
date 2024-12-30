@@ -242,16 +242,6 @@ def atm_machine (valor):
 
                                 return resultado
 
-                        else:
-
-                            resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
-
-                            if valor_pagamento == 0:
-
-                                return resultado
-
-                            moedas = 0
-
 #Acessar Valores
 """for contador2 in range(1, 100):
 
