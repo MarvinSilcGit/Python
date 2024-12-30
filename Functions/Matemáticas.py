@@ -1,5 +1,4 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
-from sympy import numer
 
 
 def resto_divisao (valor1, valor2):
@@ -229,7 +228,7 @@ def atm_machine (valor):
 
                     cedulas = 0
 
-                    if valor_pagamento > 0 and valor_pagamento < 1:
+                    if 0 < valor_pagamento < 1:
 
                         if limite_moeda <= valor_pagamento:
 
