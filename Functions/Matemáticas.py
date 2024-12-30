@@ -252,6 +252,6 @@ def atm_machine (valor):
 print(atm_machine(299.5))
 
 
-def fatorial (numero):
+def calculo_fatorial (numero):
 
     return 0

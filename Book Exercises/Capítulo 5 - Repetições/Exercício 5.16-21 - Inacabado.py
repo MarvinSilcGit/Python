@@ -70,7 +70,7 @@ while contador1 != 0:
 
                     cedulas = 0
 
-                    if valor_pagamento > 0 and valor_pagamento < 1:
+                    if 0 < valor_pagamento < 1:
 
                         if limite_moeda <= valor_pagamento:
 
