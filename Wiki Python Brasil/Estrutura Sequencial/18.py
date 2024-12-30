@@ -6,8 +6,17 @@ while contador != 0:
 
     velecidadeLink = float(input("Digite a velocidade da conexão em megabits: "))
 
+    tempoDownload = (tamanhoArquivo / (velecidadeLink / 8))
 
+    if tempoDownload >= 60:
 
+        tempoDownload = tempoDownload / 60
+
+        print("O tempo de Download será de no mínimo %.1f minutos e %d segundos" % (tempoDownload, tempoDownload))
+
+    else:
+
+        print("O tempo de Download será de no mínimo %.1f segundos" % tempoDownload)
 
     print()
 
