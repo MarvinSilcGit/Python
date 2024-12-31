@@ -46,7 +46,7 @@ else:
 
     else:
 
-        if metragem - metragemLata < 0:
+        if metragem - metragemLata < 0 or metragem - metragemLata > metragemGalao * 4:
 
             quantidadeLatas = metragem // metragemLata + 1
 
@@ -56,3 +56,20 @@ else:
 
         else:
 
+            quantidadeLatas = metragem // metragemLata
+
+            precoFinal += quantidadeLatas * precoLata
+
+            metragem = metragem % metragemLata
+
+            if metragem % metragemGalao == 0:
+
+                quantidadeGaloes = metragem / metragemGalao
+
+                precoFinal += quantidadeGaloes * precoGalao
+
+                print("Serão necessária ao menos %d latas de tinta e ao menos %d para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeLatas, quantidadeGaloes, metragem, precoFinal))
+
+            else:
+
+                print()
