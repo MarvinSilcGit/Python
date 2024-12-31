@@ -1,9 +1,5 @@
 metragem = float(input("Digite a metragem: "))
 
-print("Digite 0 para somente lata de 18 litros.\nDigite 1 para somentes galões de 3.6 litros.\nDigite 2 para uma combinação de ambos.")
-
-resposta = input("Qual a opção? ")
-
 coberturaTinta = 6
 
 metragemLata = 18 * coberturaTinta
@@ -20,14 +16,32 @@ quantidadeGaloes = 0
 
 precoFinal = 0
 
-if resposta == "0":
+if metragem <= metragemGalao * 4:
+
+    if metragem % metragemGalao == 0:
+
+        quantidadeGaloes = metragem / metragemGalao
+
+        precoFinal = quantidadeGaloes * precoGalao
+        print(0)
+        print("Serão necessários exatos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
+
+    else:
+
+        quantidadeGaloes = (metragem // metragemGalao) + 1
+
+        precoFinal = quantidadeGaloes * precoGalao
+        print(1)
+        print("Serão necessários aos menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
+
+else:
 
     if metragem / metragemLata <= 1:
 
         quantidadeLatas = 1
 
         precoFinal = quantidadeLatas * precoLata
-
+        print(2)
         print("Será necessária, no máximo, uma lata de tinta para pintar %.1f metros². O custo será R$ %.2f" % (metragem, precoFinal))
 
     else:
@@ -38,64 +52,39 @@ if resposta == "0":
 
             precoFinal = quantidadeLatas * precoLata
 
+            print(3)
+
             print("Serão necessária exatas %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeLatas, metragem, precoFinal))
 
         else:
 
-            quantidadeLatas = (metragem // metragemLata) + 1
+            if (metragem - metragemLata) <= metragemGalao * 4:
 
-            precoFinal = quantidadeLatas * precoLata
+                quantidadeLatas = metragem // metragemLata
 
-            print("Será necessária aos menos %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeLatas, metragem, precoFinal))
+                if metragem % metragemGalao == 0:
 
-elif resposta == "1":
+                    quantidadeGaloes = (metragem / metragemGalao)
 
-    if metragem / metragemGalao <= 1:
+                    precoFinal += quantidadeGaloes * precoGalao
+                    print(4)
+                    print("Serão necessários exatos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
 
-        quantidadeGaloes = 1
+                else:
 
-        precoFinal = quantidadeGaloes * precoGalao
+                    quantidadeGaloes = (metragem // metragemGalao) + 1
 
-        print("Será necessária, no máximo, um galão de tinta para pintar %.1f metros². O custo será R$ %.2f" % (metragem, precoFinal))
 
-    else:
+                    precoFinal = quantidadeGaloes * precoGalao + quantidadeLatas * precoLata
+                    print(5)
+                    print("Serão necessários aos %d latões de tinta e ao menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeLatas, quantidadeGaloes, metragem, precoFinal))
 
-        if metragem % metragemGalao == 0:
+            else:
 
-            quantidadeGaloes = metragem / metragemGalao
+                quantidadeLatas = (metragem // metragemLata) + 1
 
-            precoFinal = quantidadeGaloes * precoGalao
+                precoFinal = quantidadeLatas * precoLata
 
-            print("Serão necessários exatos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
+                print(6)
 
-        else:
-
-            quantidadeGaloes = (metragem // metragemGalao) + 1
-
-            precoFinal = quantidadeGaloes * precoGalao
-
-            print("Serão necessários aos menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
-
-elif resposta == "2":
-
-    if metragem <= metragemGalao * 4:
-
-        if metragem % metragemGalao == 0:
-
-            quantidadeGaloes = metragem / metragemGalao
-
-            precoFinal = quantidadeGaloes * precoGalao
-
-            print("Serão necessários exatos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
-
-        else:
-
-            quantidadeGaloes = (metragem // metragemGalao) + 1
-
-            precoFinal = quantidadeGaloes * precoGalao
-
-            print("Serão necessários aos menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragem, precoFinal))
-
-else:
-
-    print("Opção Inválida")
+                print("Serão necessária aos menos %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeLatas, metragem, precoFinal))
