@@ -26,7 +26,7 @@ else:
 
         precoFinal = quantidadeLatas * precoLata
 
-        print("Será necessária exatas %d latas de tinta para pintar %.2f metros². O custo será R$ %.2f" % (quantidadeLatas, metragem, precoFinal))
+        print("Serão necessária exatas %d latas de tinta para pintar %.2f metros². O custo será R$ %.2f" % (quantidadeLatas, metragem, precoFinal))
 
     else:
 
