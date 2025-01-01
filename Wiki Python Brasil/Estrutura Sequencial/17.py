@@ -1,4 +1,4 @@
-for contador in range(180, 310 +1, 10):
+for contador in range(200, 201):
 
     metragemArea = contador
 
@@ -32,9 +32,11 @@ for contador in range(180, 310 +1, 10):
 
         else:
 
-            quantidadeGaloes = metragemArea / metragemGalao + 1
+            quantidadeGaloes = metragemArea // metragemGalao + 1
 
             precoFinal = quantidadeGaloes * precoGalao
+
+            print(precoFinal)
 
             print("Serão necessários aos menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidadeGaloes, metragemArea, precoFinal))
 
@@ -52,7 +54,7 @@ for contador in range(180, 310 +1, 10):
 
             if metragemArea - metragemLata < 0:
 
-                quantidadeLatas = metragemArea / metragemLata + 1
+                quantidadeLatas = metragemArea // metragemLata + 1
 
                 precoFinal = quantidadeLatas * precoLata
 
@@ -76,7 +78,7 @@ for contador in range(180, 310 +1, 10):
 
                 else:
 
-                    quantidadeGaloes = metragemRestante / metragemGalao + 1
+                    quantidadeGaloes = metragemRestante // metragemGalao + 1
 
                     precoFinal += quantidadeGaloes * precoGalao
 
