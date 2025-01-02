@@ -119,18 +119,15 @@ def numero_primo (numero: int):
             return"%d não é um número primo" % numero
 
 
-def numero_par (numero: int):
+def numero_par_impar (numero: int):
 
     if numero % 2 == 0:
 
         return "O número %d é par" % numero
 
+    else:
 
-def numero_impar (numero: int):
-
-    if numero % 2 !=0:
-
-        return "O número %d é ímpar" % numero
+        return "O número %d é impar" % numero
 
 
 def valor_palindromo (valor):
