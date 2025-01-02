@@ -328,20 +328,32 @@ def calculo_tbm (peso: float, altura: float, idade: int, genero: str):
 
 def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
 
-    lado1 = lado1
+    if lado1 == 0 or lado2 == 0 or lado3 == 0:
 
-    lado2 = lado2
-
-    lado3 = lado3
-
-    if lado1 + lado2 <= lado3:
-
-        print("A soma desses lados não forma um triângulo")
+        return "Um triângulo não poder lado 0"
 
     else:
 
-        print()
+        lado1 = lado1
 
-    return 0
+        lado2 = lado2
 
-print(triangulo_validade_tipo(1,2, 3))
+        lado3 = lado3
+
+        if lado1 + lado2 <= lado3:
+
+            return "A soma desses lados não forma um triângulo"
+
+        else:
+
+            if lado1 == lado2 == lado3:
+
+                return "Esse é um triângulo equilátero"
+
+            elif lado1 != lado2 != lado3 != lado1:
+
+                return "Esse é um triângulo escaleno"
+
+            elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
+
+                return "Esse é um triângulo isóceles"
