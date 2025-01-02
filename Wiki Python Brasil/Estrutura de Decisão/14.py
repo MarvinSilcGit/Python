@@ -1,12 +1,12 @@
 notaParcial1 = float(input("Digite a primeira nota parcial: "))
 
-if notaParcial1 > 10 and notaParcial1 < 0:
+if notaParcial1 > 10 or notaParcial1 < 0:
 
     print("Nota inválida")
 
 notaParcial2 = float(input("Digite a segunda nota parcial: "))
 
-if notaParcial2 > 10 and notaParcial2 < 0:
+if notaParcial2 > 10 or notaParcial2 < 0:
 
     print("Nota inválida")
 
@@ -14,7 +14,7 @@ mediaFinal = (notaParcial1 + notaParcial2) / 2
 
 if mediaFinal >= 6:
 
-    print("Aprovado e média %.2f" % mediaFinal)
+    print("Aprovado e a média foi %.2f" % mediaFinal)
 
     if mediaFinal >= 9 and mediaFinal <= 10:
 
@@ -30,7 +30,7 @@ if mediaFinal >= 6:
 
 else:
 
-    print("Reprovado e média %.2f" % mediaFinal)
+    print("Reprovado e a média foi %.2f" % mediaFinal)
 
     if mediaFinal >= 4 and mediaFinal < 6:
 
