@@ -12,6 +12,6 @@ elif numero2 > numero1 and numero2 > numero3:
 
     print("O segundo número é maior")
 
-elif numero3 > numero2  and numero3 > numero1:
+elif numero3 > numero2 and numero3 > numero1:
 
     print("O terceiro número é maior")
