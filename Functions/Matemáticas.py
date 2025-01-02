@@ -324,3 +324,24 @@ def calculo_tbm (peso: float, altura: float, idade: int, genero: str):
             taxa_basal_metabolica = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
 
             return taxa_basal_metabolica
+
+
+def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
+
+    lado1 = lado1
+
+    lado2 = lado2
+
+    lado3 = lado3
+
+    if lado1 + lado2 <= lado3:
+
+        print("A soma desses lados não forma um triângulo")
+
+    else:
+
+        print()
+
+    return 0
+
+print(triangulo_validade_tipo(1,2, 3))
