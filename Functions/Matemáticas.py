@@ -373,3 +373,28 @@ def ano_bissexto (ano: int):
     else:
 
         return "O ano %d não é bissexto" % ano_366
+
+
+def numero_decimal_inteiro (numero):
+
+    import math
+
+    numero_decimal = numero
+
+    numero_inteiro = math.trunc(numero_decimal)
+
+    if numero_decimal > numero_inteiro:
+
+        return "O número %.1f é decimal" % numero_decimal
+
+    else:
+
+        numero_decimal = str(numero_decimal)
+
+        if "." in numero_decimal:
+
+            return "O número %s é decimal" % numero_decimal
+
+        else:
+
+            return "O número %d não é decimal" % numero_inteiro
