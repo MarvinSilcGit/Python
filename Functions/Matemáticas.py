@@ -357,3 +357,22 @@ def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
             elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
 
                 return "Esse é um triângulo isóceles"
+
+
+def ano_bissexto (ano: int):
+
+    ano_366 = ano
+
+    if ano_366 % 4 == 0:
+
+        if ano_366 % 100 != 0:
+
+            return "O ano %d é bissexto" % ano_366
+
+        elif ano_366 % 100 == 0:
+
+            return "O ano %d é bissexto especial" % ano_366
+
+    else:
+
+        return "O ano %d não é bissexto" % ano_366
