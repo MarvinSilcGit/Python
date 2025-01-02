@@ -4,9 +4,9 @@ while contador1 != 0:
 
     print()
 
-    valor_pagamento = float(input("Digite o valor que deseja sacar: "))
+    valorPagamento = float(input("Digite o valor que deseja sacar: "))
 
-    if valor_pagamento < 1:
+    if valorPagamento < 1:
 
         print("Valor insuficiente para saque")
 
@@ -24,9 +24,9 @@ while contador1 != 0:
 
         while True:
 
-            if limite_cedula <= valor_pagamento:
+            if limite_cedula <= valorPagamento:
 
-                valor_pagamento -= limite_cedula
+                valorPagamento -= limite_cedula
 
                 cedulas += 1
 
@@ -34,7 +34,7 @@ while contador1 != 0:
 
                 print("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-                if valor_pagamento == 0:
+                if valorPagamento == 0:
 
                     break
 
@@ -70,15 +70,15 @@ while contador1 != 0:
 
                     cedulas = 0
 
-                    if 0 < valor_pagamento < 1:
+                    if 0 < valorPagamento < 1:
 
-                        if limite_moeda <= valor_pagamento:
+                        if limite_moeda <= valorPagamento:
 
-                            valor_pagamento -= limite_moeda
+                            valorPagamento -= limite_moeda
 
                             moedas += 1
 
-                            if valor_pagamento == 0:
+                            if valorPagamento == 0:
 
                                 print("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
