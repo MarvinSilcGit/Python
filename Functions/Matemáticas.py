@@ -375,7 +375,7 @@ def ano_bissexto (ano: int):
         return "O ano %d não é bissexto" % ano_366
 
 
-def numero_decimal_inteiro (numero):
+def numero_decimal_inteiro (numero: float):
 
     import math
 
@@ -400,11 +400,39 @@ def numero_decimal_inteiro (numero):
             return "O número %d não é decimal" % numero_inteiro
 
 
-def gerador_tabuada (numero_tabuada):
+def gerador_tabuada_simples (numero_tabuada: int):
 
     inicio_tabuada = numero_tabuada
 
     for contador in range(1, 10 + 1):
+
+        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
+
+    return 0
+
+
+def gerador_tabuada_inicio_fim (numero_inicial_tabuada: int, numero_final_tabuada: int):
+
+    inicio_tabuada = numero_inicial_tabuada
+
+    fim_tabudada = numero_final_tabuada
+
+    for contador in range(1, fim_tabudada + 1):
+
+        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
+
+    return 0
+
+
+def gerador_tabuada_inicio_fim_razao (numero_inicial_tabuada: int, numero_final_tabuada: int, razao: int):
+
+    inicio_tabuada = numero_inicial_tabuada
+
+    fim_tabudada = numero_final_tabuada
+
+    razao = razao
+
+    for contador in range(1, fim_tabudada + 1, razao):
 
         print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
 

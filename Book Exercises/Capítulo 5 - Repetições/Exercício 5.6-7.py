@@ -6,9 +6,9 @@ while contador != 0:
 
     fimTabuada = int(input("Digite o valor final da tabuada: "))
 
-    for contador in range(inicioTabuada, fimTabuada + 1):
+    for contador in range(1, fimTabuada + 1):
 
-        print(contador * 2)
+        print("%d x %d = %d " % (inicioTabuada, contador, inicioTabuada * contador))
 
     print()
 
