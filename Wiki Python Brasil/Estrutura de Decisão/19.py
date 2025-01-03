@@ -1,10 +1,12 @@
-valor = int(input("Digite um número: "))
+valor = float(input("Digite um número: "))
 
 quantidadeCentena = 0
 
 quantidadeDezena = 0
 
 quantidadeUnidade = 0
+
+quantidadeDecimo = 0
 
 if valor // 100 > 0:
 
@@ -24,4 +26,4 @@ if valor // 100 > 0:
 
             valor -= quantidadeUnidade * 1
 
-print("%d = %d centenas, %d dezenas e %d unidades" % (0 + (quantidadeUnidade * 1) + 0 + (quantidadeDezena * 10) + 0 + (quantidadeCentena * 100),quantidadeCentena, quantidadeDezena, quantidadeUnidade))
+print("%d = %d centenas, %d dezenas e %d unidades" % (0 + (quantidadeUnidade * 1) + 0 + (quantidadeDezena * 10) + 0 + (quantidadeCentena * 100), quantidadeCentena, quantidadeDezena, quantidadeUnidade))
