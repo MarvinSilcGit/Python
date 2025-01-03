@@ -1,4 +1,4 @@
-popu = 0
+populacao = 0
 
 soma = 0
 
@@ -20,13 +20,13 @@ an = 1
 
 while True:
 
-    popu += 30+adc
+    populacao += 30 + adc
 
-    soma += mul*popu
+    soma += mul * populacao
 
     print("*******************************")
 
-    print("População parcial da população foi de: %d" % popu)
+    print("População parcial da população foi de: %d" % populacao)
 
     print("O resultado parcial %d:" % soma)
 
@@ -34,35 +34,35 @@ while True:
 
     adc += anos
 
-    if cont == 12*cont2:
+    if cont == 12 * cont2:
 
         ano += 1
 
         cont2 += 1
 
-        mul = mul+((mul/100)*5)
+        mul = mul + ((mul / 100) * 5)
 
         print(mul)
 
         print("*******************************")
 
-        print("O total foi %d com uma população de %d" % (soma, popu))
+        print("O total foi %d com uma população de %d" % (soma, populacao))
 
         if soma > 81000:
 
-            soma = soma-((soma/100)*20)
+            soma = soma-((soma / 100) * 20)
 
-            soma = soma+((soma/100)*9)
+            soma = soma +((soma / 100) * 9)
 
         else:
 
-            soma = soma-((soma/100)*10)
+            soma = soma - ((soma / 100) * 10)
 
         if soma > 4300000:
 
-            soma = soma-((soma/100)*30)
+            soma = soma-((soma / 100) * 30)
 
-            soma = soma+((soma/100)*9)
+            soma = soma+((soma / 100) * 9)
 
         print()
 
@@ -70,7 +70,7 @@ while True:
 
         final += soma
 
-        if ano == 2*an:
+        if ano == 2 * an:
 
             anos += 100
 

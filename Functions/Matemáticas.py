@@ -437,3 +437,28 @@ def gerador_tabuada_inicio_fim_razao (numero_inicial_tabuada: int, numero_final_
         print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
 
     return 0
+
+
+def numero_fizz_buzz (numero_limite):
+
+    numero = numero_limite
+
+    if numero <= 0:
+
+        return "Número menores que 1 não são válidos"
+
+    if numero % 3 == 0 and numero % 5 == 0 and numero != 0:
+
+        return "O número %d é FizzBuzz" % numero
+
+    elif numero % 3 == 0:
+
+        return "O número %d é Fizz" % numero
+
+    elif numero % 5 == 0:
+
+        return "O número %d é Fizz" % numero
+
+    else:
+
+        return "O número %d não é nem Fizz nem Buzz" % numero
