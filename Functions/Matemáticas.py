@@ -398,3 +398,14 @@ def numero_decimal_inteiro (numero):
         else:
 
             return "O número %d não é decimal" % numero_inteiro
+
+
+def gerador_tabuada (numero_tabuada):
+
+    inicio_tabuada = numero_tabuada
+
+    for contador in range(1, 10 + 1):
+
+        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
+
+    return 0
