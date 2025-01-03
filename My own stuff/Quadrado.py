@@ -1,14 +1,12 @@
-cont = 1
-
-while cont != 0:
+while True:
 
     print()
 
-    a = input("Digite a lado de um quadrado: ")
+    ladoQuadrado = input("Digite a lado de um quadrado: ")
 
-    if a.isdigit():
+    if ladoQuadrado.isdigit():
 
-        a = int(a)
+        ladoQuadrado = int(ladoQuadrado)
 
         z = 0
 
@@ -16,9 +14,9 @@ while cont != 0:
 
         w = 0
 
-        while y != a:
+        while y != ladoQuadrado:
 
-            while z != a:
+            while z != ladoQuadrado:
 
                 z += 1
 
