@@ -1,4 +1,4 @@
-valor = float(input("Digite um número: "))
+valor = int(input("Digite um número: "))
 
 quantidadeCentena = 0
 
