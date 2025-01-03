@@ -1,37 +1,27 @@
 valor = int(input("Digite um número: "))
 
-cedulas = 0
+quantidadeCentena = 0
 
-centena = 100
+quantidadeDezena = 0
 
-while True:
+quantidadeUnidade = 0
 
-    if centena <= valor:
+if valor // 100 > 0:
 
-        valor -= centena
+    quantidadeCentena = valor // 100
 
-        cedulas += 1
+    valor -= quantidadeCentena * 100
 
-    else:
+    if valor // 10 > 0:
 
-        print("%d cédula(s) de R$ %.2f" % (cedulas, centena))
+        quantidadeDezena = valor // 10
 
-        if valor == 0:
+        valor -= quantidadeDezena * 10
 
-            break
+        if valor // 1 > 0:
 
-        else:
+            quantidadeUnidade = valor // 1
 
-            if centena == 100:
+            valor -= quantidadeUnidade * 1
 
-                centena = 10
-
-            elif centena == 10:
-
-                centena = 1
-
-            elif centena == 5:
-
-                centena = 1
-
-            cedulas = 0
+print("%d = %d centenas, %d dezenas e %d unidades" % (0 + (quantidadeUnidade * 1) + 0 + (quantidadeDezena * 10) + 0 + (quantidadeCentena * 100),quantidadeCentena, quantidadeDezena, quantidadeUnidade))
