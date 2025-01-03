@@ -1,6 +1,6 @@
-quantidadeMorango = int(input("Digite a quantidade em kilos de morangos: "))
+quantidadeMorango = float(input("Digite a quantidade em kilos de morangos: "))
 
-quantidadeMaca = int(input("Digite a quantidade em kilos de maçãs: "))
+quantidadeMaca = float(input("Digite a quantidade em kilos de maçãs: "))
 
 precoFinal = 0
 
