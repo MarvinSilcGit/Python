@@ -2,6 +2,8 @@ contador = 1
 
 confirmacao = 2
 
+divisoes = 0
+
 while contador != 0:
 
     numero = int(input("Digite o número inicial: "))
@@ -32,9 +34,11 @@ while contador != 0:
 
                         confirmacao += 1
 
+                    divisoes +=1
+
                 if confirmacao == numero:
 
-                    print("%d é um número primo" % numero)
+                    print("%d é um número primo e foram feitas %d diviões" % (numero, divisoes))
 
                 else:
 
@@ -45,6 +49,8 @@ while contador != 0:
                 contador3 = 2
 
                 numero +=1
+
+                divisoes = 0
 
     print()
 
