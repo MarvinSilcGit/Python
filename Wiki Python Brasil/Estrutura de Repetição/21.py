@@ -12,7 +12,7 @@ if numero == 2 or numero == 3:
 
 else:
 
-    for contador in range(2, numero + 1):
+    for contador in range(confirmacao, numero + 1):
 
         if numero % contador != 0:
 

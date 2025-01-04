@@ -104,9 +104,9 @@ def numero_primo (numero: int):
 
     else:
 
-        for contador2 in range(2, numero + 1):
+        for contador in range(confirmacao, numero + 1):
 
-            if numero % contador2 != 0:
+            if numero % contador != 0:
 
                 confirmacao += 1
 
@@ -116,7 +116,7 @@ def numero_primo (numero: int):
 
         else:
 
-            return"%d não é um número primo" % numero
+            return "%d não é um número primo" % numero
 
 
 def numero_par_impar (numero: int):
