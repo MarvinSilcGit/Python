@@ -1,5 +1,7 @@
-fibo0 = 0
+fibo0, fibo1 = 0, 1
 
-fibo1 = 1
+for contador in range(10):
 
-fibFinal = 0
+    print(fibo0)
+
+    fibo0, fibo1 = fibo1, fibo0 + fibo1
