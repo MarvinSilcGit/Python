@@ -452,7 +452,7 @@ def gerador_tabuada_inicio_fim_razao (numero_inicial_tabuada: int, numero_final_
     return 0
 
 
-def numero_fizz_buzz (numero_limite):
+def numero_fizz_buzz (numero_limite: int):
 
     numero = numero_limite
 
