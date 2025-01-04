@@ -24,4 +24,16 @@ else:
 
     else:
 
-       print("%d não é um número primo" % numero)
+       print("O número %d não é primo, pois ele é divisível por: " % numero, end="")
+
+       for contador in range(1, numero + 1):
+
+           if numero % contador == 0:
+
+               if numero - contador == 0:
+
+                   print(contador, end=" ")
+
+               else:
+
+                    print(contador, end=", ")
