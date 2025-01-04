@@ -131,8 +131,6 @@ def numero_primo (numero: int):
                         print(contador, end=", ")
             return ""
 
-print(numero_primo(99))
-
 
 def numero_par_impar (numero: int):
 
