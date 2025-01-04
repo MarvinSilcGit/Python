@@ -1,10 +1,10 @@
+contador = 1
+
 confirmacao = 2
 
-numero = int(input("Digite o número inicial: "))
+while contador != 0:
 
-numero2 = int(input("Digite o número final: "))
-
-for contador in range(numero, numero2 + 1):
+    numero = int(input("Digite o número inicial: "))
 
     if numero == 0 or numero == 1:
 
@@ -14,22 +14,40 @@ for contador in range(numero, numero2 + 1):
 
     else:
 
-        for contador2 in range(confirmacao, numero + 1):
+        numero2 = int(input("Digite o número final: "))
 
-            if numero % contador2 != 0:
+        if numero2 <= numero:
 
-                confirmacao += 1
+            print("Número final não pode ser menor ou igual ao número inicial")
 
-        if confirmacao == numero:
-
-            print("%d é um número primo" % numero)
+            continue
 
         else:
 
-            print("%d não é um número primo" % numero)
+            for contador2 in range(numero, numero2 + 1):
 
-        confirmacao = 2
+                for contador3 in range(confirmacao, numero + 1):
 
-        contador2 = 2
+                    if numero % contador3 != 0:
 
-        numero +=1
+                        confirmacao += 1
+
+                if confirmacao == numero:
+
+                    print("%d é um número primo" % numero)
+
+                else:
+
+                    print("%d não é um número primo" % numero)
+
+                confirmacao = 2
+
+                contador3 = 2
+
+                numero +=1
+
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))
+
+    print()
