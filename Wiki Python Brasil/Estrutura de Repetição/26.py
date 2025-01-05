@@ -14,9 +14,7 @@ while contador != 0:
 
         print("Qual o voto do eleitor %d ?" % contador2)
 
-        print("Candidato 1 - 23\nCandidato 2 - 15\nCandidato 3 - 18")
-
-        voto = int(input(""))
+        voto = int(input("Candidato 1 - 23\nCandidato 2 - 15\nCandidato 3 - 18\n"))
 
         if voto == 23:
 
