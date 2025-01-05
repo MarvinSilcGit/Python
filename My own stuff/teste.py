@@ -1,16 +1,24 @@
 import csv
 
-data = [
-    ['Sexo', 'População'],
-    ['Homens', 93406990],
-    ['Mulheres', 97348809],
-    ['Total', 93406990 + 97348809]
-]
+lista = ["Márcio", "Luis", "João"]
 
-nome_arquivo = 'teste.csv'
+idade = [15, 18, 12]
 
-with open(nome_arquivo, mode="w", newline='') as file:
+contador2 = 0
 
-    writer = csv.writer(file)
+for contador in lista:
 
-    writer.writerows(data)
+    data = [
+        ['Nome', 'Idade'],
+        [contador, idade[contador2]]
+    ]
+
+    contador2 += 1
+
+    nome_arquivo = 'teste2.csv'
+
+    with open(nome_arquivo, mode="w", newline='') as file:
+
+        writer = csv.writer(file)
+
+        writer.writerows(data)
