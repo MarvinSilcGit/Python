@@ -28,20 +28,22 @@ while contador != 0:
 
             contador3 = 1
 
-            print("Total: %.2f" % precoFinal)
+            break
 
-            valorPagamento = float(input("Digite o valor de pagamento: "))
+    print("Total: %.2f" % precoFinal)
 
-            troco = valorPagamento - precoFinal
+    valorPagamento = float(input("Digite o valor de pagamento: "))
 
-            if valorPagamento < precoFinal:
+    troco = valorPagamento - precoFinal
 
-                print("Valor insuficiente para o pagamento")
+    if valorPagamento < precoFinal:
 
-                continue
+        print("Valor insuficiente para o pagamento")
 
-            else:
+        continue
 
-                print("Troco: %.2f" % troco)
+    else:
 
-                break
+        print("Troco: %.2f" % troco)
+
+        contador2 = 0
