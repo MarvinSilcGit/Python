@@ -36,19 +36,29 @@ while contador != 0:
 
     contador += 1
 
-    if altura > maiorAltura:
+    if altura < 0.5 or peso < 30 or codigo < 1:
 
-        maiorAltura = altura
+        print("Valores incorretos")
 
-        menorAltura = altura
+        continue
 
-        codigoPessoaMaiorAltura = codigo
+    else:
 
-    if altura < menorAltura:
+        if menorAltura == 0:
 
-        menorAltura = altura
+            menorAltura = altura
 
-        codigoPessoaMenorAltura = codigo
+        if maiorAltura < altura:
+
+            maiorAltura = altura
+
+            codigoPessoaMaiorAltura = codigo
+
+        if menorAltura > altura:
+
+            menorAltura = altura
+
+            codigoPessoaMenorAltura = codigo
 
     print()
 
@@ -56,6 +66,6 @@ while contador != 0:
 
     print()
 
-print("O cliente com o código %d teve a maior altura %.2f" % (codigoPessoaMaiorAltura, maiorAltura))
+print("O cliente com o código %d teve a maior altura %.2f Metros" % (codigoPessoaMaiorAltura, maiorAltura))
 
-print("O cliente com o código %d teve a menor altura %.2f" % (codigoPessoaMenorAltura, menorAltura))
+print("O cliente com o código %d teve a menor altura %.2f Metros" % (codigoPessoaMenorAltura, menorAltura))
