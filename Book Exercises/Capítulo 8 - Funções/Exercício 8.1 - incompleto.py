@@ -31,8 +31,6 @@ while True:
 
         while True:
 
-            print()
-
             w = input("Digite o segundo valor: ")
 
             if w.isdigit() == False:
@@ -48,4 +46,3 @@ while True:
             print(maiorValor(x,w))
 
             break
-
