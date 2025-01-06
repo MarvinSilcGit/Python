@@ -2,7 +2,7 @@ contador = 1
 
 contador2 = 0
 
-mediaNotas = 0
+media_notas = 0
 
 while contador != 0:
 
@@ -14,10 +14,10 @@ while contador != 0:
 
     else:
 
-        mediaNotas += notas
+        media_notas += notas
 
         contador2 += 1
 
-mediaNotas = mediaNotas / contador2
+media_notas = media_notas / contador2
 
-print("A média das notas foi %.2f" % mediaNotas)
+print("A média das notas foi %.2f" % media_notas)

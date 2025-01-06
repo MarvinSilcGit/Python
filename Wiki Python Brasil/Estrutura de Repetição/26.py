@@ -8,9 +8,9 @@ candidato3 = 0
 
 while contador != 0:
 
-    numeroEleitores = int(input("Número total de eleitores: "))
+    numero_eleitores = int(input("Número total de eleitores: "))
 
-    for contador2 in range(1, numeroEleitores + 1):
+    for contador2 in range(1, numero_eleitores + 1):
 
         print("Qual o voto do eleitor %d ?" % contador2)
 

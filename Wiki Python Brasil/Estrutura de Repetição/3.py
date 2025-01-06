@@ -44,9 +44,9 @@ while contador != 0:
 
                 else:
 
-                    estadoCivil = input("Digite seu estado civil:\ns - solteiro(a)\nv - viúvo(a)\nc - casado(a)\nd - divorciado\n")
+                    estado_civil = input("Digite seu estado civil:\ns - solteiro(a)\nv - viúvo(a)\nc - casado(a)\nd - divorciado\n")
 
-                    if estadoCivil != "s" and estadoCivil != "v" and estadoCivil !="c" and estadoCivil != "d":
+                    if estado_civil != "s" and estado_civil != "v" and estado_civil != "c" and estado_civil != "d":
 
                         print("Estado civil inválido")
 
@@ -54,6 +54,6 @@ while contador != 0:
 
                     else:
 
-                        print("%s, %d, %.2f, %s, %s" % (nome, idade, salario, sexo, estadoCivil))
+                        print("%s, %d, %.2f, %s, %s" % (nome, idade, salario, sexo, estado_civil))
 
     contador = int(input("Digite 0 para finalizar o programa: "))

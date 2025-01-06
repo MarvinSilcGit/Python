@@ -1,4 +1,4 @@
-idadeMedia = 0
+idade_media = 0
 
 contador = 0
 
@@ -14,24 +14,24 @@ while True:
 
         contador += 1
 
-        idadeMedia += idade
+        idade_media += idade
 
         suficiente = input("Digite sim para calcular a média de idade: ")
 
         if suficiente == "Sim" or suficiente == "sim":
 
-            idadeMedia = idadeMedia / contador
+            idade_media = idade_media / contador
 
-            print("A idade média foi %.2f anos" % idadeMedia)
+            print("A idade média foi %.2f anos" % idade_media)
 
-            if idadeMedia <= 25:
+            if idade_media <= 25:
 
                 print("Turma jovem")
 
-            elif idadeMedia <= 60:
+            elif idade_media <= 60:
 
                 print("Turma adulta")
 
-            elif idadeMedia > 60:
+            elif idade_media > 60:
 
                 print("Turma idosa")

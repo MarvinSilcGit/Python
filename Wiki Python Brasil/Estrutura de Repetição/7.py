@@ -1,11 +1,11 @@
-numeroFinal = 0
+numero_final = 0
 
 for contador in range(5):
 
     numero = float(input("Digite um número: "))
 
-    if numero > numeroFinal:
+    if numero > numero_final:
 
-        numeroFinal = numero
+        numero_final = numero
 
-print("O maior número foi %d" % numeroFinal)
+print("O maior número foi %d" % numero_final)

@@ -1,10 +1,11 @@
-numeroInicial = int(input("Digite o número inicial: "))
+numero_inicial = int(input("Digite o número inicial: "))
 
-numeroFinal = int(input("Digite o número final: "))
+numero_final = int(input("Digite o número final: "))
 
 soma = 0
 
-for contador in range(numeroInicial + 1, numeroFinal):
+for contador in range(numero_inicial + 1, numero_final):
+
     print(contador)
 
     soma += contador
