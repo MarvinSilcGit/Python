@@ -1,76 +1,15 @@
-def multiplo(x, w):
+def calculo_multiplo(multiplo: int, multiplando: int):
 
-    x = int(x)
+    multiplo = multiplo
 
-    w = int(w)
+    multiplando = multiplando
 
-    b = 0
+    if multiplo % multiplando == 0:
 
-    if x > w:
+        return True
 
-        while True:
+    else:
 
-            if b*w == x:
+        return False
 
-                return"O número %s é múltiplo de %s" % (w, x)
-
-            b += 1
-
-            if b*w > x:
-
-                return "O número %s não é múltiplo de %s" % (w, x)
-
-    elif x < w:
-
-        while True:
-
-            if b*x == w:
-
-                return "O número %s é múltiplo de %s" % (x, w)
-
-            b += 1
-
-            if b*x > w:
-
-                return "O número %s não é múltiplo de %s" % (x, w)
-
-    elif x == w:
-
-        return "Valores equivalentes!"
-
-
-while True:
-
-    while True:
-
-        print()
-
-        x = input("Digite o primeiro número: ")
-
-        if x.isdigit() == False:
-
-            print()
-
-            print("Digite somente números!")
-
-            continue
-
-        while True:
-
-            print()
-
-            w = input("Digite o segundo número: ")
-
-            if w.isdigit() == False:
-
-                print()
-
-                print("Digite somente números!")
-
-                continue
-
-            print()
-
-            print(multiplo(x, w))
-
-            break
+print(calculo_multiplo(5,6))
