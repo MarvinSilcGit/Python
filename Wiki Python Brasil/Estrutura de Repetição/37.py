@@ -1,5 +1,7 @@
 contador = 1
 
+codigo = 0
+
 maiorAltura = 0
 
 menorAltura = 0
@@ -12,7 +14,13 @@ mediaAltura = 0
 
 mediaPeso = 0
 
-codigoPessoa = 0
+codigoPessoaMenorAltura = 0
+
+codigoPessoaMaiorAltura = 0
+
+codigoPessoaMaiorPeso = 0
+
+codigoPessoaMenorPeso = 0
 
 while contador != 0:
 
@@ -20,28 +28,48 @@ while contador != 0:
 
     peso = float(input("Digite o peso da pessoa: "))
 
+    codigo = int(input("Digite o código da pessoa: "))
+
     mediaAltura += altura
 
-    menorPeso += peso
+    mediaPeso += peso
 
-    codigo = 0
+    contador += 1
 
-    if altura == 0:
+    if altura > maiorAltura:
 
-        contador = 0
+        maiorAltura = altura
 
-    else:
+        menorAltura = altura
 
-        contador += 1
+        codigoPessoaMaiorAltura = codigo
 
-        if altura > maiorAltura:
+    if altura < menorAltura:
 
-            maiorAltura = altura
+        menorAltura = altura
 
-            menorAltura = altura
+        codigoPessoaMenorAltura = codigo
 
-        if altura < menorAltura:
+    if peso > maiorPeso:
 
-            menorAltura = altura
+        maiorPeso = peso
 
-print("O maior temperatura foi %.1f° e a menor temperatura foi %.1f°" % (maiorAltura, menorAltura))
+        menorPeso = peso
+
+        codigoPessoaMaiorPeso = codigo
+
+    if peso < menorPeso:
+
+        menorPeso = peso
+
+        codigoPessoaMenorPeso = codigo
+
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))
+
+    print()
+
+print("O cliente com o código %d teve a maior altura %.2f" % (codigoPessoaMaiorAltura, maiorAltura))
+
+print("O cliente com o código %d teve a menor altura %.2f" % (codigoPessoaMenorAltura, menorAltura))

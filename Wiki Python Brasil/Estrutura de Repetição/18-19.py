@@ -32,4 +32,10 @@ while contador != 0:
 
                 menor_numero = numero
 
-print("O maior número foi %d e o menor número foi %d" % (maior_numero, menor_numero))
+if maior_numero == menor_numero:
+
+    print("O número são idênticos")
+
+else:
+
+    print("O maior número foi %d e o menor número foi %d" % (maior_numero, menor_numero))
