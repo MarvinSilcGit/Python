@@ -1,4 +1,4 @@
-def maiorValor(x, w):
+def maior_valor(x, w):
 
     if x > w:
 
@@ -43,6 +43,6 @@ while True:
 
             print()
 
-            print(maiorValor(x,w))
+            print(maior_valor(x, w))
 
             break
