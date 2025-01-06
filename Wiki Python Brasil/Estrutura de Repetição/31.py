@@ -24,8 +24,6 @@ while contador != 0:
 
         if preco == 0:
 
-            contador2 = 1
-
             contador3 = 1
 
             break
