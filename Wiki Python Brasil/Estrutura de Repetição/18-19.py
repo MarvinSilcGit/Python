@@ -1,8 +1,8 @@
 contador = 1
 
-maior_numero = 0
+maiorNumero = 0
 
-menor_numero = 0
+menorNumero = 0
 
 while contador != 0:
 
@@ -22,20 +22,20 @@ while contador != 0:
 
         else:
 
-            if numero > maior_numero:
+            if numero > maiorNumero:
 
-                maior_numero = numero
+                maiorNumero = numero
 
-                menor_numero = numero
+                menorNumero = numero
 
-            if numero < menor_numero:
+            if numero < menorNumero:
 
-                menor_numero = numero
+                menorNumero = numero
 
-if maior_numero == menor_numero:
+if maiorNumero == menorNumero:
 
     print("O número são idênticos")
 
 else:
 
-    print("O maior número foi %d e o menor número foi %d" % (maior_numero, menor_numero))
+    print("O maior número foi %d e o menor número foi %d" % (maiorNumero, menorNumero))
