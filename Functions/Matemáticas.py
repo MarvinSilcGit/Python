@@ -475,3 +475,32 @@ def numero_fizz_buzz (numero_limite: int):
     else:
 
         return "O número %d não é nem Fizz nem Buzz" % numero
+
+
+def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: float, quantidade_meses: int):
+
+    valor_inicial = valor_inicial
+
+    aporte_mensal = aporte_mensal
+
+    taxa_juros = juros_anual
+
+    periodo = quantidade_meses
+
+    ganho_bruto_total = valor_inicial
+
+    ganho_juros = 0
+
+    for contador in range(1, periodo + 1):
+
+        ganho_bruto_total += ganho_bruto_total / 100 * taxa_juros / 12
+
+        ganho_juros += ganho_bruto_total / 100 * taxa_juros / 12
+
+        print("O valor no %d° mês será de %.2f. Com uma taxa de %.2f por cento anual, gerou o valor de R$ %.2f em juros" % (contador, ganho_bruto_total, taxa_juros, ganho_juros))
+
+        ganho_bruto_total += aporte_mensal
+
+    return ""
+
+print(juros_compostos(1000, 0, 12, 120))
