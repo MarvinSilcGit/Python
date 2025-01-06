@@ -6,7 +6,7 @@ menor_temperatura = 0
 
 while contador != 0:
 
-    numero = int(input("Digite uma temperatura ou 0 para interromper a execução: "))
+    numero = float(input("Digite uma temperatura ou 0 para interromper a execução: "))
 
     if numero == 0:
 
@@ -14,22 +14,14 @@ while contador != 0:
 
     else:
 
-        if numero > 1000:
+        if numero > maior_temperatura:
 
-            print("Valor inválido")
+            maior_temperatura = numero
 
-            continue
+            menor_temperatura = numero
 
-        else:
+        if numero < menor_temperatura:
 
-            if numero > maior_temperatura:
+            menor_temperatura = numero
 
-                maior_temperatura = numero
-
-                menor_temperatura = numero
-
-            if numero < menor_temperatura:
-
-                menor_temperatura = numero
-
-print("O maior número foi %d e o menor número foi %d" % (maior_temperatura, menor_temperatura))
+print("O maior temperatura foi %.1f° e a menor temperatura foi %.1f°" % (maior_temperatura, menor_temperatura))
