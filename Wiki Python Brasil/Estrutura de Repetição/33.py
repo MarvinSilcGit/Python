@@ -1,8 +1,8 @@
 contador = 1
 
-maiorTemperatura = 0
+maior_temperatura = 0
 
-menorTemperatura = 0
+menor_temperatura = 0
 
 while contador != 0:
 
@@ -14,22 +14,22 @@ while contador != 0:
 
     else:
 
-        if menorTemperatura == 0:
+        if menor_temperatura == 0:
 
-            menorTemperatura = temperatura
+            menor_temperatura = temperatura
 
-        if maiorTemperatura < temperatura:
+        if maior_temperatura < temperatura:
 
-            maiorTemperatura = temperatura
+            maior_temperatura = temperatura
 
-        if menorTemperatura > temperatura:
+        if menor_temperatura > temperatura:
 
-            menorTemperatura = temperatura
+            menor_temperatura = temperatura
 
-if maiorTemperatura == menorTemperatura:
+if maior_temperatura == menor_temperatura:
 
     print("Os números são idênticos")
 
 else:
 
-    print("O maior temperatura foi %.1f° e a menor temperatura foi %.1f°" % (maiorTemperatura, menorTemperatura))
+    print("O maior temperatura foi %.1f° e a menor temperatura foi %.1f°" % (maior_temperatura, menor_temperatura))

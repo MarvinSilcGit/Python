@@ -1,26 +1,28 @@
 contador = 1
 
+contador2 = 0
+
 codigo = 0
 
-maiorAltura = 0
+maior_altura = 0
 
-menorAltura = 0
+menor_altura = 0
 
-maiorPeso = 0
+codigo_pessoa_menor_altura = 0
 
-menorPeso = 0
+codigo_pessoa_maior_altura = 0
 
-mediaAltura = 0
+media_altura = 0
 
-mediaPeso = 0
+maior_peso = 0
 
-codigoPessoaMenorAltura = 0
+menor_peso = 0
 
-codigoPessoaMaiorAltura = 0
+codigo_pessoa_maior_peso = 0
 
-codigoPessoaMaiorPeso = 0
+codigo_pessoa_menor_peso = 0
 
-codigoPessoaMenorPeso = 0
+media_peso = 0
 
 while contador != 0:
 
@@ -30,11 +32,11 @@ while contador != 0:
 
     codigo = int(input("Digite o código da pessoa: "))
 
-    mediaAltura += altura
+    media_altura += altura
 
-    mediaPeso += peso
+    media_peso += peso
 
-    contador += 1
+    contador2 += 1
 
     if altura < 0.5 or peso < 30 or codigo < 1:
 
@@ -44,21 +46,41 @@ while contador != 0:
 
     else:
 
-        if menorAltura == 0:
+        if menor_altura == 0:
 
-            menorAltura = altura
+            menor_altura = altura
 
-        if maiorAltura < altura:
+            codigo_pessoa_menor_altura = codigo
 
-            maiorAltura = altura
+        if maior_altura < altura:
 
-            codigoPessoaMaiorAltura = codigo
+            maior_altura = altura
 
-        if menorAltura > altura:
+            codigo_pessoa_maior_altura = codigo
 
-            menorAltura = altura
+        if menor_altura > altura:
 
-            codigoPessoaMenorAltura = codigo
+            menor_altura = altura
+
+            codigo_pessoa_menor_altura = codigo
+
+        if menor_peso == 0:
+
+            menor_peso = peso
+
+            codigo_pessoa_menor_peso = codigo
+
+        if maior_peso < peso:
+
+            maior_peso = peso
+
+            codigo_pessoa_maior_peso = codigo
+
+        if menor_peso > peso:
+
+            menor_peso = peso
+
+            codigo_pessoa_menor_peso = codigo
 
     print()
 
@@ -66,6 +88,20 @@ while contador != 0:
 
     print()
 
-print("O cliente com o código %d teve a maior altura %.2f Metros" % (codigoPessoaMaiorAltura, maiorAltura))
+media_altura = media_altura / contador2
 
-print("O cliente com o código %d teve a menor altura %.2f Metros" % (codigoPessoaMenorAltura, menorAltura))
+media_peso = media_peso / contador2
+
+print("O cliente com o código %d teve a maior altura %.2f" % (codigo_pessoa_maior_altura, maior_altura))
+
+print("O cliente com o código %d teve a menor altura %.2f" % (codigo_pessoa_menor_altura, menor_altura))
+
+print("A média de altura foi %.2f" % media_altura)
+
+print()
+
+print("O cliente com o código %d teve o maior peso %.1f" % (codigo_pessoa_maior_peso, maior_peso))
+
+print("O cliente com o código %d teve o menor peso %.1f" % (codigo_pessoa_menor_peso, menor_peso))
+
+print("A média de peso foi %.1f" % media_peso)
