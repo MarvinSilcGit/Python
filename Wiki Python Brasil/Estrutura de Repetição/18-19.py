@@ -14,7 +14,7 @@ while contador != 0:
 
     else:
 
-        if numero > 1000:
+        if numero > 1000 or numero < 1:
 
             print("Valor inválido")
 
@@ -22,19 +22,21 @@ while contador != 0:
 
         else:
 
-            if numero > maiorNumero:
-
-                maiorNumero = numero
+            if menorNumero == 0:
 
                 menorNumero = numero
 
-            if numero < menorNumero:
+            if maiorNumero < numero:
+
+                maiorNumero = numero
+
+            if menorNumero > numero:
 
                 menorNumero = numero
 
 if maiorNumero == menorNumero:
 
-    print("O número são idênticos")
+    print("Os números são idênticos")
 
 else:
 
