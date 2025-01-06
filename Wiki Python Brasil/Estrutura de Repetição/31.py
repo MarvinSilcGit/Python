@@ -24,7 +24,7 @@ while contador != 0:
 
         if preco == 0:
 
-            contador2 = 0
+            contador2 = 1
 
             contador3 = 1
 
@@ -34,8 +34,6 @@ while contador != 0:
 
     valorPagamento = float(input("Digite o valor de pagamento: "))
 
-    troco = valorPagamento - precoFinal
-
     if valorPagamento < precoFinal:
 
         print("Valor insuficiente para o pagamento")
@@ -44,6 +42,12 @@ while contador != 0:
 
     else:
 
+        troco = valorPagamento - precoFinal
+
         print("Troco: %.2f" % troco)
 
-        contador2 = 0
+    print()
+
+    contador = int(input("Digite 0 para interromper a execução: "))
+
+    print()
