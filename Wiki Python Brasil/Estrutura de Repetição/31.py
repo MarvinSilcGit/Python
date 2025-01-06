@@ -1,7 +1,5 @@
 contador = 1
 
-contador2 = 1
-
 precoFinal = 0
 
 contador3 = 1
@@ -12,7 +10,7 @@ valorPagamento = 0
 
 while contador != 0:
 
-    while contador2 != 0:
+    while True:
 
         print("Digite o preço da mercadoria %d ou 0 para finalizar a compra: " % contador3)
 
@@ -30,19 +28,23 @@ while contador != 0:
 
     print("Total: %.2f" % precoFinal)
 
-    valorPagamento = float(input("Digite o valor de pagamento: "))
+    while True:
 
-    if valorPagamento < precoFinal:
+        valorPagamento = float(input("Digite o valor de pagamento: "))
 
-        print("Valor insuficiente para o pagamento")
+        if valorPagamento < precoFinal:
 
-        continue
+            print("Valor insuficiente para o pagamento")
 
-    else:
+            continue
 
-        troco = valorPagamento - precoFinal
+        else:
 
-        print("Troco: %.2f" % troco)
+            troco = valorPagamento - precoFinal
+
+            print("Troco: %.2f" % troco)
+
+            break
 
     print()
 
