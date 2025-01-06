@@ -1,41 +1,41 @@
-cargaHoraria = int(input("Digite a sua carga horária mensal: "))
+carga_horaria = int(input("Digite a sua carga horária mensal: "))
 
-salarioHora = float(input("Digite o seu salário hora: "))
+salario_hora = float(input("Digite o seu salário hora: "))
 
-salarioBruto = cargaHoraria * salarioHora
+salario_bruto = carga_horaria * salario_hora
 
 descontos = 0
 
-impostoRenda = 0
+imposto_renda = 0
 
 inss = 0
 
-if salarioBruto <=  900:
+if salario_bruto <=  900:
 
-    print("O salário será R$ %.2f com R$ %.2f de Imposto de renda, R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salarioBruto, impostoRenda, inss, descontos))
+    print("O salário será R$ %.2f com R$ %.2f de Imposto de renda, R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salario_bruto, imposto_renda, inss, descontos))
 
-elif salarioBruto <= 1500:
+elif salario_bruto <= 1500:
 
-    impostoRenda = salarioBruto / 100 * 5
+    imposto_renda = salario_bruto / 100 * 5
 
-    inss = salarioBruto / 100 * 10
+    inss = salario_bruto / 100 * 10
 
-    descontos = impostoRenda + inss
+    descontos = imposto_renda + inss
 
-elif salarioBruto <= 2500:
+elif salario_bruto <= 2500:
 
-    impostoRenda = salarioBruto / 100 * 10
+    imposto_renda = salario_bruto / 100 * 10
 
-    inss = salarioBruto / 100 * 10
+    inss = salario_bruto / 100 * 10
 
-    descontos = impostoRenda + inss
+    descontos = imposto_renda + inss
 
-elif salarioBruto > 2500:
+elif salario_bruto > 2500:
 
-    impostoRenda = salarioBruto / 100 * 20
+    imposto_renda = salario_bruto / 100 * 20
 
-    inss = salarioBruto / 100 * 10
+    inss = salario_bruto / 100 * 10
 
-    descontos = impostoRenda + inss
+    descontos = imposto_renda + inss
 
-print("O salário inicial era de R$ %.2f e será R$ %.2f, com R$ %.2f de Imposto de renda e R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salarioBruto, salarioBruto-descontos, impostoRenda, inss, descontos))
+print("O salário inicial era de R$ %.2f e será R$ %.2f, com R$ %.2f de Imposto de renda e R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salario_bruto, salario_bruto - descontos, imposto_renda, inss, descontos))

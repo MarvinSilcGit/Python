@@ -1,29 +1,29 @@
 valor = int(input("Digite um número: "))
 
-quantidadeCentena = 0
+quantidade_centena = 0
 
-quantidadeDezena = 0
+quantidade_dezena = 0
 
-quantidadeUnidade = 0
+quantidade_unidade = 0
 
-quantidadeDecimo = 0
+quantidade_decimo = 0
 
 if valor // 100 > 0:
 
-    quantidadeCentena = valor // 100
+    quantidade_centena = valor // 100
 
-    valor -= quantidadeCentena * 100
+    valor -= quantidade_centena * 100
 
     if valor // 10 > 0:
 
-        quantidadeDezena = valor // 10
+        quantidade_dezena = valor // 10
 
-        valor -= quantidadeDezena * 10
+        valor -= quantidade_dezena * 10
 
         if valor // 1 > 0:
 
-            quantidadeUnidade = valor // 1
+            quantidade_unidade = valor // 1
 
-            valor -= quantidadeUnidade * 1
+            valor -= quantidade_unidade * 1
 
-print("%d = %d centenas, %d dezenas e %d unidades" % (0 + (quantidadeUnidade * 1) + 0 + (quantidadeDezena * 10) + 0 + (quantidadeCentena * 100), quantidadeCentena, quantidadeDezena, quantidadeUnidade))
+print("%d = %d centenas, %d dezenas e %d unidades" % (0 + (quantidade_unidade * 1) + 0 + (quantidade_dezena * 10) + 0 + (quantidade_centena * 100), quantidade_centena, quantidade_dezena, quantidade_unidade))

@@ -1,6 +1,6 @@
-formatoData = input("Digite a data no formato dd/mm/aaaa: ")
+formato_data = input("Digite a data no formato dd/mm/aaaa: ")
 
-if len(formatoData) != 10 or formatoData[2] == "/" or formatoData[5] == "/":
+if len(formato_data) != 10 or formato_data[2] == "/" or formato_data[5] == "/":
 
     print("Formato de data inválida")
 

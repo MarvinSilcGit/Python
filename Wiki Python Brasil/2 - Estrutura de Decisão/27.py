@@ -1,23 +1,23 @@
-quantidadeMorango = float(input("Digite a quantidade em kilos de morangos: "))
+quantidade_morango = float(input("Digite a quantidade em kilos de morangos: "))
 
-quantidadeMaca = float(input("Digite a quantidade em kilos de maçãs: "))
+quantidade_maca = float(input("Digite a quantidade em kilos de maçãs: "))
 
-precoFinal = 0
+preco_final = 0
 
-if quantidadeMorango <= 5:
+if quantidade_morango <= 5:
 
-    precoFinal += quantidadeMorango * 2.5
-
-else:
-
-    precoFinal += quantidadeMorango * 2.2
-
-if quantidadeMaca <= 5:
-
-    precoFinal += quantidadeMaca * 1.8
+    preco_final += quantidade_morango * 2.5
 
 else:
 
-    precoFinal += quantidadeMaca * 1.2
+    preco_final += quantidade_morango * 2.2
 
-print("O preço final será R$ %.2f" % precoFinal)
+if quantidade_maca <= 5:
+
+    preco_final += quantidade_maca * 1.8
+
+else:
+
+    preco_final += quantidade_maca * 1.2
+
+print("O preço final será R$ %.2f" % preco_final)

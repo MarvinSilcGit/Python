@@ -1,33 +1,33 @@
-quantidadeFile = int(input("Digite a quantidade em kilos de Filé Duplo: "))
+quantidade_file = int(input("Digite a quantidade em kilos de Filé Duplo: "))
 
-quantidadePicanha = int(input("Digite a quantidade em kilos de Picanha: "))
+quantidade_picanha = int(input("Digite a quantidade em kilos de Picanha: "))
 
-quantidadeAlcatra = int(input("Digite a quantidade em kilos de Alcatra: "))
+quantidade_alcatra = int(input("Digite a quantidade em kilos de Alcatra: "))
 
-precoFinal = 0
+preco_final = 0
 
-if quantidadeFile <= 5:
+if quantidade_file <= 5:
 
-    precoFinal += quantidadeFile * 4.9
-
-else:
-
-    precoFinal += quantidadeFile * 5.8
-
-if quantidadePicanha <= 5:
-
-    precoFinal += quantidadePicanha * 5.9
+    preco_final += quantidade_file * 4.9
 
 else:
 
-    precoFinal += quantidadePicanha * 6.8
+    preco_final += quantidade_file * 5.8
 
-if quantidadeAlcatra <= 5:
+if quantidade_picanha <= 5:
 
-    precoFinal += quantidadeAlcatra * 6.9
+    preco_final += quantidade_picanha * 5.9
 
 else:
 
-    precoFinal += quantidadePicanha * 7.8
+    preco_final += quantidade_picanha * 6.8
 
-print("O preço final será R$ %.2f" % precoFinal)
+if quantidade_alcatra <= 5:
+
+    preco_final += quantidade_alcatra * 6.9
+
+else:
+
+    preco_final += quantidade_picanha * 7.8
+
+print("O preço final será R$ %.2f" % preco_final)

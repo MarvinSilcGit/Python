@@ -1,20 +1,20 @@
+import math
+
 operacao = input("Digite qual operação deseja realizar:\n1 - Inteiro ou decimal\n2 - Par ou Ímpar\n3 - Positivo ou Negativo\n")
 
 if operacao == "1":
 
-    import math
+    numero_decimal = float(input("Digite o número para saber se é decimal ou não: "))
 
-    numeroDecimal = float(input("Digite o número para saber se é decimal ou não: "))
+    numero_inteiro = math.trunc(numero_decimal)
 
-    numeroInteiro = math.trunc(numeroDecimal)
+    if numero_decimal > numero_inteiro:
 
-    if numeroDecimal > numeroInteiro:
-
-        print("O número %.1f é decimal" % numeroDecimal)
+        print("O número %.1f é decimal" % numero_decimal)
 
     else:
 
-        print("O número %d não é decimal" % numeroInteiro)
+        print("O número %d não é decimal" % numero_inteiro)
 
 elif operacao == "2":
 

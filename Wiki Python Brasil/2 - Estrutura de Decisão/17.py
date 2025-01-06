@@ -1,15 +1,15 @@
-anoBissexto = int(input("Digite o ano para saber se é bissexto ou não: "))
+ano_bissexto = int(input("Digite o ano para saber se é bissexto ou não: "))
 
-if anoBissexto % 4 == 0:
+if ano_bissexto % 4 == 0:
 
-    if anoBissexto % 100 != 0:
+    if ano_bissexto % 100 != 0:
 
-        print("O ano %d é bissexto" % anoBissexto)
+        print("O ano %d é bissexto" % ano_bissexto)
 
-    elif anoBissexto % 100 == 0:
+    elif ano_bissexto % 100 == 0:
 
-        print("O ano %d é bissexto especial" % anoBissexto)
+        print("O ano %d é bissexto especial" % ano_bissexto)
 
 else:
 
-    print("O ano %d não é bissexto" % anoBissexto)
+    print("O ano %d não é bissexto" % ano_bissexto)

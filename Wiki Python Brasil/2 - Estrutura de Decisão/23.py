@@ -1,13 +1,13 @@
 import math
 
-numeroDecimal = float(input("Digite o número para saber se é decimal ou não: "))
+numero_decimal = float(input("Digite o número para saber se é decimal ou não: "))
 
-numeroInteiro = math.trunc(numeroDecimal)
+numero_inteiro = math.trunc(numero_decimal)
 
-if numeroDecimal > numeroInteiro:
+if numero_decimal > numero_inteiro:
 
-    print("O número %.1f é decimal" % numeroDecimal)
+    print("O número %.1f é decimal" % numero_decimal)
 
 else:
 
-    print("O número %d não é decimal" % numeroInteiro)
+    print("O número %d não é decimal" % numero_inteiro)

@@ -1,37 +1,37 @@
-salarioInicial = float(input("Digite o salário atual: "))
+salario_inicial = float(input("Digite o salário atual: "))
 
 aumento = 0
 
-salarioFinal = salarioInicial
+salario_final = salario_inicial
 
-if salarioInicial <= 280:
+if salario_inicial <= 280:
 
-    aumento = salarioInicial / 100 * 20
+    aumento = salario_inicial / 100 * 20
 
-    salarioFinal += aumento
+    salario_final += aumento
 
-    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 20 por cento" % (salarioInicial, salarioFinal, aumento,))
+    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 20 por cento" % (salario_inicial, salario_final, aumento,))
 
-elif salarioInicial <= 700:
+elif salario_inicial <= 700:
 
-    aumento = salarioInicial / 100 * 15
+    aumento = salario_inicial / 100 * 15
 
-    salarioFinal += aumento
+    salario_final += aumento
 
-    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 15 por cento" % (salarioInicial, salarioFinal, aumento,))
+    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 15 por cento" % (salario_inicial, salario_final, aumento,))
 
-elif salarioInicial <= 1500:
+elif salario_inicial <= 1500:
 
-    aumento = salarioInicial / 100 * 10
+    aumento = salario_inicial / 100 * 10
 
-    salarioFinal += aumento
+    salario_final += aumento
 
-    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 10 por cento" % (salarioInicial, salarioFinal, aumento,))
+    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 10 por cento" % (salario_inicial, salario_final, aumento,))
 
-elif salarioInicial > 1500:
+elif salario_inicial > 1500:
 
-    aumento = salarioInicial / 100 * 5
+    aumento = salario_inicial / 100 * 5
 
-    salarioFinal += aumento
+    salario_final += aumento
 
-    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 5 por cento" % (salarioInicial, salarioFinal, aumento,))
+    print("O salário antes do reajuste era de R$ %.2f e passou a ser R$ %.2f com um aumento de R$ %.2f, ou um aumento de 5 por cento" % (salario_inicial, salario_final, aumento,))
