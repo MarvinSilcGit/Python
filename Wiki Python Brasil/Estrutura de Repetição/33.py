@@ -18,7 +18,6 @@ while contador != 0:
 
             maior_temperatura = numero
 
-            menor_temperatura = numero
 
         if numero < menor_temperatura:
 
