@@ -1,11 +1,11 @@
 salario = float(input("Digite o seu salário: "))
 
-salarioLiquido = salario
+salario_liquido = salario
 
-salarioLiquido -= salario / 100 * 11
+salario_liquido -= salario / 100 * 11
 
-salarioLiquido -= salarioLiquido / 100 * 8
+salario_liquido -= salario_liquido / 100 * 8
 
-salarioLiquido -= salarioLiquido / 100 * 5
+salario_liquido -= salario_liquido / 100 * 5
 
-print("O salário líquido será R$ %.2f, com R$ %.2f de desconto" % (salarioLiquido, salario-salarioLiquido))
+print("O salário líquido será R$ %.2f, com R$ %.2f de desconto" % (salario_liquido, salario - salario_liquido))

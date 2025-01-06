@@ -1,17 +1,17 @@
-numeroInteiro1 = int(input("Digite o primeiro número inteiro: "))
+numero_inteiro1 = int(input("Digite o primeiro número inteiro: "))
 
-numeroInteiro2 = int(input("Digite o segundo número inteiro: "))
+numero_inteiro2 = int(input("Digite o segundo número inteiro: "))
 
-numeroReal = float(input("Digite o número real: "))
+numero_real = float(input("Digite o número real: "))
 
-resultado1 = numeroInteiro1 * 2 * numeroInteiro2 / 2
+resultado1 = numero_inteiro1 * 2 * numero_inteiro2 / 2
 
 print(resultado1)
 
-resultado2 = numeroInteiro1 * 3 + numeroReal
+resultado2 = numero_inteiro1 * 3 + numero_real
 
 print(resultado2)
 
-resultado3 = numeroReal**3
+resultado3 = numero_real ** 3
 
 print(resultado3)

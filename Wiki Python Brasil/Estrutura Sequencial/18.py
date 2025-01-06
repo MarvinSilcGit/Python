@@ -1,19 +1,19 @@
-tamanhoArquivo = float(input("Digite o tamanho do arquivo em Megabytes: "))
+tamanho_arquivo = float(input("Digite o tamanho do arquivo em Megabytes: "))
 
-if tamanhoArquivo < 1:
+if tamanho_arquivo < 1:
 
     print("Valor inválido!")
 
-velecidadeLink = float(input("Digite a velocidade de sua conexão em megabits: "))
+velecidade_link = float(input("Digite a velocidade de sua conexão em megabits: "))
 
-tempoDownload = (tamanhoArquivo / (velecidadeLink / 8))
+tempo_download = (tamanho_arquivo / (velecidade_link / 8))
 
-if tempoDownload >= 60:
+if tempo_download >= 60:
 
-    tempoDownload = tempoDownload / 60
+    tempo_download = tempo_download / 60
 
-    print("O tempo de Download será de no mínimo %.1f minutos" % tempoDownload)
+    print("O tempo de Download será de no mínimo %.1f minutos" % tempo_download)
 
 else:
 
-    print("O tempo de Download será de no mínimo %.1f segundos" % tempoDownload)
+    print("O tempo de Download será de no mínimo %.1f segundos" % tempo_download)
