@@ -1,4 +1,4 @@
-import math
+import cmath
 
 a = int(input("Digite o valor de a: "))
 
@@ -14,9 +14,13 @@ else:
 
     delta = b ** 2 - 4 * a * c
 
-    raiz_negativa = (- b - math.sqrt(delta)) / 2 * a
+    raiz_negativa = (- b - cmath.sqrt(delta)) / 2 * a
 
-    raiz_positiva = (- b + math.sqrt(delta)) / 2 * a
+    raiz_positiva = (- b + cmath.sqrt(delta)) / 2 * a
+
+    raiz_negativa = raiz_negativa.real
+
+    raiz_positiva = raiz_positiva.real
 
     if delta < 0:
 
