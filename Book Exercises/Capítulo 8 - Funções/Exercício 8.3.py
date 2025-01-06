@@ -1,26 +1,15 @@
-def area(w):
+def area_quadrado(area: str):
 
-    w = int(w)
+    if not area.isdigit():
 
-    w = w*w
+        return "Digite somente números"
 
-    print()
+    else:
 
-    return("A área do quadrado é %d" % w)
+        area = int(area)
 
+        area = area * area
 
-while True:
+        return "A área do quadrado é %d" % area
 
-    print()
-
-    w = input("Digite o lado do quadrado: ")
-
-    if w.isdigit() == False:
-
-        print()
-
-        print("Digite somente números!")
-
-        continue
-
-    print(area(w))
+print(area_quadrado("8"))
