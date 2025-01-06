@@ -6,7 +6,7 @@ menor_numero = 0
 
 while contador != 0:
 
-    numero = int(input("Digite um número ou 0 para interoomper a execução: "))
+    numero = int(input("Digite um número ou 0 para interromper a execução: "))
 
     if numero == 0:
 
