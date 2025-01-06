@@ -50,20 +50,6 @@ while contador != 0:
 
         codigoPessoaMenorAltura = codigo
 
-    if peso > maiorPeso:
-
-        maiorPeso = peso
-
-        menorPeso = peso
-
-        codigoPessoaMaiorPeso = codigo
-
-    if peso < menorPeso:
-
-        menorPeso = peso
-
-        codigoPessoaMenorPeso = codigo
-
     print()
 
     contador = int(input("Digite 0 para interromper a execução: "))
