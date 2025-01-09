@@ -167,8 +167,6 @@ def valor_palindromo (valor):
 
             return "%s não é palíndromo" % valor
 
-print(valor_palindromo("aa"))
-
 
 def atm_machine (valor: float):
 
