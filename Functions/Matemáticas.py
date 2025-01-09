@@ -147,7 +147,7 @@ def valor_palindromo (valor):
 
     contador2 = 0
 
-    if len(valor) < 2:
+    if len(valor) <= 2:
 
         return "Tamanho insuficiente!"
 
@@ -166,6 +166,8 @@ def valor_palindromo (valor):
         else:
 
             return "%s não é palíndromo" % valor
+
+print(valor_palindromo("aa"))
 
 
 def atm_machine (valor: float):
