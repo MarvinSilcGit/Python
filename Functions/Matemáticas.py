@@ -155,7 +155,7 @@ def valor_palindromo (valor):
 
         for contador1 in range(0, len(valor)):
 
-            if valor[0 + contador1] == valor[-1 - contador1]:
+            if valor[contador1] == valor[-1 - contador1]:
 
                 contador2 += 1
 
