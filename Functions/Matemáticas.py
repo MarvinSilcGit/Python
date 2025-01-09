@@ -112,7 +112,7 @@ def numero_primo (numero: int):
 
         if confirmacao == numero:
 
-            return "%d é um número primo" % numero
+            return "%d é um número primo, pois é divisível somente por ele e por 1" % numero
 
         else:
 
@@ -502,5 +502,3 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
         ganho_bruto_total += aporte_mensal
 
     return ""
-
-print(juros_compostos(1000, 0, 12, 120))
