@@ -340,7 +340,7 @@ def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
 
     if lado1 == 0 or lado2 == 0 or lado3 == 0:
 
-        return "Um triângulo não poder lado 0"
+        return "Um triângulo não pode ter lado 0"
 
     else:
 
