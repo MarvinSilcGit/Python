@@ -305,7 +305,7 @@ def calculo_imc (peso: float, altura: float):
     return indice_massa_corporea
 
 
-def calculo_tbm (peso: float, altura: float, idade: int, genero: str):
+def calculo_tmb (peso: float, altura: float, idade: int, genero: str):
 
     lista_generos = ["Masculino", "masculino", "Feminino", "feminino"]
 
@@ -325,15 +325,15 @@ def calculo_tbm (peso: float, altura: float, idade: int, genero: str):
 
         if genero == "Masculino" or genero == "masculino":
 
-            taxa_basal_metabolica = 66 + (13.8 * peso) + (5 * altura) - (6.8 * idade)
+            taxa_metabolica_basal = (10 * peso) + (6.25 * altura) - (5 * idade) + 5
 
-            return taxa_basal_metabolica
+            return taxa_metabolica_basal
 
-        elif genero == "Feminino" or genero == " feminino":
+        elif genero == "Feminino" or genero == "feminino":
 
-            taxa_basal_metabolica = 655 + (9.6 * peso) + (1.8 * altura) - (4.7 * idade)
+            taxa_metabolica_basal = (10 * peso) + (6.25 * altura) - (5 * idade) - 161
 
-            return taxa_basal_metabolica
+            return taxa_metabolica_basal
 
 
 def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
