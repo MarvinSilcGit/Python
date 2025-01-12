@@ -470,7 +470,7 @@ def numero_fizz_buzz (numero_limite: int):
 
     elif numero % 5 == 0:
 
-        return "O número %d é Fizz" % numero
+        return "O número %d é Buzz" % numero
 
     else:
 
