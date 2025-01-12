@@ -424,32 +424,28 @@ def gerador_tabuada_simples (numero_tabuada: int):
     return 0
 
 
-def gerador_tabuada_inicio_fim (numero_inicial_tabuada: int, numero_final_tabuada: int):
+def gerador_tabuada_inicio_fim (numero_inicial: int, numero_final: int):
 
-    inicio_tabuada = numero_inicial_tabuada
+    inicio_tabuada = numero_inicial
 
-    fim_tabudada = numero_final_tabuada
-
-    for contador in range(1, fim_tabudada + 1):
+    for contador in range(1, numero_final + 1):
 
         print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
 
     return 0
 
 
-def gerador_tabuada_inicio_fim_razao (numero_inicial_tabuada: int, numero_final_tabuada: int, razao: int):
+def gerador_tabuada_inicio_fim_razao (numero_inicial: int, numero_final: int, razao: int):
 
-    inicio_tabuada = numero_inicial_tabuada
+    inicio_tabuada = numero_inicial
 
-    fim_tabudada = numero_final_tabuada
-
-    razao = razao
-
-    for contador in range(1, fim_tabudada + 1, razao):
+    for contador in range(1, numero_final + 1, razao):
 
         print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
 
     return 0
+
+print(gerador_tabuada_inicio_fim_razao(2, 20, 2))
 
 
 def numero_fizz_buzz (numero_limite: int):
