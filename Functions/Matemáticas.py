@@ -415,22 +415,19 @@ def numero_decimal_inteiro (numero: float):
 
 def gerador_tabuada_simples (numero_tabuada: int):
 
-    inicio_tabuada = numero_tabuada
 
     for contador in range(1, 10 + 1):
 
-        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
+        print("%d x %d = %d " % (numero_tabuada, contador, numero_tabuada * contador))
 
     return 0
 
 
 def gerador_tabuada_inicio_fim (numero_inicial: int, numero_final: int):
 
-    inicio_tabuada = numero_inicial
-
     for contador in range(1, numero_final + 1):
 
-        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
+        print("%d x %d = %d " % (numero_inicial, contador, numero_inicial * contador))
 
     return 0
 
