@@ -387,7 +387,6 @@ def numero_decimal_inteiro (numero: float):
 
 def gerador_tabuada_simples (numero_tabuada: int):
 
-
     for contador in range(1, 10 + 1):
 
         print("%d x %d = %d " % (numero_tabuada, contador, numero_tabuada * contador))
