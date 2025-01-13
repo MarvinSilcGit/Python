@@ -168,9 +168,7 @@ def valor_palindromo (valor):
             return "%s não é palíndromo" % valor
 
 
-def atm_machine (valor: float):
-
-    valor_pagamento = valor
+def atm_machine (valor_pagamento: float):
 
     if valor_pagamento < 1:
 
@@ -262,8 +260,6 @@ print(atm_machine(11.5))"""
 
 def calculo_fatorial (numero: int):
 
-    numero = numero
-
     resultado_fatorial = numero
 
     for contador in range(numero, 1, -1):
@@ -275,34 +271,26 @@ def calculo_fatorial (numero: int):
 
 def raio_circulo (area: float):
 
-    area_circulo = 3.14 * (area ** 2)
-
-    return area_circulo
+    return 3.14 * (area ** 2)
 
 
 def fahrenheit_celsius (temperatura: float):
 
-    fahrenheit = temperatura
+    celsius = (temperatura - 32) / 1.8
 
-    celsius = (fahrenheit - 32) / 1.8
-
-    return "A temperatura em %.1f° fahrenheit equivale à %.1f° celsius" % (fahrenheit, celsius)
+    return "A temperatura em %.1f° fahrenheit equivale à %.1f° celsius" % (temperatura, celsius)
 
 
 def celsius_fahrenheit (temperatura: float):
 
-    celsius = temperatura
+    fahrenheit = (temperatura * 1.8) + 32
 
-    fahrenheit = (celsius * 1.8) + 32
-
-    return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (celsius, fahrenheit)
+    return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (temperatura, fahrenheit)
 
 
 def calculo_imc (peso: float, altura: float):
 
-    indice_massa_corporea = peso / altura ** 2
-
-    return indice_massa_corporea
+    return peso / altura ** 2
 
 
 def calculo_tmb (peso: float, altura: float, idade: int, genero: str):
@@ -314,14 +302,6 @@ def calculo_tmb (peso: float, altura: float, idade: int, genero: str):
         return "Genêro inválido"
 
     else:
-
-        peso = peso
-
-        altura = altura
-
-        idade = idade
-
-        genero = genero
 
         if genero == "Masculino" or genero == "masculino":
 
@@ -344,12 +324,6 @@ def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
 
     else:
 
-        lado1 = lado1
-
-        lado2 = lado2
-
-        lado3 = lado3
-
         if lado1 + lado2 <= lado3:
 
             return "A soma desses lados não forma um triângulo"
@@ -371,21 +345,19 @@ def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
 
 def ano_bissexto (ano: int):
 
-    ano_366 = ano
+    if ano % 4 == 0:
 
-    if ano_366 % 4 == 0:
+        if ano % 100 != 0:
 
-        if ano_366 % 100 != 0:
+            return "O ano %d é bissexto" % ano
 
-            return "O ano %d é bissexto" % ano_366
+        elif ano % 100 == 0:
 
-        elif ano_366 % 100 == 0:
-
-            return "O ano %d é bissexto especial" % ano_366
+            return "O ano %d é bissexto especial" % ano
 
     else:
 
-        return "O ano %d não é bissexto" % ano_366
+        return "O ano %d não é bissexto" % ano
 
 
 def numero_decimal_inteiro (numero: float):
@@ -443,50 +415,40 @@ def gerador_tabuada_inicio_fim_razao (numero_inicial: int, numero_final: int, ra
 
 def numero_fizz_buzz (numero_limite: int):
 
-    numero = numero_limite
-
-    if numero <= 0:
+    if numero_limite <= 0:
 
         return "Número menores que 1 não são válidos"
 
-    if numero % 3 == 0 and numero % 5 == 0 and numero != 0:
+    if numero_limite % 3 == 0 and numero_limite % 5 == 0 and numero_limite != 0:
 
-        return "O número %d é FizzBuzz" % numero
+        return "O número %d é FizzBuzz" % numero_limite
 
-    elif numero % 3 == 0:
+    elif numero_limite % 3 == 0:
 
-        return "O número %d é Fizz" % numero
+        return "O número %d é Fizz" % numero_limite
 
-    elif numero % 5 == 0:
+    elif numero_limite % 5 == 0:
 
-        return "O número %d é Buzz" % numero
+        return "O número %d é Buzz" % numero_limite
 
     else:
 
-        return "O número %d não é nem Fizz nem Buzz" % numero
+        return "O número %d não é nem Fizz nem Buzz" % numero_limite
 
 
 def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: float, quantidade_meses: int):
-
-    valor_inicial = valor_inicial
-
-    aporte_mensal = aporte_mensal
-
-    taxa_juros = juros_anual
-
-    periodo = quantidade_meses
 
     ganho_bruto_total = valor_inicial
 
     ganho_juros = 0
 
-    for contador in range(1, periodo + 1):
+    for contador in range(1, quantidade_meses + 1):
 
-        ganho_bruto_total += ganho_bruto_total / 100 * taxa_juros / 12
+        ganho_bruto_total += ganho_bruto_total / 100 * juros_anual / 12
 
-        ganho_juros += ganho_bruto_total / 100 * taxa_juros / 12
+        ganho_juros += ganho_bruto_total / 100 * juros_anual / 12
 
-        print("O valor no %d° mês será de %.2f. Com uma taxa de %.2f por cento anual, gerou o valor de R$ %.2f em juros" % (contador, ganho_bruto_total, taxa_juros, ganho_juros))
+        print("O valor no %d° mês será de %.2f. Com uma taxa de %.2f por cento anual, gerou o valor de R$ %.2f em juros" % (contador, ganho_bruto_total, juros_anual, ganho_juros))
 
         ganho_bruto_total += aporte_mensal
 
