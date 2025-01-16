@@ -274,20 +274,6 @@ def raio_circulo (area: float):
     return 3.14 * (area ** 2)
 
 
-def fahrenheit_celsius (temperatura: float):
-
-    celsius = (temperatura - 32) / 1.8
-
-    return "A temperatura em %.1f° fahrenheit equivale à %.1f° celsius" % (temperatura, celsius)
-
-
-def celsius_fahrenheit (temperatura: float):
-
-    fahrenheit = (temperatura * 1.8) + 32
-
-    return "A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (temperatura, fahrenheit)
-
-
 def calculo_imc (peso: float, altura: float):
 
     return peso / altura ** 2
@@ -452,17 +438,3 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
         ganho_bruto_total += aporte_mensal
 
     return ""
-
-
-def radiano_grau (radiano: float):
-
-    import math
-
-    return  "%.2f radianos equivalem à %.2f°" % (radiano, radiano * 180 / math.pi)
-
-
-def grau_radiano (grau: float):
-
-    import math
-
-    return "%.2f° equivalem à %.3f radianos" % (grau, grau * math.pi / 180)
