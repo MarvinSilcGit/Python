@@ -66,3 +66,19 @@ def rankine_fahrenheit (temperatura: float):
     fahrenheit = temperatura - 459.67
 
     return  "A temperatura em %.1f° Rankine equivale à %.1f° Fahrenheit" % (temperatura, fahrenheit)
+
+
+def rankine_celsius (temperatura: float):
+
+    celsius = (temperatura - 491.67) * 5/ 9
+
+    return "A temperatura em %.1f° Rankine equivale à %.1f° Celsius" % (temperatura, celsius)
+
+
+def rankine_kelvin (temperatura: float):
+
+    kelvin = temperatura * 5 / 9
+
+    return "A temperatura em %.1f° Rankine equivale à %.1f° Kelvin" % (temperatura, kelvin)
+
+print(rankine_kelvin(100))
