@@ -1,4 +1,5 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
+from xml.etree.ElementTree import tostring
 
 
 def resto_divisao (valor1: float, valor2: float):
@@ -438,3 +439,30 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
         ganho_bruto_total += aporte_mensal
 
     return ""
+
+
+def binary_decimal (numero: str):
+
+    tamanho_decimal = len(numero)
+
+    decimal = 0
+
+    expoente = tamanho_decimal - 1
+
+    for contador in numero:
+
+        if contador == "1":
+
+            decimal += (1 * 2 ** expoente)
+
+        elif contador == "0":
+
+            decimal += (0 * 2 ** expoente)
+
+        else:
+
+            return 'Esse não é um número binário'
+
+        expoente -= 1
+
+    return decimal
