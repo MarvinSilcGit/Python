@@ -1,5 +1,4 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
-from xml.etree.ElementTree import tostring
 
 
 def resto_divisao (valor1: float, valor2: float):
@@ -465,4 +464,32 @@ def binary_decimal (numero: str):
 
         expoente -= 1
 
-    return decimal
+        numero = int(numero)
+
+    return "%d binário representa %d em decimal" % (numero, decimal)
+
+print(binary_decimal('10000'))
+
+def decimal_binary (numero: int):
+
+    resto = []
+
+    binario = ""
+
+    numero_decimal = numero
+
+    while numero_decimal != 0:
+
+        resto.insert(0, numero_decimal % 2)
+
+        numero_decimal = numero_decimal // 2
+
+    for contador in resto:
+
+        binario += str(contador)
+
+    binario = int(binario)
+
+    return "%d decimal representa %s em binário" % (numero, binario)
+
+print(decimal_binary(16))
