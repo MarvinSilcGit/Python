@@ -1,13 +1,12 @@
 def fahrenheit_celsius (temperatura: float):
 
-    celsius = (temperatura - 32) / 1.8
+    celsius = (temperatura - 32) * 5 / 9
 
     return "A temperatura em %.1f° Fahrenheit equivale à %.1f° Celsius" % (temperatura, celsius)
 
-
 def fahrenheit_kelvin (temperatura: float):
 
-    kelvin = (temperatura - 32) / 1.8 + 273.15
+    kelvin = (temperatura - 32) * 5 / 9 + 273.15
 
     return "A temperatura em %.1f° Fahrenheit equivale à %.1f° Kelvin" % (temperatura, kelvin)
 
@@ -21,7 +20,7 @@ def fahrenheit_rankine (temperatura: float):
 
 def celsius_fahrenheit (temperatura: float):
 
-    fahrenheit = (temperatura * 1.8) + 32
+    fahrenheit = (temperatura * 5 / 9) + 32
 
     return "A temperatura em %.1f° Celsius equivale à %.1f° Fahrenheit" % (temperatura, fahrenheit)
 
