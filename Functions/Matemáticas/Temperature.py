@@ -80,5 +80,3 @@ def rankine_kelvin (temperatura: float):
     kelvin = temperatura * 5 / 9
 
     return "A temperatura em %.1f° Rankine equivale à %.1f° Kelvin" % (temperatura, kelvin)
-
-print(rankine_kelvin(100))
