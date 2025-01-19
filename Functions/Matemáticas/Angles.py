@@ -4,7 +4,7 @@ def radiano_graus (radiano: float):
 
     graus = radiano * 180 / math.pi
 
-    return  "%.2f radianos equivalem à %.2f° Graus" % (radiano, graus)
+    return  "%.2f Radianos equivalem à %.2f° Graus" % (radiano, graus)
 
 
 def radiano_grados (radiano: float):
@@ -13,8 +13,7 @@ def radiano_grados (radiano: float):
 
     grados = radiano * 200 / math.pi
 
-    return  "%.2f radianos equivalem à %.2f° Grados" % (radiano, grados)
-
+    return f"{radiano:,.2f}° Radianos equivalem à {grados:,.2f}° Grados"
 
 def graus_radiano (grau: float):
 
