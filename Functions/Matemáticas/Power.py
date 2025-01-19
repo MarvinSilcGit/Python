@@ -4,6 +4,7 @@ def kw_cv (kilowatts: float):
 
     return "%.2f kilowatts equivalem à %.2f Cavalos" % (kilowatts, cv)
 
+
 def cv_kw (cavalos: float):
 
     kw = cavalos / 1.36
