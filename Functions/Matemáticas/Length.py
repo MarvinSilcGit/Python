@@ -42,13 +42,12 @@ def metro_pe (metro: float):
 
 def metro_polegada (metro: float):
 
-    return f"{metro:,.2f} Metros equivalem à {metro * 39.37:,.2f} Polegas"
+    return f"{metro:,.2f} Metros equivalem à {metro * 39.37:,.2f} Polegadas"
 
 
 def metro_milha_nautica (metro: float):
 
     return f"{metro:,.2f} Metros equivalem à {metro / 1852:,.2f} Milhas Náuticas"
-
 
 
 ## Kilometers to many
