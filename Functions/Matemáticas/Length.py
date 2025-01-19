@@ -1,23 +1,54 @@
+## Meters to many
+
 def metro_quilometro (metro: float):
 
-    return "%.2f Metros equivalem à %.2f Quilometros" % (metro, metro / 1000)
+    return f"{metro:,.2f} Metros equivalem à {metro / 1000:,.2f} Quilometros"
 
 
 def metro_centimetro (metro: float):
 
-    return "%.2f Metros equivalem à %.2f Centímetros" % (metro, metro * 100)
+    return f"{metro:,.2f} Metros equivalem à {metro * 100:,.2f} Centímetros"
 
 
 def metro_milimetro (metro: float):
 
-    return "%.2f Metros equivalem à %.2f Milímetros" % (metro, metro * 1000)
+    return f"{metro:,.2f} Metros equivalem à {metro * 1000:,.2f} Milímetros"
 
 
 def metro_micrometro (metro: float):
 
-    return "%.2f Metros equivalem à %.0e Micrômetros" % (metro, metro * 1e+6)
+    return f"{metro:,.2f} Metros equivalem à {metro * 1e+6:,e} Micrômetros"
 
 
 def metro_nanometro (metro: float):
 
-    return "%.2f Metros equivalem à %.0e Nanômetros" % (metro, metro * 1e+9)
+    return f"{metro:,.2f} Metros equivalem à {metro * 1e+9:,e} Nanômetros"
+
+
+def metro_milha (metro: float):
+
+    return f"{metro:,.2f} Metros equivalem à {metro / 1609:,.2f} Milhas"
+
+
+def metro_jarda (metro: float):
+
+    return f"{metro:,.2f} Metros equivalem à {metro * 1.094:,.2f} Jardas"
+
+
+def metro_pe (metro: float):
+
+    return f"{metro:,.2f} Metros equivalem à {metro * 3.281:,.2f} Pés"
+
+
+def metro_polegada (metro: float):
+
+    return f"{metro:,.2f} Metros equivalem à {metro * 39.37:,.2f} Polegas"
+
+
+def metro_milha_nautica (metro: float):
+
+    return f"{metro:,.2f} Metros equivalem à {metro / 1852:,.2f} Milhas Náuticas"
+
+
+
+## Kilometers to many
