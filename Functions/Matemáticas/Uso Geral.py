@@ -308,7 +308,9 @@ def validade_cpf (cpf):
 
         else:
 
-            return "Cpf inválidoa"
+            return "Cpf inválido"
 
 
-print(validade_cpf('06288231509'))
+def consumo_aparelho (volts: float, amperes: float):
+
+    return f"Com uma voltagem de {volts:,.2f}v e {amperes:,.2f}A, a potência máxima será {volts * amperes:,.2f} Watts"
