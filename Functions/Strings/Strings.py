@@ -1,11 +1,8 @@
 # Manipulação de strings;
 
-# --capturação de strings;
-
 imposto = ("olá mundo")
 
 print(imposto[8])
-# operações com string;
 # concatenação;
 
 imposto = "ABCDEFGHI"
@@ -30,7 +27,7 @@ print("joão tem [%4.2f]" % x)
 
 print("joão tem [%10.1f]" % x)
 
-        #utilização de marcador do tipo string "%s"; Composição de strings;
+#utilização de marcador do tipo string "%s"; Composição de strings;
 
 joão = "joão"
 
@@ -40,7 +37,8 @@ dinheiro = x*10
 
 print("%s tem %d anos e %4.2f reais de dinheiro" % (joão, idade, dinheiro))
 
-    #fatiamento de strings;
+
+#fatiamento de strings;
 
 print()
 

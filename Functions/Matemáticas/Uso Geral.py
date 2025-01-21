@@ -222,71 +222,93 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
     return ""
 
 
-def validade_cpf (valor):
+def validade_cpf (cpf):
 
-
-    if len(valor) != 11:
+    if len(cpf) != 11:
 
         return "Cpf inválido"
 
     else:
 
-        posicao_j = 0
+        lista_estados = {0: "Bahia", 1: "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", 2: "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma", 3: "Ceará, Maranhão ou Piauí",
+                         4: "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", 5: "Bahia ou Sergipe", 6: "Minas Gerais", 7: "Rio de Janeiro ou Espírito Santo", 8: "São Paulo",
+                         9 :"Paraná ou Santa Catarina"}
 
-        posicao_k = 0
+        resultado_posicao_j = 0
 
-        cpf = str(valor)
+        resultado_posicao_k = 0
 
-        estado = ""
+        contador = 10
 
-        if cpf[8] == "0":
+        estado = int(cpf[8])
 
-            estado = "Rio Grande do sul"
+        for contador2 in range(9):
 
-        elif cpf[8] == "1":
+            resultado_posicao_j += int(cpf[contador2]) * contador
 
-            estado = "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins"
+            contador -= 1
 
-        elif cpf[8] == "2":
+        if resultado_posicao_j % 11 < 2:
 
-            estado = "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma"
+            posicao_j = 0
 
-        elif cpf[8] == "3":
+        elif 2 <= resultado_posicao_j % 11 <= 10: # equals to: elif resultado_posicao_j >= 2 and resultado_posicao_j <= 10
 
-            estado = "Ceará, Maranhão ou Piauí"
-
-        elif cpf[8] == "4":
-
-            estado = "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas"
-
-        elif cpf[8] == "5":
-
-            estado = "Bahia ou Sergipe"
-
-        elif cpf[8] == "6":
-
-            estado = "Minas Gerais"
-
-        elif cpf[8] == "7":
-
-            estado = "Rio de Janeiro ou Espírito Santo"
-
-        elif cpf[8] == "8":
-
-            estado = "São Paulo"
-
-        elif cpf[8] == "9":
-
-            estado = "Paraná ou Santa Catarina"
+            posicao_j = 11 - (resultado_posicao_j % 11)
 
         else:
 
-            return "cpf inválido"
+            return "Cpf inválido"
 
-        for contador in cpf:
+        contador = 11
 
-            print(contador)
+        for contador2 in range(10):
 
-        return estado
+            resultado_posicao_k += int(cpf[contador2]) * contador
 
-print(validade_cpf('12348095523'))
+            contador -= 1
+
+        if resultado_posicao_k % 11 < 2:
+
+            posicao_k = 0
+
+        elif 2 <= resultado_posicao_k % 11 <= 10: # equals to: elif resultado_posicao_k >= 2 and resultado_posicao_k <= 10
+
+            posicao_k = 11 - (resultado_posicao_k % 11)
+
+        else:
+
+            return "Cpf inválido"
+
+        posicao_k = str(posicao_k)
+
+        posicao_j = str(posicao_j)
+
+        if posicao_j == cpf[9] and posicao_k == cpf[10]:
+
+            for contador3 in range(14):
+
+                cpf = list(cpf)
+
+                if contador3 == 3:
+
+                    cpf.insert(contador3, '.')
+
+                elif contador3 == 7:
+
+                    cpf.insert(contador3, '.')
+
+                elif contador3 == 11:
+
+                    cpf.insert(contador3, '-')
+
+            cpf = ''.join(cpf)
+
+            return f"O CPF {cpf} é válido, sendo emitido em: {lista_estados[estado]}"
+
+        else:
+
+            return "Cpf inválidoa"
+
+
+print(validade_cpf('06288231509'))

@@ -1,7 +1,5 @@
 # List
 
-## Validade CPF
-
 ## Função de calendário: perguntar quantos dias no futuro e retornar data completa
 
 ## Função calcular potência com voltagem e amperes
