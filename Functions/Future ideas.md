@@ -13,3 +13,7 @@ old_price, new_price = 499, 672"{:.2%} price increase".format(Fraction(new_price
 ## Função com greatest common divisor
 
 ## Least common multiple
+
+## Função de formatação de cnpj, data de nascimento e similares
+
+## Função convert fraction to decimal and vice-versa
