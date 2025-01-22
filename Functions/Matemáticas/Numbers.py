@@ -74,6 +74,10 @@ def raiz_quadrada (numero: float):
 
     base = 2
 
+    if numero < 0:
+
+        return "número imaginário"
+
     resultado_raiz_quadrada = (base + numero / base) / 2
 
     resultado_raiz_quadrada = resultado_raiz_quadrada ** 2
@@ -176,9 +180,9 @@ def numero_decimal_inteiro (numero: float):
 
     numero_inteiro = math.trunc(numero_decimal)
 
-    if numero_decimal > numero_inteiro:
+    if numero_decimal > numero_inteiro or numero_decimal != numero:
 
-        return "O número %.1f é decimal" % numero_decimal
+        return True
 
     else:
 

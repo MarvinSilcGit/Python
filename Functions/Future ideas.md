@@ -9,3 +9,7 @@
 ```python
 old_price, new_price = 499, 672"{:.2%} price increase".format(Fraction(new_price, old_price) - 1)
 ```
+
+## Função com greatest common divisor
+
+## Least common multiple

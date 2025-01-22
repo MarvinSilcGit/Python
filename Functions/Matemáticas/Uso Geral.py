@@ -319,6 +319,8 @@ def consumo_aparelho (volts: float, amperes: float):
 
 def formula_bhaskara (coeficiente_a, coeficiente_b, coeficiente_c):
 
+    from fractions import Fraction
+
     if coeficiente_a == 0:
 
         return "Coeficiente a não pode ser 0"
@@ -331,11 +333,23 @@ def formula_bhaskara (coeficiente_a, coeficiente_b, coeficiente_c):
 
             x_1 = -coeficiente_b + float(raiz_quadrada(delta))
 
-            print(numero_decimal_inteiro(x_1 / (2 * coeficiente_a)))
+            if numero_decimal_inteiro(x_1 / (2 * coeficiente_a)):
 
-            print(x_1 / (2*coeficiente_a))
+                x_1 = Fraction(int(x_1), int(2 * coeficiente_a))
 
-            x_2 = (-coeficiente_b - float(raiz_quadrada(delta))) / (2 * coeficiente_a)
+            else:
+
+                x_1 = x_1 / (2 * coeficiente_a)
+
+            x_2 = -coeficiente_b - float(raiz_quadrada(delta))
+
+            if numero_decimal_inteiro(x_2 / (2 * coeficiente_a)):
+
+                x_2 = Fraction(int(x_2), int(2 * coeficiente_a))
+
+            else:
+
+                x_2 = x_2 / (2 * coeficiente_a)
 
             if delta < 0:
 
@@ -347,7 +361,7 @@ def formula_bhaskara (coeficiente_a, coeficiente_b, coeficiente_c):
 
             else:
 
-                return f"Equação completa. A raiz positiva é {x_1:.2f}. A raiz negativa é {x_2:.2f}"
+                return f"Equação completa. A raiz positiva é {x_1}. A raiz negativa é {x_2:}"
 
 
-print(formula_bhaskara(3, -3, -5))
+print(formula_bhaskara(5, 7, 2))
