@@ -1,26 +1,26 @@
 import cmath
 
-a = int(input("Digite o valor de a: "))
+coeficiente_a = int(input("Digite o valor do coeficiente a: "))
 
-if a < 1:
+if coeficiente_a < 1:
 
     print("Valor inválido")
 
 else:
 
-    b = int(input("Digite o valor de b: "))
+    coeficiente_b = int(input("Digite o valor do coeficiente b: "))
 
-    c = int(input("Digite o valor de c: "))
+    coeficiente_c = int(input("Digite o valor do coeficiente c: "))
 
-    delta = b ** 2 - 4 * a * c
+    delta = coeficiente_b ** 2 - 4 * coeficiente_a * coeficiente_c
 
-    raiz_negativa = (- b - cmath.sqrt(delta)) / 2 * a
+    x_1 = (- coeficiente_b - cmath.sqrt(delta)) / 2 * coeficiente_a
 
-    raiz_positiva = (- b + cmath.sqrt(delta)) / 2 * a
+    x_2 = (- coeficiente_b + cmath.sqrt(delta)) / 2 * coeficiente_a
 
-    raiz_negativa = raiz_negativa.real
+    x_1 = x_1.real
 
-    raiz_positiva = raiz_positiva.real
+    x_2 = x_2.real
 
     if delta < 0:
 
@@ -30,10 +30,10 @@ else:
 
         print("A equação possui apenas uma raiz real")
 
-        print("A raiz positiva é %d" % raiz_positiva)
+        print("A raiz positiva é %d" % x_2)
 
     else:
 
         print("A equação possui duas raiz reais")
 
-        print("A raiz negativa é %d e a raiz positiva é %d" % (raiz_negativa, raiz_positiva))
+        print("A raiz negativa é %d e a raiz positiva é %d" % (x_1, x_2))

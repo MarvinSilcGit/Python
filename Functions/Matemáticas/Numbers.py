@@ -67,7 +67,7 @@ def resto_inteiro_divisao (valor1: float, valor2: float):
 
                 resto += 1
 
-        return "O resto inteiro da divisão entre %.1f e %.1f é: %d" % (valor1, valor2, resto_inteiro)
+        return f"{resto_inteiro}"
 
 
 def raiz_quadrada (numero: float):
@@ -84,7 +84,7 @@ def raiz_quadrada (numero: float):
 
         resultado_raiz_quadrada = (base + numero / base) / 2
 
-    return "A raiz aproximada de %d é: %.4f" % (numero, resultado_raiz_quadrada)
+    return f"{resultado_raiz_quadrada:,.4f}"
 
 
 def numero_primo (numero: int):
@@ -148,7 +148,7 @@ def calculo_fatorial (numero: int):
 
         resultado_fatorial *= contador - 1
 
-    return "Fatorial de %d é %d" % (numero, resultado_fatorial)
+    return f"{resultado_fatorial}"
 
 
 def ano_bissexto (ano: int):
@@ -186,11 +186,11 @@ def numero_decimal_inteiro (numero: float):
 
         if "." in numero_decimal:
 
-            return "O número %s é decimal" % numero_decimal
+            return True
 
         else:
 
-            return "O número %d não é decimal" % numero_inteiro
+            return False
 
 
 def numero_fizz_buzz (numero_limite: int):
@@ -242,7 +242,7 @@ def binary_decimal (numero: str):
 
         numero = int(numero)
 
-    return "%d binário representa %d em decimal" % (numero, decimal)
+    return f"{decimal}"
 
 
 def decimal_binary (numero: int):
@@ -265,4 +265,4 @@ def decimal_binary (numero: int):
 
     binario = int(binario)
 
-    return "%d decimal representa %s em binário" % (numero, binario)
+    return f"{binario}"

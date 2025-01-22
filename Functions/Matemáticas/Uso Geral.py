@@ -1,5 +1,6 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
 
+from Functions.Matemáticas.Numbers import raiz_quadrada, numero_decimal_inteiro
 
 def palindromo (valor):
 
@@ -314,3 +315,39 @@ def validade_cpf (cpf):
 def consumo_aparelho (volts: float, amperes: float):
 
     return f"Com uma voltagem de {volts:,.2f}v e {amperes:,.2f}A, a potência máxima será {volts * amperes:,.2f} Watts"
+
+
+def formula_bhaskara (coeficiente_a, coeficiente_b, coeficiente_c):
+
+    if coeficiente_a == 0:
+
+        return "Coeficiente a não pode ser 0"
+
+    else:
+
+        if coeficiente_a != 0 and coeficiente_b != 0 and coeficiente_c != 0:
+
+            delta = coeficiente_b ** 2 - 4 * coeficiente_a * coeficiente_c
+
+            x_1 = -coeficiente_b + float(raiz_quadrada(delta))
+
+            print(numero_decimal_inteiro(x_1 / (2 * coeficiente_a)))
+
+            print(x_1 / (2*coeficiente_a))
+
+            x_2 = (-coeficiente_b - float(raiz_quadrada(delta))) / (2 * coeficiente_a)
+
+            if delta < 0:
+
+                return "A equação não possui raizes reais"
+
+            elif delta == 0:
+
+                return f"A equação possui apenas uma raiz real. A raiz positiva é {x_1}"
+
+            else:
+
+                return f"Equação completa. A raiz positiva é {x_1:.2f}. A raiz negativa é {x_2:.2f}"
+
+
+print(formula_bhaskara(3, -3, -5))
