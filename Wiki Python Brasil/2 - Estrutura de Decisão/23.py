@@ -1,36 +1,21 @@
 import math
 
-numero_decimal = float(input("Digite o número para saber se é decimal ou não: "))
+numero = input("Digite o número para saber se é decimal ou não: ")
+
+numero_decimal = float(numero)
 
 numero_inteiro = math.trunc(numero_decimal)
 
-if numero_decimal > numero_inteiro or numero_inteiro != numero_decimal:
+if numero_decimal > numero_inteiro:
 
-    print("O número %.1f é decimal" % numero_decimal)
+    print(f"O número {numero} é decimal")
 
 else:
 
-    print("O número %d não é decimal" % numero_inteiro)
+    if "." in numero:
 
-  #Update as below
-"""    import math
-
-    numero_decimal = numero
-
-    numero_inteiro = math.trunc(numero_decimal)
-
-    if numero_decimal > numero_inteiro:
-
-        return "dd"
+        print(f"O número {numero} é decimal")
 
     else:
 
-        numero_decimal = str(numero_decimal)
-
-        if "." in numero_decimal:
-
-            return True
-
-        else:
-
-            return False"""
+        print(f"O número {numero} não é decimal")
