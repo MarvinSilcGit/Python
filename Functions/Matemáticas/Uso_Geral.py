@@ -227,7 +227,7 @@ def validade_cpf (cpf):
 
     if len(cpf) != 11:
 
-        return "Cpf inválido"
+        return "CPF inválido"
 
     else:
 
@@ -259,7 +259,7 @@ def validade_cpf (cpf):
 
         else:
 
-            return "Cpf inválido"
+            return "CPF inválido"
 
         contador = 11
 
@@ -279,17 +279,17 @@ def validade_cpf (cpf):
 
         else:
 
-            return "Cpf inválido"
+            return "CPF inválido"
 
         posicao_k = str(posicao_k)
 
         posicao_j = str(posicao_j)
 
+        cpf = list(cpf)
+
         if posicao_j == cpf[9] and posicao_k == cpf[10]:
 
             for contador3 in range(14):
-
-                cpf = list(cpf)
 
                 if contador3 == 3:
 
@@ -309,7 +309,74 @@ def validade_cpf (cpf):
 
         else:
 
-            return "Cpf inválido"
+            return "CPF inválido"
+
+
+def validade_cnpj(cnpj):
+
+    if len(cnpj) != 12:
+
+        return "CNPJ inválido. Digite somente os primeiros 12 digitos"
+
+    else:
+
+        resultado_posicao_x_1 = 0
+
+        resultado_posicao_x_2 = 0
+
+        contador = 5
+
+        for contador2 in range(12):
+
+            contador += 1
+
+            resultado_posicao_x_1 += int(cnpj[contador2]) * contador
+
+            if contador == 9:
+
+                contador = 1
+
+        cnpj = str(cnpj)
+
+        cnpj += str(resultado_posicao_x_1 % 11)
+
+        contador = 4
+
+        for contador2 in range(13):
+
+            contador += 1
+
+            resultado_posicao_x_2 += int(cnpj[contador2]) * contador
+
+            if contador == 9:
+
+                contador = 1
+
+        cnpj += str(resultado_posicao_x_2 % 11)
+
+        cnpj = list(cnpj)
+
+        for contador3 in range(18):
+
+            if contador3 == 2:
+
+                cnpj.insert(contador3, '.')
+
+            elif contador3 == 6:
+
+                cnpj.insert(contador3, '.')
+
+            elif contador3 == 10:
+
+                cnpj.insert(contador3, '/')
+
+            elif contador3 == 15:
+
+                cnpj.insert(contador3, '-')
+
+        cnpj = ''.join(cnpj)
+
+        return f"O CNPJ será {cnpj}"
 
 
 def consumo_aparelho (volts: float, amperes: float):
