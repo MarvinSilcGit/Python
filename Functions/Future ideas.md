@@ -17,3 +17,11 @@ old_price, new_price = 499, 672"{:.2%} price increase".format(Fraction(new_price
 ## Função de formatação de data de nascimento e similares
 
 ## Função convert fraction to decimal and vice-versa
+
+## Função geradora de números de telefone
+
+## Site/aplicativo gerador de vários tipos de número, vide: https://geradornv.com.br/
+
+## Site/aplicativo conversor de números
+
+## Site/aplicativo para resolução de fórmulas matemáticas
