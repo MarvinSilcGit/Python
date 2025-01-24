@@ -316,17 +316,17 @@ def validade_cpf (cpf):
 
 def validade_cnpj(cnpj):
 
+    resultado_posicao_x_1 = 0
+
+    resultado_posicao_x_2 = 0
+
+    contador = 5
+
     if len(cnpj) != 12:
 
         return "CNPJ inválido. Digite somente os primeiros 12 digitos"
 
     else:
-
-        resultado_posicao_x_1 = 0
-
-        resultado_posicao_x_2 = 0
-
-        contador = 5
 
         for contador2 in range(12):
 
