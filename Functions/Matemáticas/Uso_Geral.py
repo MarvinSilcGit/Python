@@ -231,9 +231,11 @@ def validade_cpf (cpf):
 
     else:
 
-        dicionario_estados = {"0": "Bahia", "1": "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma", "3": "Ceará, Maranhão ou Piauí",
-                         "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", "5": "Bahia ou Sergipe", "6": "Minas Gerais", "7": "Rio de Janeiro ou Espírito Santo", "8": "São Paulo",
-                         "9":"Paraná ou Santa Catarina"}
+        dicionario_estados = {"0": "Bahia", "1": "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma",
+                              "3": "Ceará, Maranhão ou Piauí",
+                              "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", "5": "Bahia ou Sergipe", "6": "Minas Gerais",
+                              "7": "Rio de Janeiro ou Espírito Santo", "8": "São Paulo",
+                              "9":"Paraná ou Santa Catarina"}
 
         resultado_posicao_j = 0
 
@@ -492,5 +494,3 @@ def formatacao_numero_telefone (ddi: str, numero: str):
         numero_formatado = ''.join(numero_formatado)
 
     return f"O número {numero_formatado} pertence ao país: {dicionario_paises[ddi]}. Mais precisamente: {dicionario_ddd_brasil[codigo_local]}"
-
-print(formatacao_numero_telefone('55', '77980729127'))
