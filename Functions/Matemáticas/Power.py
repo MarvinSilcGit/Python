@@ -12,7 +12,8 @@ def cv_kw (cavalos: float):
     return f"{cavalos:,.2f} Cavalos equivalem à {kw:,.2f} Kilowatts"
 
 
-
 def consumo_aparelho (volts: float, amperes: float):
 
-    return f"Com uma voltagem de {volts:,.2f}v e {amperes:,.2f}A, a potência máxima será {volts * amperes:,.2f} Watts"
+    return f"Com {volts:,.2f}v e {amperes:,.2f}A, a potência máxima será {volts * amperes:,.2f} Watts"
+
+print(consumo_aparelho(12,5))
