@@ -231,7 +231,7 @@ def validade_cpf (cpf):
 
     else:
 
-        dicionario_estados = {"0": "Bahia", "1": "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma",
+        dicionario_estados = {"1": "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma",
                               "3": "Ceará, Maranhão ou Piauí",
                               "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", "5": "Bahia ou Sergipe", "6": "Minas Gerais",
                               "7": "Rio de Janeiro ou Espírito Santo", "8": "São Paulo",
