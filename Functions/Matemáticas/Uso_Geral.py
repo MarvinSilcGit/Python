@@ -250,7 +250,7 @@ def validade_cpf (cpf):
             resultado_posicao_j += int(cpf[contador2]) * contador
 
             contador -= 1
-
+            print(resultado_posicao_j)
         if resultado_posicao_j % 11 < 2:
 
             posicao_j = 0
@@ -312,6 +312,7 @@ def validade_cpf (cpf):
         else:
 
             return "CPF inválido"
+print(validade_cpf('86706209520'))
 
 
 def validade_cnpj(cnpj):
