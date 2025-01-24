@@ -15,5 +15,3 @@ def cv_kw (cavalos: float):
 def consumo_aparelho (volts: float, amperes: float):
 
     return f"Com {volts:,.2f}v e {amperes:,.2f}A, a potência máxima será {volts * amperes:,.2f} Watts"
-
-print(consumo_aparelho(12,5))
