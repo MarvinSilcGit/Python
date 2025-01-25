@@ -232,15 +232,15 @@ def binary_decimal (numero: str):
 
         if contador == "1":
 
-            decimal += (1 * 2 ** expoente)
+            decimal += (2 ** expoente)
 
         elif contador == "0":
 
-            decimal += (0 * 2 ** expoente)
+            decimal += 0
 
         else:
 
-            return 'Esse não é um número binário'
+            return 'Esse número não é binário'
 
         expoente -= 1
 
@@ -253,23 +253,19 @@ def decimal_binary (numero: int):
 
     resto = []
 
-    binario = ""
-
     numero_decimal = numero
 
     while numero_decimal != 0:
 
-        resto.insert(0, numero_decimal % 2)
+        resto.insert(0, str(numero_decimal % 2))
 
         numero_decimal = numero_decimal // 2
 
-    for contador in resto:
+    resto = ''.join(resto)
 
-        binario += str(contador)
+    resto = int(resto)
 
-    binario = int(binario)
-
-    return f"{binario}"
+    return f"{resto}"
 
 
 def equacao_segundo_grau_bhaskara (coeficiente_a: float, coeficiente_b: float, coeficiente_c: float):
