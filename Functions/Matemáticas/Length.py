@@ -160,3 +160,54 @@ def centimetro_milha_nautica (centimetro: float):
 # Milimeters to many
 
 
+def milimetro_quilometro (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 1e+6:.2e} Quilometros'
+
+
+def milimetro_metro (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 1000:,.2f} Metros'
+
+
+def milimetro_centimetro (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 10:,.2f} Centímetros'
+
+
+def milimetro_micrometro (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros * 1000:,.2f} Micrômetros'
+
+
+def milimetro_nanometro (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros * 1e+06:.2e} Nanômetros'
+
+
+def milimetro_milha (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 1.609e+6:.2e} Milhas'
+
+
+def milimetro_jarda (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 914.4:,.2f} Jardas'
+
+
+def milimetro_pe (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 304.8:,.3f} Pés'
+
+
+def milimetro_polegada (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 25.4:,.2f} Polegadas'
+
+
+def milimetro_milha_nautica (milimetros: float):
+
+    return f'{milimetros:,.2f} Milímetros equivalem à {milimetros / 1.852e+6:.2e} Milhas Náuticas'
+
+
+# Micrometers to many
