@@ -221,6 +221,29 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
     return ""
 
 
+def formatar_cpf (cpf: str):
+
+    cpf = list(cpf)
+
+    for contador in range(14):
+
+        if contador == 3:
+
+            cpf.insert(contador, '.')
+
+        elif contador == 7:
+
+            cpf.insert(contador, '.')
+
+        elif contador == 11:
+
+            cpf.insert(contador, '-')
+
+    cpf = ''.join(cpf)
+
+    return cpf
+
+
 def validade_cpf (cpf):
 
     if len(cpf) != 11:
@@ -285,25 +308,9 @@ def validade_cpf (cpf):
 
         posicao_j = str(posicao_j)
 
-        cpf = list(cpf)
-
         if posicao_j == cpf[9] and posicao_k == cpf[10]:
 
-            for contador3 in range(14):
-
-                if contador3 == 3:
-
-                    cpf.insert(contador3, '.')
-
-                elif contador3 == 7:
-
-                    cpf.insert(contador3, '.')
-
-                elif contador3 == 11:
-
-                    cpf.insert(contador3, '-')
-
-            cpf = ''.join(cpf)
+            cpf = formatar_cpf(cpf)
 
             return f"O CPF {cpf} é válido, sendo emitido em {dicionario_estados[estado]}"
 
@@ -314,23 +321,46 @@ def validade_cpf (cpf):
 
 def gerador_cpf ():
 
-    import random as aleatorio
+    import random as aleatoriedade
 
-    cpf = ""
-
-    resultado = 0
+    cpf = []
 
     for contador in range(11):
 
-        resultado = aleatorio.randint(0,9)
+        cpf.append(str(aleatoriedade.randint(0,9)))
 
-        cpf += str(resultado)
+    cpf = ''.join(cpf)
 
-        print(resultado)
+    cpf = formatar_cpf(cpf)
 
-    return resultado
+    return cpf
 
-print(gerador_cpf())
+
+def formatar_cnpj (cnpj: str):
+
+    cnpj = list(cnpj)
+
+    for contador3 in range(18):
+
+        if contador3 == 2:
+
+            cnpj.insert(contador3, '.')
+
+        elif contador3 == 6:
+
+            cnpj.insert(contador3, '.')
+
+        elif contador3 == 10:
+
+            cnpj.insert(contador3, '/')
+
+        elif contador3 == 15:
+
+            cnpj.insert(contador3, '-')
+
+    cnpj = ''.join(cnpj)
+
+    return cnpj
 
 
 def validade_cnpj(cnpj):
@@ -373,29 +403,24 @@ def validade_cnpj(cnpj):
 
         cnpj += str(resultado_posicao_x_2 % 11)
 
-        cnpj = list(cnpj)
+        return f"O CNPJ será {formatar_cnpj(cnpj)}"
 
-        for contador3 in range(18):
 
-            if contador3 == 2:
+def gerador_cnpj ():
 
-                cnpj.insert(contador3, '.')
+    import random as aleatoriedade
 
-            elif contador3 == 6:
+    cnpj = []
 
-                cnpj.insert(contador3, '.')
+    for contador in range(14):
 
-            elif contador3 == 10:
+        cnpj.append(str(aleatoriedade.randint(0,9)))
 
-                cnpj.insert(contador3, '/')
+    cnpj = ''.join(cnpj)
 
-            elif contador3 == 15:
+    cnpj = formatar_cnpj(cnpj)
 
-                cnpj.insert(contador3, '-')
-
-        cnpj = ''.join(cnpj)
-
-        return f"O CNPJ será {cnpj}"
+    return cnpj
 
 
 def formatacao_numero_telefone (numero: str):
