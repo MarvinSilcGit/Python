@@ -54,54 +54,109 @@ def metro_milha_nautica (metro: float):
 ## Kilometers to many
 
 
-def quilometro_metro (km: float):
+def quilometro_metro (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km * 1000:,.2f} Metros'
-
-
-def quilometro_centimetro (km: float):
-
-    return f'{km:,.2f} Quilômetros equivalem à {km * 100000:,.2f} Centímetros'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 1000:,.2f} Metros'
 
 
-def quilometro_milimetro (km: float):
+def quilometro_centimetro (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+6:.2e} Milímetros'
-
-
-def quilometro_micrometro (km: float):
-
-    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+9:.2e} Micrômetros'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 100000:,.2f} Centímetros'
 
 
-def quilometro_nanometro (km: float):
+def quilometro_milimetro (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+12:.2e} Nanômetros'
-
-
-def quilometro_milha (km: float):
-
-    return f'{km:,.2f} Quilômetros equivalem à {km / 1.609:,.2f} Milhas'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 1e+6:.2e} Milímetros'
 
 
-def quilometro_jarda (km: float):
+def quilometro_micrometro (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km * 1094:,.2f} Jardas'
-
-
-def quilometro_pe (km: float):
-
-    return f'{km:,.2f} Quilômetros equivalem à {km * 3281:,.2f} Pés'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 1e+9:.2e} Micrômetros'
 
 
-def quilometro_polegada (km: float):
+def quilometro_nanometro (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km * 39370:,.2f} Polegadas'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 1e+12:.2e} Nanômetros'
 
 
-def quilometro_milha_nautica (km: float):
+def quilometro_milha (kilometros: float):
 
-    return f'{km:,.2f} Quilômetros equivalem à {km / 1.852:,.2f} Milhas Náuticas'
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros / 1.609:,.2f} Milhas'
+
+
+def quilometro_jarda (kilometros: float):
+
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 1094:,.2f} Jardas'
+
+
+def quilometro_pe (kilometros: float):
+
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 3281:,.2f} Pés'
+
+
+def quilometro_polegada (kilometros: float):
+
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros * 39370:,.2f} Polegadas'
+
+
+def quilometro_milha_nautica (kilometros: float):
+
+    return f'{kilometros:,.2f} Quilômetros equivalem à {kilometros / 1.852:,.2f} Milhas Náuticas'
 
 
 # Centimeters to many
+
+
+def centimetro_quilometro (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 100000:.2e} Quilometros'
+
+
+def centimetro_metro (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 100:,.2f} Metros'
+
+
+def centimetro_milimetro (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro * 10:,.2f} Milímetros'
+
+
+def centimetro_micrometro (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro * 10000:,.2f} Micrômetros'
+
+
+def centimetro_nanometro (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro * 1e+07:.2e} Nanômetros'
+
+
+def centimetro_milha (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 160900:.2e} Milhas'
+
+
+def centimetro_jarda (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 91.44:,.2f} Jardas'
+
+
+def centimetro_pe (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 30.48:,.2f} Pés'
+
+
+def centimetro_polegada (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 2.54:,.2f} Polegadas'
+
+
+def centimetro_milha_nautica (centimetro: float):
+
+    return f'{centimetro:,.2f} Centímetros equivalem à {centimetro / 185200:.2e} Milhas Náuticas'
+
+
+# Milimeters to many
+
+
