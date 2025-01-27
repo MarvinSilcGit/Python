@@ -1,7 +1,5 @@
 #How to import: from Functions.Matemáticas import resto_divisao or import *
 
-from Functions.Matemáticas.Numbers import raiz_quadrada, numero_decimal_inteiro
-
 def palindromo (valor):
 
     contador2 = 0
@@ -133,7 +131,7 @@ def calculo_tmb (peso: float, altura: float, idade: int, genero: str):
 
     if genero not in lista_generos:
 
-        return "Genêro inválido"
+        return "Gênero inválido"
 
     else:
 
@@ -174,7 +172,7 @@ def triangulo_validade_tipo (lado1: int, lado2: int, lado3: int):
 
             elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
 
-                return "Esse é um triângulo isóceles"
+                return "Esse é um triângulo isosceles"
 
 
 def gerador_tabuada_simples (numero_tabuada: int):
@@ -231,7 +229,7 @@ def validade_cpf (cpf):
 
     else:
 
-        dicionario_estados = {"1": "Distrido Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônio ou Roraíma",
+        dicionario_estados = {"1": "Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônia ou Roraíma",
                               "3": "Ceará, Maranhão ou Piauí",
                               "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", "5": "Bahia ou Sergipe", "6": "Minas Gerais",
                               "7": "Rio de Janeiro ou Espírito Santo", "8": "São Paulo",
@@ -307,11 +305,32 @@ def validade_cpf (cpf):
 
             cpf = ''.join(cpf)
 
-            return f"O CPF {cpf} é válido, sendo emitido em: {dicionario_estados[estado]}"
+            return f"O CPF {cpf} é válido, sendo emitido em {dicionario_estados[estado]}"
 
         else:
 
             return "CPF inválido"
+
+
+def gerador_cpf ():
+
+    import random as aleatorio
+
+    cpf = ""
+
+    resultado = 0
+
+    for contador in range(11):
+
+        resultado = aleatorio.randint(0,9)
+
+        cpf += str(resultado)
+
+        print(resultado)
+
+    return resultado
+
+print(gerador_cpf())
 
 
 def validade_cnpj(cnpj):
@@ -324,7 +343,7 @@ def validade_cnpj(cnpj):
 
     if len(cnpj) != 12:
 
-        return "CNPJ inválido. Digite somente os primeiros 12 digitos"
+        return "CNPJ inválido. Digite somente os primeiros 12 dígitos"
 
     else:
 
@@ -379,66 +398,56 @@ def validade_cnpj(cnpj):
         return f"O CNPJ será {cnpj}"
 
 
-def formatacao_numero_telefone (ddi: str, numero: str):
+def formatacao_numero_telefone (numero: str):
 
-    dicionario_paises = {"55": "Brasil", "1": "Estados Unidos da America", "48": "Polônia"}
-
-    numero_formatado = ddi
-
-    numero_formatado += numero
+    numero_formatado = numero
 
     numero_formatado = list(numero_formatado)
 
-    if ddi == "55":
+    codigo_local = str(numero[0:2])
 
-        codigo_local = str(numero[0:2])
+    dicionario_ddd_brasil = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará", "93": "Pará", "94": "Pará",
+                             "69": "Rondônia", "95": "Roraima", "63": "Tocantins", "61": "Distrito Federal", "62": "Goiás", "64": "Goiás",
+                             "65": "Mato Grosso", "66": "Mato Grosso", "67": "Mato Grosso do Sul", "82": "Alagoas", "71": "Bahia", "73": "Bahia",
+                             "74": "Bahia", "75": "Bahia", "77": "Bahia", "79": "Sergipe", "85": "Ceará", "88": "Ceará", "98": "Maranhão", "99": "Maranhão",
+                             "83": "Paraíba", "81": "Pernambuco", "87": "Pernambuco", "86": "Piauí", "89": "Piauí", "84": "Rio Grande do Norte",
+                             "27": "Espírito Santo", "28": "Espírito Santo", "31": "Minas Gerais", "32": "Minas Gerais", "33": "Minas Gerais",
+                             "34": "Minas Gerais", "35": "Minas Gerais", "37": "Minas Gerais", "38": "Minas Gerais", "21": "Rio de Janeiro",
+                             "22": "Rio de Janeiro", "24": "Rio de Janeiro", "11": "São Paulo", "12": "São Paulo", "13": "São Paulo", "14": "São Paulo",
+                             "15": "São Paulo", "16": "São Paulo", "17": "São Paulo", "18": "São Paulo", "19": "São Paulo", "41": "Paraná", "42": "Paraná",
+                             "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul", "53": "Rio Grande do Sul",
+                             "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina", "48": "Santa Catarina", "49": "Santa Catarina"}
 
-        dicionario_ddd_brasil = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará", "93": "Pará", "94": "Pará",
-                                 "69": "Rondônia", "95": "Roraima", "63": "Tocantins", "61": "Distrito Federal", "62": "Goiás", "64": "Goiás",
-                                 "65": "Mato Grosso", "66": "Mato Grosso", "67": "Mato Grosso do Sul", "82": "Alagoas", "71": "Bahia", "73": "Bahia",
-                                 "74": "Bahia", "75": "Bahia", "77": "Bahia", "79": "Sergipe", "85": "Ceará", "88": "Ceará", "98": "Maranhão", "99": "Maranhão",
-                                 "83": "Paraíba", "81": "Pernambuco", "87": "Pernambuco", "86": "Piauí", "89": "Piauí", "84": "Rio Grande do Norte",
-                                 "27": "Espírito Santo", "28": "Espírito Santo", "31": "Minas Gerais", "32": "Minas Gerais", "33": "Minas Gerais",
-                                 "34": "Minas Gerais", "35": "Minas Gerais", "37": "Minas Gerais", "38": "Minas Gerais", "21": "Rio de Janeiro",
-                                 "22": "Rio de Janeiro", "24": "Rio de Janeiro", "11": "São Paulo", "12": "São Paulo", "13": "São Paulo", "14": "São Paulo",
-                                 "15": "São Paulo", "16": "São Paulo", "17": "São Paulo", "18": "São Paulo", "19": "São Paulo", "41": "Paraná", "42": "Paraná",
-                                 "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul", "53": "Rio Grande do Sul",
-                                 "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina", "48": "Santa Catarina", "49": "Santa Catarina"}
+    if len(numero) != 11:
 
-        if len(numero) != 11:
+        return 'Número inválido'
 
-            return 'Número inválido'
+    if not codigo_local in dicionario_ddd_brasil:
 
-        if not codigo_local in dicionario_ddd_brasil:
+        return "DDD inválido"
 
-            return "DDD inválido"
+    for contador in range(17):
 
-        for contador in range(17):
+        if contador == 0:
 
-            if contador == 0:
+            numero_formatado.insert(contador, '(')
 
-                numero_formatado.insert(contador, '+')
+        elif contador == 3:
 
-            elif contador == 3:
+            numero_formatado.insert(contador, ')')
 
-                numero_formatado.insert(contador, ' ')
+        elif contador == 4:
 
-            elif contador == 4:
+            numero_formatado.insert(contador, ' ')
 
-                numero_formatado.insert(contador, '(')
+        elif contador == 7:
 
-            elif contador == 7:
+            numero_formatado.insert(contador, '')
 
-                numero_formatado.insert(contador, ')')
+        elif contador == 11:
 
-            elif contador == 8:
+            numero_formatado.insert(contador, '-')
 
-                numero_formatado.insert(contador, ' ')
+    numero_formatado = ''.join(numero_formatado)
 
-            elif contador == 14:
-
-                numero_formatado.insert(contador, '-')
-
-        numero_formatado = ''.join(numero_formatado)
-
-    return f"O número {numero_formatado} pertence ao país: {dicionario_paises[ddi]}. Mais precisamente: {dicionario_ddd_brasil[codigo_local]}"
+    return f"{numero_formatado}"
