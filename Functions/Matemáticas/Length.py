@@ -1,5 +1,6 @@
 ## Meters to many
 
+
 def metro_quilometro (metro: float):
 
     return f"{metro:,.2f} Metros equivalem à {metro / 1000:,.2f} Quilometros"
@@ -17,12 +18,12 @@ def metro_milimetro (metro: float):
 
 def metro_micrometro (metro: float):
 
-    return f"{metro:,.2f} Metros equivalem à {metro * 1e+6:,e} Micrômetros"
+    return f"{metro:,.2f} Metros equivalem à {metro * 1e+6:.2e} Micrômetros"
 
 
 def metro_nanometro (metro: float):
 
-    return f"{metro:,.2f} Metros equivalem à {metro * 1e+9:,e} Nanômetros"
+    return f"{metro:,.2f} Metros equivalem à {metro * 1e+9:.2e} Nanômetros"
 
 
 def metro_milha (metro: float):
@@ -51,3 +52,56 @@ def metro_milha_nautica (metro: float):
 
 
 ## Kilometers to many
+
+
+def quilometro_metro (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 1000:,.2f} Metros'
+
+
+def quilometro_centimetro (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 100000:,.2f} Centímetros'
+
+
+def quilometro_milimetro (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+6:.2e} Milímetros'
+
+
+def quilometro_micrometro (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+9:.2e} Micrômetros'
+
+
+def quilometro_nanometro (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 1e+12:.2e} Nanômetros'
+
+
+def quilometro_milha (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km / 1.609:,.2f} Milhas'
+
+
+def quilometro_jarda (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 1094:,.2f} Jardas'
+
+
+def quilometro_pe (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 3281:,.2f} Pés'
+
+
+def quilometro_polegada (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km * 39370:,.2f} Polegadas'
+
+
+def quilometro_milha_nautica (km: float):
+
+    return f'{km:,.2f} Quilômetros equivalem à {km / 1.852:,.2f} Milhas Náuticas'
+
+
+# Centimeters to many
