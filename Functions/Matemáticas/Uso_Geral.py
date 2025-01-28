@@ -340,30 +340,34 @@ def formatar_cnpj (cnpj: str):
 
     cnpj = list(cnpj)
 
-    for contador3 in range(18):
+    for contador in range(18):
 
-        if contador3 == 2:
+        if contador == 2:
 
-            cnpj.insert(contador3, '.')
+            cnpj.insert(contador, '.')
 
-        elif contador3 == 6:
+        elif contador == 6:
 
-            cnpj.insert(contador3, '.')
+            cnpj.insert(contador, '.')
 
-        elif contador3 == 10:
+        elif contador == 10:
 
-            cnpj.insert(contador3, '/')
+            cnpj.insert(contador, '/')
 
-        elif contador3 == 15:
+        elif contador == 15:
 
-            cnpj.insert(contador3, '-')
+            cnpj.insert(contador, '-')
 
     cnpj = ''.join(cnpj)
 
     return cnpj
 
 
-def validade_cnpj(cnpj):
+def validade_cnpj(cnpj: str):
+
+    cnpj_validador = list(cnpj[0:12])
+
+    cnpj_validador = ''.join(cnpj_validador)
 
     resultado_posicao_x_1 = 0
 
@@ -371,40 +375,49 @@ def validade_cnpj(cnpj):
 
     contador = 5
 
-    if len(cnpj) != 12:
+    for contador2 in cnpj_validador:
 
-        return "CNPJ inválido. Digite somente os primeiros 12 dígitos"
+        contador += 1
+
+        posicao_x_1 = int(contador2)
+
+        resultado_posicao_x_1 += posicao_x_1 * contador
+
+        if contador == 9:
+
+            contador = 1
+
+    cnpj_validador += str(resultado_posicao_x_1 % 11)
+
+    contador = 4
+
+    for contador2 in cnpj_validador:
+
+        contador += 1
+
+        posicao_x_2 = int(contador2)
+
+        resultado_posicao_x_2 += posicao_x_2 * contador
+
+        if contador == 9:
+
+            contador = 1
+
+    cnpj_validador += str(resultado_posicao_x_2 % 11)
+
+    cnpj_validador = formatar_cnpj(cnpj_validador)
+
+    cnpj = formatar_cnpj(cnpj)
+
+    if cnpj == cnpj_validador:
+
+        return f"O CNPJ {cnpj} é válido"
 
     else:
 
-        for contador2 in range(12):
+        return f"O CNPJ {cnpj} é inválido"
 
-            contador += 1
-
-            resultado_posicao_x_1 += int(cnpj[contador2]) * contador
-
-            if contador == 9:
-
-                contador = 1
-
-        cnpj += str(resultado_posicao_x_1 % 11)
-
-        contador = 4
-
-        for contador2 in range(13):
-
-            contador += 1
-
-            resultado_posicao_x_2 += int(cnpj[contador2]) * contador
-
-            if contador == 9:
-
-                contador = 1
-
-        cnpj += str(resultado_posicao_x_2 % 11)
-
-        return f"O CNPJ será {formatar_cnpj(cnpj)}"
-
+print(validade_cnpj('59120772000100'))
 
 def gerador_cnpj ():
 
