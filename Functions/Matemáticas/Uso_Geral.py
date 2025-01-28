@@ -244,7 +244,7 @@ def formatar_cpf (cpf: str):
     return cpf
 
 
-def validade_cpf (cpf):
+def validar_cpf (cpf):
 
     cpf_validador = list(cpf[0:9])
 
@@ -343,7 +343,7 @@ def formatar_cnpj (cnpj: str):
     return cnpj
 
 
-def validade_cnpj(cnpj: str):
+def validar_cnpj(cnpj: str):
 
     cnpj_validador = list(cnpj[0:12])
 
@@ -397,7 +397,7 @@ def validade_cnpj(cnpj: str):
 
         return f"O CNPJ {cnpj} é inválido"
 
-print(validade_cnpj('59120772000100'))
+print(validar_cnpj('59120772000100'))
 
 def gerador_cnpj ():
 
@@ -424,7 +424,7 @@ def gerador_cnpj ():
     return cnpj
 
 
-def formatacao_numero_telefone (numero: str):
+def formatar_numero_telefone (numero: str):
 
     numero_formatado = numero
 
@@ -444,13 +444,9 @@ def formatacao_numero_telefone (numero: str):
                              "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul", "53": "Rio Grande do Sul",
                              "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina", "48": "Santa Catarina", "49": "Santa Catarina"}
 
-    if len(numero) != 11:
+    if not codigo_local in dicionario_ddd_brasil or len(numero) != 11:
 
-        return 'Número inválido'
-
-    if not codigo_local in dicionario_ddd_brasil:
-
-        return "DDD inválido"
+        return "Número inválido"
 
     for contador in range(17):
 
@@ -466,11 +462,7 @@ def formatacao_numero_telefone (numero: str):
 
             numero_formatado.insert(contador, ' ')
 
-        elif contador == 7:
-
-            numero_formatado.insert(contador, '')
-
-        elif contador == 11:
+        elif contador == 10:
 
             numero_formatado.insert(contador, '-')
 
