@@ -427,7 +427,17 @@ def gerador_cnpj ():
 
     for contador in range(14):
 
-        cnpj.append(str(aleatoriedade.randint(0,9)))
+        if contador == 8 or contador == 9 or contador == 10:
+
+            cnpj.append(str(0))
+
+        elif contador == 11:
+
+            cnpj.append(str(1))
+
+        else:
+
+            cnpj.append(str(aleatoriedade.randint(0,9)))
 
     cnpj = ''.join(cnpj)
 
