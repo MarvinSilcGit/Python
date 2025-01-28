@@ -397,7 +397,7 @@ def validade_cnpj(cnpj: str):
 
         return f"O CNPJ {cnpj} é inválido"
 
-#print(validade_cnpj('59120772000100'))
+print(validade_cnpj('59120772000100'))
 
 def gerador_cnpj ():
 
