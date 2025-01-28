@@ -423,23 +423,21 @@ def gerador_cnpj ():
 
     import random as aleatoriedade
 
-    cnpj = []
+    cnpj = ''
 
     for contador in range(14):
 
         if contador == 8 or contador == 9 or contador == 10:
 
-            cnpj.append(str(0))
+            cnpj += '0'
 
         elif contador == 11:
 
-            cnpj.append(str(1))
+            cnpj += '1'
 
         else:
 
-            cnpj.append(str(aleatoriedade.randint(0,9)))
-
-    cnpj = ''.join(cnpj)
+            cnpj += (str(aleatoriedade.randint(0,9)))
 
     cnpj = formatar_cnpj(cnpj)
 
