@@ -424,48 +424,100 @@ def gerador_cnpj ():
     return cnpj
 
 
+def estado_ddd (ddd):
+
+    dicionario_ddd_estado = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará",
+                             "93": "Pará", "94": "Pará",
+                             "69": "Rondônia", "95": "Roraima", "63": "Tocantins", "61": "Distrito Federal",
+                             "62": "Goiás", "64": "Goiás",
+                             "65": "Mato Grosso", "66": "Mato Grosso", "67": "Mato Grosso do Sul", "82": "Alagoas",
+                             "71": "Bahia", "73": "Bahia",
+                             "74": "Bahia", "75": "Bahia", "77": "Bahia", "79": "Sergipe", "85": "Ceará", "88": "Ceará",
+                             "98": "Maranhão", "99": "Maranhão",
+                             "83": "Paraíba", "81": "Pernambuco", "87": "Pernambuco", "86": "Piauí", "89": "Piauí",
+                             "84": "Rio Grande do Norte",
+                             "27": "Espírito Santo", "28": "Espírito Santo", "31": "Minas Gerais", "32": "Minas Gerais",
+                             "33": "Minas Gerais",
+                             "34": "Minas Gerais", "35": "Minas Gerais", "37": "Minas Gerais", "38": "Minas Gerais",
+                             "21": "Rio de Janeiro",
+                             "22": "Rio de Janeiro", "24": "Rio de Janeiro", "11": "São Paulo", "12": "São Paulo",
+                             "13": "São Paulo", "14": "São Paulo",
+                             "15": "São Paulo", "16": "São Paulo", "17": "São Paulo", "18": "São Paulo",
+                             "19": "São Paulo", "41": "Paraná", "42": "Paraná",
+                             "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul",
+                             "53": "Rio Grande do Sul",
+                             "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina",
+                             "48": "Santa Catarina", "49": "Santa Catarina"}
+
+    if not ddd in dicionario_ddd_estado:
+
+        return False
+
+    else:
+
+        return dicionario_ddd_estado[ddd]
+
+
 def formatar_numero_telefone (numero: str):
 
-    numero_formatado = numero
-
-    numero_formatado = list(numero_formatado)
-
-    codigo_local = str(numero[0:2])
-
-    dicionario_ddd_brasil = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará", "93": "Pará", "94": "Pará",
-                             "69": "Rondônia", "95": "Roraima", "63": "Tocantins", "61": "Distrito Federal", "62": "Goiás", "64": "Goiás",
-                             "65": "Mato Grosso", "66": "Mato Grosso", "67": "Mato Grosso do Sul", "82": "Alagoas", "71": "Bahia", "73": "Bahia",
-                             "74": "Bahia", "75": "Bahia", "77": "Bahia", "79": "Sergipe", "85": "Ceará", "88": "Ceará", "98": "Maranhão", "99": "Maranhão",
-                             "83": "Paraíba", "81": "Pernambuco", "87": "Pernambuco", "86": "Piauí", "89": "Piauí", "84": "Rio Grande do Norte",
-                             "27": "Espírito Santo", "28": "Espírito Santo", "31": "Minas Gerais", "32": "Minas Gerais", "33": "Minas Gerais",
-                             "34": "Minas Gerais", "35": "Minas Gerais", "37": "Minas Gerais", "38": "Minas Gerais", "21": "Rio de Janeiro",
-                             "22": "Rio de Janeiro", "24": "Rio de Janeiro", "11": "São Paulo", "12": "São Paulo", "13": "São Paulo", "14": "São Paulo",
-                             "15": "São Paulo", "16": "São Paulo", "17": "São Paulo", "18": "São Paulo", "19": "São Paulo", "41": "Paraná", "42": "Paraná",
-                             "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul", "53": "Rio Grande do Sul",
-                             "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina", "48": "Santa Catarina", "49": "Santa Catarina"}
-
-    if not codigo_local in dicionario_ddd_brasil or len(numero) != 11:
+    if not estado_ddd(numero[0:2]) or len(numero) != 11:
 
         return "Número inválido"
 
-    for contador in range(17):
+    else:
 
-        if contador == 0:
+        numero_formatado = list(numero)
 
-            numero_formatado.insert(contador, '(')
+        for contador in range(17):
 
-        elif contador == 3:
+            if contador == 0:
 
-            numero_formatado.insert(contador, ')')
+                numero_formatado.insert(contador, '(')
 
-        elif contador == 4:
+            elif contador == 3:
 
-            numero_formatado.insert(contador, ' ')
+                numero_formatado.insert(contador, ')')
 
-        elif contador == 10:
+            elif contador == 4:
 
-            numero_formatado.insert(contador, '-')
+                numero_formatado.insert(contador, ' ')
 
-    numero_formatado = ''.join(numero_formatado)
+            elif contador == 10:
 
-    return f"{numero_formatado}"
+                numero_formatado.insert(contador, '-')
+
+        numero_formatado = ''.join(numero_formatado)
+
+        return f"{numero_formatado}"
+
+print(formatar_numero_telefone('75997067371'))
+
+def gerador_numero_telefone_pessoal ():
+
+    import random as aleatorio
+
+    numero_telefone = ''
+
+    for contador in range(11):
+
+        numero_telefone += str(aleatorio.randint(1, 9))
+
+        if numero_telefone == '1':
+
+            numero_telefone += str(aleatorio.randrange(1, 9))
+
+            return numero_telefone
+
+        elif numero_telefone == '2':
+
+            numero_telefone += str()
+
+        if len(numero_telefone) == 2:
+
+            numero_telefone += '9'
+
+        return numero_telefone
+
+    return numero_telefone
+
+print(gerador_numero_telefone_pessoal())
