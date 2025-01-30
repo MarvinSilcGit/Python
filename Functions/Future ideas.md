@@ -25,3 +25,7 @@ old_price, new_price = 499, 672"{:.2%} price increase".format(Fraction(new_price
 ## Site/aplicativo conversor de números
 
 ## Site/aplicativo para resolução de fórmulas matemáticas
+
+## Progressões Aritméticas e Geométricas
+
+##
