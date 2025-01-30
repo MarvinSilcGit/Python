@@ -11,7 +11,7 @@ while cont != "0":
 
         pa = [["esgrima", "boliche", "baseball", "vôlei"], ["empreendedor", "design", "neurologista", "otorrinolaringologista"], ["itaquaquecetuba", "pidamonhagaba", "recife", "vitória"], ["violoncelo", "banjo", "acordeon", "xilophone"]]
 
-        print(("Forca 1, Espotes; Forca 2, Profissões; Forca 3, Cidades Brasileiras; Forca 4, Intrumentos musicais" ))
+        print("Forca 1, Espotes; Forca 2, Profissões; Forca 3, Cidades Brasileiras; Forca 4, Intrumentos musicais")
 
         print("**************************************************************************************")
 

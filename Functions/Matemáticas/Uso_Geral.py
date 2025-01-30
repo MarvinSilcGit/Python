@@ -104,7 +104,7 @@ def atm_machine (valor_pagamento: float):
                                 resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
 
                                 return resultado
-
+# FIXME: fazer funcionar com moedas menores que 50 centavos
 #Acessar Valores
 """for contador2 in range(1, 100):
 
@@ -397,7 +397,7 @@ def validar_cnpj(cnpj: str):
 
         return f"O CNPJ {cnpj} é inválido"
 
-print(validar_cnpj('59120772000100'))
+#print(validar_cnpj('59120772000100')) FIXME: fazer funcionar onde o módulo do resultado da posicão é igual a 10
 
 def gerador_cnpj ():
 
