@@ -526,5 +526,3 @@ def gerador_numero_telefone_pessoal ():
     numero_telefone = formatar_numero_telefone(numero_telefone)
 
     return numero_telefone
-
-print(gerador_numero_telefone_pessoal())
