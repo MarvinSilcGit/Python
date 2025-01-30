@@ -2,9 +2,9 @@ contador1 = 1
 
 while contador1 != 0:
 
-    valorInicial = int(input("Digite o valor inicial: "))
+    valor_inicial = int(input("Digite o valor inicial: "))
 
-    if valorInicial != 1:
+    if valor_inicial != 1:
 
         print("Número incorreto")
 
@@ -12,13 +12,13 @@ while contador1 != 0:
 
     else:
 
-        valorFinal = int(input("Digite o valor final: "))
+        valor_final = int(input("Digite o valor final: "))
 
-        while valorInicial < valorFinal:
+        while valor_inicial < valor_final:
 
-            print(valorInicial)
+            print(valor_inicial)
 
-            valorInicial += 2
+            valor_inicial += 2
 
         print()
 

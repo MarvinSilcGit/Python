@@ -4,9 +4,9 @@ while contador1 != 0:
 
     total = 0
 
-    codigoProduto = 1
+    codigo_produto = 1
 
-    while codigoProduto != 0:
+    while codigo_produto != 0:
 
         print()
 
@@ -34,9 +34,9 @@ while contador1 != 0:
 
         print()
 
-        codigoProduto = float(input("Digite o código do produto desejado: "))
+        codigo_produto = float(input("Digite o código do produto desejado: "))
 
-        if codigoProduto == 0:
+        if codigo_produto == 0:
 
             print()
 
@@ -46,29 +46,29 @@ while contador1 != 0:
 
         else:
 
-            quantidadeProduto = int(input(f"Digite a quantidade desejada do produto {codigoProduto:.{0}f} "))
+            quantidade_produto = int(input(f"Digite a quantidade desejada do produto {codigo_produto:.{0}f} "))
 
-            if codigoProduto == 1:
+            if codigo_produto == 1:
 
-                total += quantidadeProduto * 0.5
+                total += quantidade_produto * 0.5
 
-            elif codigoProduto == 2:
+            elif codigo_produto == 2:
 
-                total += quantidadeProduto * 1
+                total += quantidade_produto * 1
 
-            elif codigoProduto == 3:
+            elif codigo_produto == 3:
 
-                total += quantidadeProduto * 4
+                total += quantidade_produto * 4
 
-            elif codigoProduto == 5:
+            elif codigo_produto == 5:
 
-                total += quantidadeProduto * 7
+                total += quantidade_produto * 7
 
-            elif codigoProduto == 9:
+            elif codigo_produto == 9:
 
-                total += quantidadeProduto * 8
+                total += quantidade_produto * 8
 
-            elif codigoProduto != 0 or codigoProduto != 1 or codigoProduto != 2 or codigoProduto != 3 or codigoProduto != 5 or codigoProduto != 9:
+            elif codigo_produto != 0 or codigo_produto != 1 or codigo_produto != 2 or codigo_produto != 3 or codigo_produto != 5 or codigo_produto != 9:
 
                 print("Valor incorreto digitado")
 

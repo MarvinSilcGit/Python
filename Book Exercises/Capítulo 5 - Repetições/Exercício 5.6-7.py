@@ -2,13 +2,13 @@ contador = 1
 
 while contador != 0:
 
-    inicioTabuada = int(input("Digite o valor inicial da tabuada: "))
+    inicio_tabuada = int(input("Digite o valor inicial da tabuada: "))
 
-    fimTabuada = int(input("Digite o valor final da tabuada: "))
+    fim_tabuada = int(input("Digite o valor final da tabuada: "))
 
-    for contador in range(1, fimTabuada + 1):
+    for contador in range(1, fim_tabuada + 1):
 
-        print("%d x %d = %d " % (inicioTabuada, contador, inicioTabuada * contador))
+        print("%d x %d = %d " % (inicio_tabuada, contador, inicio_tabuada * contador))
 
     print()
 

@@ -16,11 +16,11 @@ while contador1 != 0:
 
     print()
 
-    mathOperator = int(input("Digite o valor correspondente para a operação desejada: "))
+    math_operator = int(input("Digite o valor correspondente para a operação desejada: "))
 
     print()
 
-    if mathOperator != 1 and mathOperator != 2 and mathOperator != 3 and mathOperator != 4:
+    if math_operator != 1 and math_operator != 2 and math_operator != 3 and math_operator != 4:
 
         print("Opção inexistente")
 
@@ -34,19 +34,19 @@ while contador1 != 0:
 
         print()
 
-        if mathOperator == 1:
+        if math_operator == 1:
 
             print("O resultado da soma é: %.1f" % (valor1 + valor2))
 
-        elif mathOperator == 2:
+        elif math_operator == 2:
 
             print("O resultado da subtração é: %.1f" % (valor1 - valor2))
 
-        elif mathOperator == 3:
+        elif math_operator == 3:
 
             print("O resultado da divisão é: %.1f" % (valor1 / valor2))
 
-        elif mathOperator == 4:
+        elif math_operator == 4:
 
             print("O resultado da multiplicação é: %.1f" % (valor1 * valor2))
 

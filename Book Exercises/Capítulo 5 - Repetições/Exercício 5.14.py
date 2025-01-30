@@ -8,7 +8,7 @@ while contador != 0:
 
     contador2 = 0
 
-    mediaValor = 0
+    media_valor = 0
 
     while True:
 
@@ -30,13 +30,13 @@ while contador != 0:
 
                 contador2 -= 1
 
-                mediaValor = contador1 / contador2
+                media_valor = contador1 / contador2
 
                 print()
 
                 print("A iteração parou por ter digitado o número %d" % valor)
 
-                print("A média das somas dos números digitados é: %.2f E o valor total da soma é: %d" % (mediaValor, contador1))
+                print("A média das somas dos números digitados é: %.2f E o valor total da soma é: %d" % (media_valor, contador1))
 
                 break
 

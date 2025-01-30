@@ -2,7 +2,7 @@ contador1 = 1
 
 while contador1 != 0:
 
-    restoInteiro = 0
+    resto_inteiro = 0
 
     resto = 0
 
@@ -22,7 +22,7 @@ while contador1 != 0:
 
         if valor1 == valor2:
 
-            restoInteiro = 1
+            resto_inteiro = 1
 
             print()
 
@@ -30,7 +30,7 @@ while contador1 != 0:
 
             while valor2 + resto <= valor1:
 
-                restoInteiro += 1
+                resto_inteiro += 1
 
                 resto += valor2
 
@@ -46,7 +46,7 @@ while contador1 != 0:
 
                 resto += 1
 
-        print("O resto inteiro da divisão entre %.1f e %.1f é: %.1f. E o resto da divisão é: %.1f" % (valor1, valor2, restoInteiro, resto))
+        print("O resto inteiro da divisão entre %.1f e %.1f é: %.1f. E o resto da divisão é: %.1f" % (valor1, valor2, resto_inteiro, resto))
 
         print()
 
