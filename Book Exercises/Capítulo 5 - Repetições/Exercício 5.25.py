@@ -6,17 +6,17 @@ while contador1 != 0:
 
     base = 2
 
-    raizQuadrada = (base + numero / base) / 2
+    resultado_raiz_quadrada = (base + numero / base) / 2
 
-    raizQuadrada = raizQuadrada**2
+    resultado_raiz_quadrada **= 2
 
-    while raizQuadrada * raizQuadrada - numero > 0.001:
+    while resultado_raiz_quadrada * resultado_raiz_quadrada - numero > 0.001:
 
-        base = raizQuadrada
+        base = resultado_raiz_quadrada
 
-        raizQuadrada = (base + numero / base) / 2
+        resultado_raiz_quadrada = (base + numero / base) / 2
 
-    print("A raiz aproximada de %d é: %.4f" % (numero, raizQuadrada))
+    print(f"A raiz aproximada de {numero:,.2f} é {resultado_raiz_quadrada:,.2f}")
 
     print()
 
