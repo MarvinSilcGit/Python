@@ -128,31 +128,18 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
 
             mmc.append(numero_primo_inicial)
 
-            print("1")
-
-        else:
-
-            numero_primo_inicial += 1
-            print("2")
-
-    numero_primo_inicial = 2
-
-    while valor2 != 1.0:
-
         if valor2 % numero_primo_inicial == 0:
 
             valor2 /= numero_primo_inicial
 
-            mmc.append(numero_primo_inicial)
+            if numero_primo_inicial not in mmc:
 
-            print('3')
+                mmc.append(numero_primo_inicial)
 
         else:
 
             numero_primo_inicial += 1
 
-            print("4")
-
     return mmc
 
-print(minimo_multiplo_comum(12, 45))
+print(minimo_multiplo_comum(10, 7))
