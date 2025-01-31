@@ -1,3 +1,5 @@
-## Algorithms to be solved
+# Algorithms to be solved
 
-### Fixing the code. Better late than sorry
+## Making new functions from scratch
+
+## Adding new functions every week (probably)
