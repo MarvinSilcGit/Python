@@ -1,4 +1,4 @@
-#How to import: from Functions.Matemáticas.Uso_Geral import resto_divisao or import *
+#How to import: from Functions.Calculadoras.Uso_Geral import resto_divisao or import *
 
 def palindromo (valor):
 

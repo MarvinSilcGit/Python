@@ -1,6 +1,7 @@
 from fractions import Fraction
 
-from Functions.Matemáticas.Numbers import numero_decimal_inteiro, raiz_quadrada
+from Functions.Calculadoras.Numbers import raiz_quadrada
+from Functions.Calculadoras.Validations import validade_numero_decimal
 
 coeficiente_a = int(input("Digite o valor do coeficiente a: "))
 
@@ -24,7 +25,7 @@ else:
 
         x_1 = -coeficiente_b + float(raiz_quadrada(delta))
 
-        if numero_decimal_inteiro(x_1 / (2 * coeficiente_a)):
+        if validade_numero_decimal(x_1 / (2 * coeficiente_a)):
 
             x_1 = Fraction(int(x_1), int(2 * coeficiente_a))
 
@@ -34,7 +35,7 @@ else:
 
         x_2 = -coeficiente_b - float(raiz_quadrada(delta))
 
-        if numero_decimal_inteiro(x_2 / (2 * coeficiente_a)):
+        if validade_numero_decimal(x_2 / (2 * coeficiente_a)):
 
             x_2 = Fraction(int(x_2), int(2 * coeficiente_a))
 
