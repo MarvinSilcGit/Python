@@ -120,35 +120,39 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
 
     mmc = []
 
-    if valor1 % numero_primo_inicial == 0:
+    while valor1 != 1.0:
 
-        valor1 /= numero_primo_inicial
+        if valor1 % numero_primo_inicial == 0:
 
-        mmc.append(numero_primo_inicial)
+            valor1 /= numero_primo_inicial
 
-        print('oi')
+            mmc.append(numero_primo_inicial)
 
-    else:
+            print("1")
 
-        if numero_primo(numero_primo_inicial + 1):
+        else:
+
+            numero_primo_inicial += 1
+            print("2")
+
+    numero_primo_inicial = 2
+
+    while valor2 != 1.0:
+
+        if valor2 % numero_primo_inicial == 0:
+
+            valor2 /= numero_primo_inicial
+
+            mmc.append(numero_primo_inicial)
+
+            print('3')
+
+        else:
 
             numero_primo_inicial += 1
 
-            print("ooo")
+            print("4")
 
+    return mmc
 
-    if valor2 % numero_primo_inicial == 0:
-
-        valor2 /= numero_primo_inicial
-
-        mmc.append(numero_primo_inicial)
-
-        print("aa")
-
-
-
-    if valor1 == 1 and valor2 == 1:
-
-        return 1
-
-print(minimo_multiplo_comum(5, 6))
+print(minimo_multiplo_comum(12, 45))
