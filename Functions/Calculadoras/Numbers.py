@@ -1,5 +1,6 @@
 from Functions.Calculadoras.Validations import numero_primo
 
+
 def resto_divisao (valor1: float, valor2: float):
 
     resto = 0
@@ -12,7 +13,7 @@ def resto_divisao (valor1: float, valor2: float):
 
         if valor1 == valor2:
 
-            resto = 0
+            return f"{resto}"
 
         elif valor1 > valor2:
 
@@ -43,7 +44,7 @@ def resto_inteiro_divisao (valor1: float, valor2: float):
 
     if valor1 == 0 or valor2 == 0:
 
-        return "Divisão por zero inválida"
+        return False
 
     else:
 
@@ -117,12 +118,37 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
 
     numero_primo_inicial = 2
 
-    if resto_divisao(valor1, numero_primo_inicial) == 0:
+    mmc = []
 
-        return 2
+    if valor1 % numero_primo_inicial == 0:
+
+        valor1 /= numero_primo_inicial
+
+        mmc.append(numero_primo_inicial)
+
+        print('oi')
+
+    else:
+
+        if numero_primo(numero_primo_inicial + 1):
+
+            numero_primo_inicial += 1
+
+            print("ooo")
+
+
+    if valor2 % numero_primo_inicial == 0:
+
+        valor2 /= numero_primo_inicial
+
+        mmc.append(numero_primo_inicial)
+
+        print("aa")
 
 
 
     if valor1 == 1 and valor2 == 1:
 
         return 1
+
+print(minimo_multiplo_comum(5, 6))
