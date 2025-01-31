@@ -105,8 +105,6 @@ def calculo_fatorial (numero: int):
     return f"{resultado_fatorial}"
 
 
-#print(equacao_segundo_grau_bhaskara(3,-6, -8))
-
 def calculo_porcentagem_representante (valor1: float, valor2: float):
 
     porcentagem = (valor1 / valor2) * 100
@@ -120,7 +118,7 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
 
     fatoracao = []
 
-    for contador in range(10):
+    while valor1 > 1.0 or valor2 > 1.0:
 
         if valor1 % numero_primo_inicial == 0 and valor2 % numero_primo_inicial == 0:
 
@@ -153,5 +151,3 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
         mmc *= fatoracao[contador + 1]
 
     return mmc
-
-print(minimo_multiplo_comum(10, 9))
