@@ -118,28 +118,40 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
 
     numero_primo_inicial = 2
 
-    mmc = []
+    fatoracao = []
 
-    while valor1 != 1.0:
+    for contador in range(10):
 
-        if valor1 % numero_primo_inicial == 0:
+        if valor1 % numero_primo_inicial == 0 and valor2 % numero_primo_inicial == 0:
 
             valor1 /= numero_primo_inicial
 
-            mmc.append(numero_primo_inicial)
+            valor2 /= numero_primo_inicial
 
-        if valor2 % numero_primo_inicial == 0:
+            fatoracao.append(numero_primo_inicial)
+
+        elif valor1 % numero_primo_inicial == 0:
+
+            valor1 /= numero_primo_inicial
+
+            fatoracao.append(numero_primo_inicial)
+
+        elif valor2 % numero_primo_inicial == 0:
 
             valor2 /= numero_primo_inicial
 
-            if numero_primo_inicial not in mmc:
+            fatoracao.append(numero_primo_inicial)
 
-                mmc.append(numero_primo_inicial)
-
-        else:
+        elif valor1 % numero_primo_inicial != 0 and valor2 % numero_primo_inicial != 0:
 
             numero_primo_inicial += 1
 
+    mmc = fatoracao[0]
+
+    for contador in range(len(fatoracao) - 1):
+
+        mmc *= fatoracao[contador + 1]
+
     return mmc
 
-print(minimo_multiplo_comum(10, 7))
+print(minimo_multiplo_comum(10, 9))
