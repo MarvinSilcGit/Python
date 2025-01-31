@@ -1,5 +1,5 @@
 # Algorithms to be solved
 
-## Making new functions from scratch
+### Making new functions from scratch
 
-## Adding new functions every week (probably)
+### Adding new functions every week (probably)
