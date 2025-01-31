@@ -14,7 +14,7 @@ old_price, new_price = 499, 672"{:.2%} price increase".format(Fraction(new_price
 
 ## Least common multiple
 
-## Função de formatação de data de nascimento e similares
+## Função de formatação de data de nascimento
 
 ## Função convert fraction to decimal and vice-versa
 
