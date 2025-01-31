@@ -38,7 +38,7 @@ while contador != 0:
 
                 if confirmacao == numero:
 
-                    print("%d é um número primo e foram feitas %d diviões" % (numero, divisoes))
+                    print("%d é um número primo e foram feitas %d divisões" % (numero, divisoes))
 
                 else:
 

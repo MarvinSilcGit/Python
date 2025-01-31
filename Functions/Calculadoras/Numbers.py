@@ -1,3 +1,5 @@
+from Functions.Calculadoras.Validations import numero_primo
+
 def resto_divisao (valor1: float, valor2: float):
 
     resto = 0
@@ -30,7 +32,7 @@ def resto_divisao (valor1: float, valor2: float):
 
                 resto += 1
 
-        return "O resto da divisão entre %.1f e %.1f é: %.1f" % (valor1, valor2, resto)
+        return f"{resto}"
 
 
 def resto_inteiro_divisao (valor1: float, valor2: float):
@@ -109,3 +111,18 @@ def calculo_porcentagem_representante (valor1: float, valor2: float):
     porcentagem = (valor1 / valor2) * 100
 
     return f'{valor1:,.2f} representa {porcentagem:,.2f}% de {valor2:,.2f}'
+
+
+def minimo_multiplo_comum (valor1: float, valor2: float):
+
+    numero_primo_inicial = 2
+
+    if resto_divisao(valor1, numero_primo_inicial) == 0:
+
+        return 2
+
+
+
+    if valor1 == 1 and valor2 == 1:
+
+        return 1

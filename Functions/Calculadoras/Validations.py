@@ -4,11 +4,11 @@ def numero_primo (numero: int):
 
     if numero == 0 or numero == 1:
 
-        return "Esse número é inválido"
+        return False
 
     if numero ==  2 or numero == 3:
 
-        return "%d é um número primo" % numero
+        return True
 
     else:
 
@@ -20,24 +20,11 @@ def numero_primo (numero: int):
 
         if confirmacao == numero:
 
-            return "%d é um número primo, pois é divisível somente por ele e por 1" % numero
+            return True
 
         else:
 
-            print("O número %d não é primo, pois ele é divisível por: " % numero, end="")
-
-            for contador in range(1, numero + 1):
-
-                if numero % contador == 0:
-
-                    if numero - contador == 0:
-
-                        print(contador, end=" ")
-
-                    else:
-
-                        print(contador, end=", ")
-            return ""
+            return False
 
 
 def numero_par_impar (numero: int):
