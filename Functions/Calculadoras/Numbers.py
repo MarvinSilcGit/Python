@@ -1,6 +1,3 @@
-from Functions.Calculadoras.Validations import numero_primo
-
-
 def resto_divisao (valor1: float, valor2: float):
 
     resto = 0
