@@ -52,11 +52,15 @@ def numero_algarismo_romano (numero: int):
 
     limite_romano = 1000
 
+    algarismos = 0
+
     while numero != 0:
 
         if limite_romano <= numero:
 
             numero -= limite_romano
+
+            algarismos += 1
 
         else:
 
@@ -82,6 +86,8 @@ def numero_algarismo_romano (numero: int):
 
                 limite_romano = 1
 
+            algarismos = 0
+
     return numero_romano
 
-print(numero_algarismo_romano(100))
+print(numero_algarismo_romano(2100))

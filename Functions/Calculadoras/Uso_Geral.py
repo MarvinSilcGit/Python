@@ -1,11 +1,13 @@
 #How to import: from Functions.Calculadoras.Uso_Geral import resto_divisao or import *
 
+from Functions.Calculadoras.Validations import validade_numero_decimal
 
-def atm_machine (valor_pagamento: float):
 
-    if valor_pagamento < 1:
+def atm_machine (valor_pagamento: int):
 
-        return "Valor insuficiente para saque"
+    if validade_numero_decimal(valor_pagamento):
+
+        return 'Valores não podem ser decimais'
 
     else:
 
@@ -15,11 +17,7 @@ def atm_machine (valor_pagamento: float):
 
         resultado = []
 
-        limite_moeda = 0.5
-
-        moedas = 0
-
-        while True:
+        while valor_pagamento != 0:
 
             if limite_cedula <= valor_pagamento:
 
@@ -29,66 +27,45 @@ def atm_machine (valor_pagamento: float):
 
             else:
 
+                if limite_cedula == 200:
+
+                    limite_cedula = 100
+
+                elif limite_cedula == 100:
+
+                    limite_cedula = 50
+
+                elif limite_cedula == 50:
+
+                    limite_cedula = 20
+
+                elif limite_cedula == 20:
+
+                    limite_cedula = 10
+
+                elif limite_cedula == 10:
+
+                    limite_cedula = 5
+
+                elif limite_cedula == 5:
+
+                    limite_cedula = 2
+
+                elif limite_cedula == 2:
+
+                    limite_cedula = 1
+
+                    print("oi")
+
                 resultado.append("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
 
-                if valor_pagamento == 0:
+                print('a')
 
-                    return resultado
+                cedulas = 0
 
-                else:
+        return resultado
 
-                    if limite_cedula == 200:
-
-                        limite_cedula = 100
-
-                    elif limite_cedula == 100:
-
-                        limite_cedula = 50
-
-                    elif limite_cedula == 50:
-
-                        limite_cedula = 20
-
-                    elif limite_cedula == 20:
-
-                        limite_cedula = 10
-
-                    elif limite_cedula == 10:
-
-                        limite_cedula = 5
-
-                    elif limite_cedula == 5:
-
-                        limite_cedula = 2
-
-                    elif limite_cedula == 2:
-
-                        limite_cedula = 1
-
-                    cedulas = 0
-
-                    if 0 < valor_pagamento < 1:
-
-                        if limite_moeda <= valor_pagamento:
-
-                            valor_pagamento -= limite_moeda
-
-                            moedas += 1
-
-                            if valor_pagamento == 0:
-
-                                resultado.append("%d moeda(s) de R$ %.2f" % (moedas, limite_moeda))
-
-                                return resultado
-# FIXME: fazer funcionar com moedas menores que 50 centavos
-#Acessar Valores
-"""for contador2 in range(1, 100):
-
-    for contador in atm_machine(contador2):
-
-        print(contador)
-
-print(atm_machine(11.5))"""
+print(atm_machine(5))
 
 
 def raio_circulo (area: float):
