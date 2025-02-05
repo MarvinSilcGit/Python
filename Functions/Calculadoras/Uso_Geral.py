@@ -13,59 +13,27 @@ def atm_machine (valor_pagamento: int):
 
         cedulas = 0
 
-        limite_cedula = 200
+        limite_cedula = [200, 100, 50, 20, 10, 5, 2, 1]
 
-        resultado = []
+        resultado = {}
 
         while valor_pagamento != 0:
 
-            if limite_cedula <= valor_pagamento:
+            for contador in limite_cedula:
 
-                valor_pagamento -= limite_cedula
+                if valor_pagamento <= contador:
 
-                cedulas += 1
+                    valor_pagamento -= contador
 
-            else:
+                    cedulas += 1
 
-                if limite_cedula == 200:
+                    resultado.update({cedulas: contador})
 
-                    limite_cedula = 100
-
-                elif limite_cedula == 100:
-
-                    limite_cedula = 50
-
-                elif limite_cedula == 50:
-
-                    limite_cedula = 20
-
-                elif limite_cedula == 20:
-
-                    limite_cedula = 10
-
-                elif limite_cedula == 10:
-
-                    limite_cedula = 5
-
-                elif limite_cedula == 5:
-
-                    limite_cedula = 2
-
-                elif limite_cedula == 2:
-
-                    limite_cedula = 1
-
-                    print("oi")
-
-                resultado.append("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
-
-                print('a')
-
-                cedulas = 0
+                    cedulas = 0
 
         return resultado
 
-print(atm_machine(5))
+print(atm_machine(56))
 
 
 def raio_circulo (area: float):
