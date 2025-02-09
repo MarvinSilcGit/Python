@@ -17,7 +17,7 @@ def batched_dot_bmm(a, b):
     return torch.bmm(a, b).flatten(-3)
 
 # Input for benchmarking
-x = torch.randn(10000, 1024, device='cpu') # Change to CUDA when GPU available
+x = torch.randn(10000, 1024, device='cpu') # Change to CUDA when NVIDIA GPU available
 
 t0 = timeit.Timer(
     stmt='batched_dot_mul_sum(x, x)',
