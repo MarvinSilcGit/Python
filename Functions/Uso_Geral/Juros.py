@@ -1,11 +1,3 @@
-#How to import: from Functions.Calculadoras.Uso_Geral import resto_divisao or import *
-
-
-def raio_circulo (area: float):
-
-    return 3.14 * (area ** 2)
-
-
 def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: float, quantidade_meses: int):
 
     ganho_bruto_total = valor_inicial

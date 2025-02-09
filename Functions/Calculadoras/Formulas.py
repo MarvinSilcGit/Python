@@ -1,7 +1,13 @@
+#How to import: from Functions.Calculadoras.Uso_Geral import name_function
+
 from Functions.Calculadoras.Numbers import raiz_quadrada
 
 from Functions.Calculadoras.Validations import validade_numero_decimal
 
+
+def raio_circulo (area: float):
+
+    return 3.14 * (area ** 2)
 
 def equacao_segundo_grau_bhaskara (coeficiente_a: float, coeficiente_b: float, coeficiente_c: float):
 
