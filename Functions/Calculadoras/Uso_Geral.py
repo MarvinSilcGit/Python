@@ -21,7 +21,7 @@ def atm_machine (valor_pagamento: int):
 
             for contador in limite_cedula:
 
-                if valor_pagamento <= contador:
+                if valor_pagamento >= contador:
 
                     valor_pagamento -= contador
 
@@ -29,11 +29,15 @@ def atm_machine (valor_pagamento: int):
 
                     resultado.update({cedulas: contador})
 
+                    print(resultado)
+
                     cedulas = 0
+
+                    print(cedulas)
 
         return resultado
 
-print(atm_machine(56))
+print(atm_machine(120))
 
 
 def raio_circulo (area: float):
