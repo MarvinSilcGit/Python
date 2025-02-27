@@ -1,3 +1,5 @@
+import math
+
 from Validations import numero_par_impar
 
 
@@ -157,18 +159,18 @@ def collatz_conjecture (numero: int):
 
     steps = 0
 
-    while numero != 1:
+    resultado = numero
 
-        if not numero_par_impar(numero):
+    while resultado != 1 or steps == 0:
 
-            numero = numero * 3 + 1
+        if not numero_par_impar(resultado):
+
+            resultado = resultado * 3 + 1
 
         else:
 
-            numero = numero / 2
+            resultado = resultado / 2
 
         steps += 1
 
-    return steps
-
-print(collatz_conjecture(-7))
+    return f"Foram necessários {steps} passos para o número {math.trunc(numero)}"
