@@ -1,3 +1,6 @@
+from Validations import numero_par_impar
+
+
 def resto_divisao (valor1: float, valor2: float):
 
     resto = 0
@@ -148,3 +151,24 @@ def minimo_multiplo_comum (valor1: float, valor2: float):
         mmc *= fatoracao[contador + 1]
 
     return mmc
+
+
+def collatz_conjecture (numero: int):
+
+    steps = 0
+
+    while numero != 1:
+
+        if not numero_par_impar(numero):
+
+            numero = numero * 3 + 1
+
+        else:
+
+            numero = numero / 2
+
+        steps += 1
+
+    return steps
+
+print(collatz_conjecture(-7))

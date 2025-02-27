@@ -31,11 +31,11 @@ def numero_par_impar (numero: int):
 
     if numero % 2 == 0:
 
-        return "O número %d é par" % numero
+        return True
 
     else:
 
-        return "O número %d é impar" % numero
+        return False
 
 
 def ano_bissexto (ano: int):
