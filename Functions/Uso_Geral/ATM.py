@@ -9,30 +9,28 @@ def atm_machine (valor_pagamento: int):
 
     else:
 
-        cedulas = 0
+        resultado = []
 
-        limite_cedula = [200, 100, 50, 20, 10, 5, 2, 1]
+        dict_contagem_cedulas = {200: 0, 100: 0, 50: 0, 20: 0, 10: 0, 5: 0, 2: 0, 1: 0}
 
-        resultado = {}
+        lista_cedulas = [200, 100, 50, 20, 10, 5, 2, 1]
+
+        contador = 0
 
         while valor_pagamento != 0:
 
-            for contador in limite_cedula:
+            if valor_pagamento >= lista_cedulas[contador]:
 
-                if valor_pagamento >= contador:
+                valor_pagamento -= lista_cedulas[contador]
 
-                    valor_pagamento -= contador
+                resultado.append(lista_cedulas[contador])
 
-                    cedulas += 1
+            else:
 
-                    resultado.update({cedulas: contador})
+                contador += 1
 
-                    print(resultado)
+        for contador2 in dict_contagem_cedulas:
 
-                    cedulas = 0
+            dict_contagem_cedulas.update({contador2: resultado.count(contador2)})
 
-                    print(cedulas)
-
-        return resultado
-
-print(atm_machine(120))
+        return dict_contagem_cedulas

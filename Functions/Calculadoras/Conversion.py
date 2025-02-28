@@ -70,24 +70,26 @@ def numero_algarismo_romano (numero: int):
 
                 return numero_romano
 
-            if limite_romano == 1000:
+            else:
 
-                limite_romano = 100
+                if limite_romano == 1000:
 
-            elif limite_romano == 100:
+                    limite_romano = 100
 
-                limite_romano = 50
+                elif limite_romano == 100:
 
-            elif limite_romano == 50:
+                    limite_romano = 50
 
-                limite_romano = 10
+                elif limite_romano == 50:
 
-            elif limite_romano == 10:
+                    limite_romano = 10
 
-                limite_romano = 1
+                elif limite_romano == 10:
 
-            algarismos = 0
+                    limite_romano = 1
+
+                algarismos = 0
 
     return numero_romano
 
-print(numero_algarismo_romano(2100))
+print(numero_algarismo_romano(100))
