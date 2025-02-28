@@ -34,3 +34,11 @@ def atm_machine (valor_pagamento: int):
             dict_contagem_cedulas.update({contador2: resultado.count(contador2)})
 
         return dict_contagem_cedulas
+
+"""
+#How to acess values
+lista = atm_machine(2200)
+
+for cont in lista:
+
+    print(f"{lista[cont]} cédulas de {cont}" if lista[cont] > 1 else f"{lista[cont]} cédula de {cont}")"""
