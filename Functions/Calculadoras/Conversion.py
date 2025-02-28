@@ -50,46 +50,22 @@ def numero_algarismo_romano (numero: int):
 
     numero_romano = []
 
-    limite_romano = 1000
+    lista_numeros = [1000, 500, 100, 50, 10, 5, 1]
 
-    algarismos = 0
+    contador = 0
 
     while numero != 0:
 
-        if limite_romano <= numero:
+        if numero >= lista_numeros[contador]:
 
-            numero -= limite_romano
+            numero -= lista_numeros[contador]
 
-            algarismos += 1
+            numero_romano.append(lista_numeros[contador])
 
         else:
 
-            numero_romano.append(limite_romano)
-
-            if numero == 0:
-
-                return numero_romano
-
-            else:
-
-                if limite_romano == 1000:
-
-                    limite_romano = 100
-
-                elif limite_romano == 100:
-
-                    limite_romano = 50
-
-                elif limite_romano == 50:
-
-                    limite_romano = 10
-
-                elif limite_romano == 10:
-
-                    limite_romano = 1
-
-                algarismos = 0
+            contador += 1
 
     return numero_romano
 
-print(numero_algarismo_romano(100))
+print(numero_algarismo_romano(900))
