@@ -33,5 +33,3 @@ def quilograma_onca (quilo: float):
 def quilograma_arroba (quilo: float):
 
     return f"{quilo:,.2f} Quilos equivalem à {quilo / 15:,.2f} Arrobas"
-
-

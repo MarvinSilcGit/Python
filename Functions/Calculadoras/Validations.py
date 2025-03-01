@@ -29,13 +29,7 @@ def numero_primo (numero: int):
 
 def numero_par_impar (numero: int):
 
-    if numero % 2 == 0:
-
-        return True
-
-    else:
-
-        return False
+    return numero % 2 == 0
 
 
 def ano_bissexto (ano: int):
