@@ -1,6 +1,7 @@
 from fractions import Fraction
 
 from Functions.Calculadoras.Numbers import raiz_quadrada
+
 from Functions.Calculadoras.Validations import validade_numero_decimal
 
 coeficiente_a = int(input("Digite o valor do coeficiente a: "))
