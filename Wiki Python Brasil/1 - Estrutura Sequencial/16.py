@@ -16,7 +16,7 @@ if metragem / metragem_lata <= 1:
 
     preco_final = quantidade_latas * preco_lata
 
-    print("Será necessária, no máximo, uma lata de tinta para pintar %.2f metros². O custo será R$ %.2f" % (metragem, preco_final))
+    print(f"Será necessária, no máximo, uma lata de tinta para pintar {metragem:.1f} metros². O custo será R$ {preco_final:.2f}")
 
 else:
 
@@ -26,7 +26,7 @@ else:
 
         preco_final = quantidade_latas * preco_lata
 
-        print("Serão necessária exatas %d latas de tinta para pintar %.2f metros². O custo será R$ %.2f" % (quantidade_latas, metragem, preco_final))
+        print(f"Serão necessária exatas {quantidade_latas:.0f} latas de tinta para pintar {metragem:.1f} metros². O custo será R$ {preco_final:.2f}")
 
     else:
 
@@ -34,4 +34,4 @@ else:
 
         preco_final = quantidade_latas * preco_lata
 
-        print("Será necessária aos menos %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_latas, metragem, preco_final))
+        print(f"Será necessária aos menos {quantidade_latas:.0f} latas de tinta para pintar {metragem:.1f} metros². O custo será R$ {preco_final:.2f}")

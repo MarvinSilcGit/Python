@@ -8,4 +8,4 @@ salario_liquido -= salario_liquido / 100 * 8
 
 salario_liquido -= salario_liquido / 100 * 5
 
-print("O salário líquido será R$ %.2f, com R$ %.2f de desconto" % (salario_liquido, salario - salario_liquido))
+print(f"O salário líquido será R$ {salario_liquido:.2f}, com R$ {salario - salario_liquido:.2f} de desconto")

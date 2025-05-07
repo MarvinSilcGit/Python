@@ -24,7 +24,7 @@ if metragem_area <= metragem_galao * 4:
 
         preco_final = quantidade_galoes * preco_galao
 
-        print("Serão necessários exatos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_galoes, metragem_area, preco_final))
+        print(f"Serão necessários exatos {quantidade_galoes:.0f} galões de tinta para pintar {metragem_area:.2f} metros². O custo será R$ {preco_final:.2f}")
 
     else:
 
@@ -32,7 +32,7 @@ if metragem_area <= metragem_galao * 4:
 
         preco_final = quantidade_galoes * preco_galao
 
-        print("Serão necessários aos menos %d galões de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_galoes, metragem_area, preco_final))
+        print(f"Serão necessários aos menos {quantidade_galoes:.0f} galões de tinta para pintar {metragem_area:.2f} metros². O custo será R$ {preco_final:.2f}")
 
 else:
 
@@ -42,7 +42,7 @@ else:
 
         preco_final = quantidade_latas * preco_lata
 
-        print("Serão necessária exatas %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_latas, metragem_area, preco_final))
+        print(f"Serão necessária exatas {quantidade_latas:.0f} latas de tinta para pintar {metragem_area:.2f} metros². O custo será R$ {preco_final:.2f}")
 
     else:
 
@@ -52,7 +52,7 @@ else:
 
             preco_final = quantidade_latas * preco_lata
 
-            print("Serão necessária ao menos %d latas de tinta para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_latas, metragem_area, preco_final))
+            print(f"Serão necessária ao menos {quantidade_latas:.0f} latas de tinta para pintar {metragem_area:.2f} metros². O custo será R$ {preco_final:.2f}")
 
         else:
 
@@ -68,7 +68,7 @@ else:
 
                 preco_final += quantidade_galoes * preco_galao
 
-                print("Serão necessárias ao menos %d latas de tinta e ao menos %d Galões para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_latas, quantidade_galoes, metragem_area, preco_final))
+                print(f"Serão necessárias ao menos {quantidade_latas:.0f} latas de tinta e ao menos {quantidade_galoes:.0f} Galões para pintar {metragem_area:.2f} metros². O custo será {preco_final:.2f}")
 
             else:
 
@@ -86,4 +86,4 @@ else:
 
                     preco_final += quantidade_galoes * preco_galao
 
-                print("Serão necessárias ao menos %d latas de tinta e ao menos %d Galões para pintar %.1f metros². O custo será R$ %.2f" % (quantidade_latas, quantidade_galoes, metragem_area, preco_final))
+                print(f"Serão necessárias ao menos {quantidade_latas:.0f} latas de tinta e ao menos {quantidade_galoes:.0f} Galões para pintar {metragem_area:.2f} metros². O custo será R$ {preco_final:.2f}")

@@ -8,7 +8,7 @@ if peso_peixe > 50:
 
     multa = peso_adicional * 4
 
-    print("A multa será R$ %.2f por exceder o peso limite em %.2f quilos " % (multa, peso_adicional))
+    print(f"A multa será R$ {multa:.2f} por exceder o peso limite em {peso_adicional:.2f} quilos")
 
 else:
 

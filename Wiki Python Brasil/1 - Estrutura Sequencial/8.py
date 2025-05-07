@@ -4,4 +4,4 @@ horasMensal = float(input("Digite sua carga horária mensal: "))
 
 salario = salarioHora * horasMensal
 
-print("O salário mensal é R$ %.2f " % salario)
+print(f"O salário mensal é R$ {salario:.2f}")

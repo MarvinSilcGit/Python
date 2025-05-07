@@ -12,8 +12,8 @@ if tempo_download >= 60:
 
     tempo_download = tempo_download / 60
 
-    print("O tempo de Download será de no mínimo %.1f minutos" % tempo_download)
+    print(f"O tempo de Download será de no mínimo {tempo_download:.1f} minutos")
 
 else:
 
-    print("O tempo de Download será de no mínimo %.1f segundos" % tempo_download)
+    print(f"O tempo de Download será de no mínimo {tempo_download:.1f} segundos")
