@@ -38,15 +38,15 @@ def ano_bissexto (ano: int):
 
         if ano % 100 != 0:
 
-            return "O ano %d é bissexto" % ano
+            return f"O ano {ano:d} é bissexto"
 
         else:
 
-            return "O ano %d é bissexto especial" % ano
+            return f"O ano {ano:d} é bissexto especial"
 
     else:
 
-        return "O ano %d não é bissexto" % ano
+        return f"O ano {ano:d} não é bissexto"
 
 
 def validade_numero_decimal (numero: float):
@@ -80,19 +80,19 @@ def numero_fizz_buzz (numero_limite: int):
 
     if numero_limite % 3 == 0 and numero_limite % 5 == 0 and numero_limite != 0:
 
-        return "O número %d é FizzBuzz" % numero_limite
+        return f"O número {numero_limite:d} é FizzBuzz"
 
     elif numero_limite % 3 == 0:
 
-        return "O número %d é Fizz" % numero_limite
+        return f"O número {numero_limite:d} é Fizz"
 
     elif numero_limite % 5 == 0:
 
-        return "O número %d é Buzz" % numero_limite
+        return f"O número {numero_limite:d} é Buzz"
 
     else:
 
-        return "O número %d não é nem Fizz nem Buzz" % numero_limite
+        return f"O número {numero_limite:d} não é nem Fizz nem Buzz"
 
 
 def triangulo_tipo (lado1: int, lado2: int, lado3: int):
@@ -140,8 +140,8 @@ def palindromo (valor):
 
         if contador2 == len(valor):
 
-            return "%s é palíndromo" % valor
+            return f"{valor:s} é palíndromo"
 
         else:
 
-            return "%s não é palíndromo" % valor
+            return f"{valor:s} não é palíndromo"

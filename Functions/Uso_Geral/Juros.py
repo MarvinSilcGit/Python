@@ -10,7 +10,7 @@ def juros_compostos (valor_inicial: float, aporte_mensal: float, juros_anual: fl
 
         ganho_juros += ganho_bruto_total / 100 * juros_anual / 12
 
-        print("O valor ao final do %d° mês será de R$ %.2f. Com uma taxa de %.2f por cento anual, gerou o valor de R$ %.2f em juros" % (contador, ganho_bruto_total, juros_anual, ganho_juros))
+        print(f"O valor ao final do {contador}° mês será de R$ {ganho_bruto_total:,.2f}. Com uma taxa anual de {juros_anual:,.2f}%, gerou-se um valor de R$ {ganho_juros:,.2f} em juros")
 
         ganho_bruto_total += aporte_mensal
 

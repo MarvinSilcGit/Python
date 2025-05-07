@@ -45,7 +45,7 @@ def decimal_binary (numero: int):
 
     return f"{resto}"
 
-
+#FIXME: terminar de consertar o código. Possivelmente, a abordagem utilizando o ATM não funciona
 def numero_algarismo_romano (numero: int):
 
     numero_romano = []
