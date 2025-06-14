@@ -2,6 +2,8 @@ contador = 1
 
 while contador != 0:
 
+    dict_estado_civil = {"s": "Solteiro", "v": "Viúvo", "c": "Casado", "d": "Divorciado"}
+
     nome = input("Digite seu nome: ")
 
     if len(nome) < 3:
@@ -10,50 +12,64 @@ while contador != 0:
 
         continue
 
-    else:
+
+    while True:
 
         idade = int(input("Digite sua idade: "))
 
-        if idade < 0 or idade > 150:
+        if 0 <= idade < 150: # Equals to if idade >=0 and idade < 150:
 
-            print("Idade inválida")
-
-            continue
+            break
 
         else:
 
-            salario = float(input("Digite o seu salário: "))
+            print("Idade inválida")
 
-            if salario <= 0:
 
-                print("Salário inválido")
+    while True:
 
-                continue
+        salario = float(input("Digite o seu salário: "))
 
-            else:
+        if salario > 0:
 
-                sexo = input("Digite o seu sexo:\nf - mulheres\nm - homens\n")
+            break
 
-                print(sexo)
+        else:
 
-                if sexo != "m" and sexo != "f":
+            print("Salário inválido")
 
-                    print("Sexo inválido")
 
-                    continue
+    while True:
 
-                else:
+        sexo = input("Digite o seu sexo:\nf - mulheres\nm - homens\n")
 
-                    estado_civil = input("Digite seu estado civil:\ns - solteiro(a)\nv - viúvo(a)\nc - casado(a)\nd - divorciado\n")
+        print(sexo)
 
-                    if estado_civil != "s" and estado_civil != "v" and estado_civil != "c" and estado_civil != "d":
+        if sexo == "m" or sexo == "f":
 
-                        print("Estado civil inválido")
+            break
 
-                        continue
 
-                    else:
+        else:
 
-                        print("%s, %d, %.2f, %s, %s" % (nome, idade, salario, sexo, estado_civil))
+            print("Sexo inválido")
+
+
+    while True:
+
+        estado_civil = input("Digite seu estado civil:\ns - solteiro(a)\nv - viúvo(a)\nc - casado(a)\nd - divorciado\n")
+
+        if estado_civil in dict_estado_civil:
+
+            break
+
+        else:
+
+            print("Estado civil inválido")
+
+
+    sexo = "Masculino" if sexo == "m" else "Feminino"
+
+    print(f"{nome} {idade} anos, {salario:,.2f} de salário, sexo {sexo} e {dict_estado_civil.get(estado_civil)}")
 
     contador = int(input("Digite 0 para finalizar o programa: "))
