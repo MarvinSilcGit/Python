@@ -1,6 +1,6 @@
 def estado_ddd (ddd):
 
-    dicionario_ddd_estado = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará",
+    dict_ddd_estado = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará",
                              "93": "Pará", "94": "Pará", "69": "Rondônia", "95": "Roraima", "63": "Tocantins",
                              "61": "Distrito Federal", "62": "Goiás", "64": "Goiás", "65": "Mato Grosso",
                              "66": "Mato Grosso", "67": "Mato Grosso do Sul", "82": "Alagoas", "71": "Bahia",
@@ -11,18 +11,18 @@ def estado_ddd (ddd):
                              "33": "Minas Gerais", "34": "Minas Gerais", "35": "Minas Gerais", "37": "Minas Gerais",
                              "38": "Minas Gerais", "21": "Rio de Janeiro", "22": "Rio de Janeiro", "24": "Rio de Janeiro",
                              "11": "São Paulo", "12": "São Paulo", "13": "São Paulo", "14": "São Paulo", "15": "São Paulo",
-                             "16": "São Paulo", "17": "São Paulo", "18": "São Paulo", "19": "São Paulo", "41": "Paraná",
-                             "42": "Paraná", "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul",
-                             "53": "Rio Grande do Sul", "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina",
-                             "48": "Santa Catarina", "49": "Santa Catarina"}
+                       "16": "São Paulo", "17": "São Paulo", "18": "São Paulo", "19": "São Paulo", "41": "Paraná",
+                       "42": "Paraná", "43": "Paraná", "44": "Paraná", "45": "Paraná", "46": "Paraná", "51": "Rio Grande do Sul",
+                       "53": "Rio Grande do Sul", "54": "Rio Grande do Sul", "55": "Rio Grande do Sul", "47": "Santa Catarina",
+                       "48": "Santa Catarina", "49": "Santa Catarina"}
 
-    if not ddd in dicionario_ddd_estado:
+    if not ddd in dict_ddd_estado:
 
         return False
 
     else:
 
-        return dicionario_ddd_estado[ddd]
+        return dict_ddd_estado[ddd]
 
 
 def lista_ddd():

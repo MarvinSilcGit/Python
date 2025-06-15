@@ -109,7 +109,7 @@ def calculo_fatorial (numero: int):
 
 def calculo_porcentagem_representante (valor1: float, valor2: float):
 
-    porcentagem = (valor1 / valor2) * 100
+    porcentagem = valor1 / valor2 * 100
 
     return f'{valor1:,.2f} representa {porcentagem:,.2f}% de {valor2:,.2f}'
 

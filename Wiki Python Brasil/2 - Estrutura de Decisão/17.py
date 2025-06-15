@@ -4,12 +4,12 @@ if ano_bissexto % 4 == 0:
 
     if ano_bissexto % 100 != 0:
 
-        print("O ano %d é bissexto" % ano_bissexto)
+        print(f"O ano {ano_bissexto} é bissexto")
 
     elif ano_bissexto % 100 == 0:
 
-        print("O ano %d é bissexto especial" % ano_bissexto)
+        print(f"O ano {ano_bissexto} é bissexto especial")
 
 else:
 
-    print("O ano %d não é bissexto" % ano_bissexto)
+    print(f"O ano {ano_bissexto} não é bissexto")

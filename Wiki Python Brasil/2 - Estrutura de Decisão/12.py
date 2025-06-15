@@ -12,7 +12,7 @@ inss = 0
 
 if salario_bruto <=  900:
 
-    print("O salário será R$ %.2f com R$ %.2f de Imposto de renda, R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salario_bruto, imposto_renda, inss, descontos))
+    print(f"O salário será R$ {salario_bruto:.2f}, com R$ {imposto_renda:.2f} de Imposto de renda, R$ {inss:.2f} de INSS. Totalizando R$ {descontos:.2f} em descontos")
 
 elif salario_bruto <= 1500:
 
@@ -38,4 +38,4 @@ elif salario_bruto > 2500:
 
     descontos = imposto_renda + inss
 
-print("O salário inicial era de R$ %.2f e será R$ %.2f, com R$ %.2f de Imposto de renda e R$ %.2f de INSS. Totalizando R$ %.2f em descontos" % (salario_bruto, salario_bruto - descontos, imposto_renda, inss, descontos))
+print(f"O salário inicial era de R$ {salario_bruto:.2f} e será R$ {salario_bruto-descontos:.2f}, com R$ {imposto_renda:.2f} de Imposto de renda e R$ {inss:.2f} de INSS. Totalizando R$ {descontos:.2f} em descontos")

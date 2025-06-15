@@ -37,7 +37,9 @@ def atm_machine (valor_pagamento: int):
 
 """
 #How to acess values
-lista = atm_machine(2200)
+valor_saque = int(input("Digite o valor de saque: "))
+
+lista = atm_machine(valor_saque)
 
 for cont in lista:
 

@@ -3,7 +3,7 @@ letra_busca = input("Digite a letra para saber se é vogal ou consoante: ")
 if (letra_busca == "a" or letra_busca == "e" or letra_busca == "i" or letra_busca == "o" or letra_busca == "u" or letra_busca == "A"
     or letra_busca == "E" or letra_busca == "I" or letra_busca == "O" or letra_busca == "U"):
 
-    print("A letra '%s' é Vogal" % letra_busca)
+    print(f"A letra '{letra_busca}' é Vogal")
 
 elif (letra_busca == "b" or letra_busca == "c" or letra_busca == "d" or letra_busca == "f" or letra_busca == "g" or letra_busca == "h"
     or letra_busca == "j" or letra_busca == "k" or letra_busca == "l" or letra_busca == "m" or letra_busca == "n" or letra_busca == "p"
@@ -14,8 +14,8 @@ elif (letra_busca == "b" or letra_busca == "c" or letra_busca == "d" or letra_bu
     or letra_busca == "S" or letra_busca == "T" or letra_busca == "V" or letra_busca == "W" or  letra_busca =="X" or  letra_busca =="Y"
     or letra_busca == "Z" or letra_busca == "Ç"):
 
-    print("A letra '%s' é Consoante" % letra_busca)
+    print(f"A letra '{letra_busca}' é Consoante")
 
 else:
 
-    print("O caractere '%s' não é nem vogal nem consoante" % letra_busca)
+    print(f"O caractere '{letra_busca}' não é nem vogal nem consoante")

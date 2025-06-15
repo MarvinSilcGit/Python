@@ -42,8 +42,8 @@ while contador != 5:
 
 media_veiculos = media_veiculos / contador
 
-print("A cidade com o código %d teve a maior taxa de acidentes com %.2f" % (codigo_cidade_maior_acidente, maior_media_acidentes))
+print(f"A cidade com o código {codigo_cidade_maior_acidente} teve a maior taxa de acidentes com {maior_media_acidentes:.2f}")
 
-print("A cidade com o código %d teve a menor taxa de acidentes com %.2f" % (codigo_cidade_menor_acidente, menor_media_acidentes))
+print(f"A cidade com o código {codigo_cidade_menor_acidente} teve a menor taxa de acidentes com {menor_media_acidentes:.2f}")
 
-print("A média de veículos das %d cidades é %.2f" % (contador, media_veiculos))
+print(f"A média de veículos das {contador} cidades é {media_veiculos:.2f}")

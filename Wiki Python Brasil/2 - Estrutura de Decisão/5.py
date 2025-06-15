@@ -6,12 +6,12 @@ media = (nota1 + nota2) / 2
 
 if media < 7:
 
-    print("O aluno foi reprovado com a nota %.2f" % media)
+    print(f"O aluno foi reprovado com a nota {media:.2f}")
 
 elif media < 10:
 
-    print("O aluno foi aprovado com a nota %.2f" % media)
+    print(f"O aluno foi aprovado com a nota {media:.2f}")
 
 else:
 
-    print("O aluno foi aprovado com distinção através da nota %.2f" % media)
+    print(f"O aluno foi aprovado com distinção através da nota {media:.2f}")
