@@ -30,4 +30,4 @@ else:
 
     preco_final += quantidade_picanha * 7.8
 
-print("O preço final será R$ %.2f" % preco_final)
+print(f"O preço final será R$ {preco_final}")

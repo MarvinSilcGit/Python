@@ -24,7 +24,7 @@ else:
 
         else:
 
-            print("%d cédula(s) de R$ %.2f" % (cedulas, limite_cedula))
+            print(f"{cedulas} cédula(s) de R$ {limite_cedula:.2f}")
 
             if valor_pagamento == 0:
 

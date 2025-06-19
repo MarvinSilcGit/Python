@@ -32,4 +32,4 @@ elif tipo_gasolina == "G" or tipo_gasolina == "g":
 
         preco_final -= preco_final / 100 * 5
 
-print("O preço final será R$ %.2f" % preco_final)
+print(f"O preço final será R$ {preco_final}")

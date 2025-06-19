@@ -20,4 +20,4 @@ else:
 
     preco_final += quantidade_maca * 1.2
 
-print("O preço final será R$ %.2f" % preco_final)
+print(f"O preço final será R$ {preco_final}")

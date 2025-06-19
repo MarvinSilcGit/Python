@@ -10,22 +10,25 @@ pergunta5 = input("Você já trabalhou com a vítima? ")
 
 criminalidade = 0
 
-if pergunta1 == "Sim" or pergunta1 == "sim":
+list_possivel_resposta = ['Sim', 'sim']
+
+if pergunta1 in list_possivel_resposta:
 
     criminalidade += 1
 
-if pergunta2 == "Sim" or pergunta2 == "sim":
+if pergunta2 in list_possivel_resposta:
 
     criminalidade += 1
 
-if pergunta3 == "Sim" or pergunta3 == "sim":
-    criminalidade += 1
-
-if pergunta4 == "Sim" or pergunta4 == "sim":
+if pergunta3 in list_possivel_resposta:
 
     criminalidade += 1
 
-if pergunta5 == "Sim" or pergunta5 == "sim":
+if pergunta4 in list_possivel_resposta:
+
+    criminalidade += 1
+
+if pergunta5 in list_possivel_resposta:
 
     criminalidade += 1
 

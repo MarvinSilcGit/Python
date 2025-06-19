@@ -10,11 +10,11 @@ if operacao == "1":
 
     if numero_decimal > numero_inteiro:
 
-        print("O número %.1f é decimal" % numero_decimal)
+        print(f"O número {numero_decimal} é decimal")
 
     else:
 
-        print("O número %d não é decimal" % numero_inteiro)
+        print(f"O número {numero_inteiro} não é decimal")
 
 elif operacao == "2":
 
@@ -22,11 +22,11 @@ elif operacao == "2":
 
     if numero % 2 != 0:
 
-        print("O número %d é ímpar" % numero)
+        print(f"O número {numero} é ímpar")
 
     else:
 
-        print("O número %d é par" % numero)
+        print(f"O número {numero} é par")
 
 elif operacao == "3":
 
@@ -34,8 +34,8 @@ elif operacao == "3":
 
     if numero < 0:
 
-        print("O número %.1f é negativo" % numero)
+        print(f"O número {numero:.1f} é negativo")
 
     else:
 
-        print("O número %.1f é positivo" % numero)
+        print(f"O número {numero:.1f} é positivo")
