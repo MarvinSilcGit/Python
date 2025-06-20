@@ -4,54 +4,53 @@ confirmacao = 2
 
 divisoes = 0
 
+contagem_primos = 0
+
 while contador != 0:
 
-    numero = int(input("Digite o número inicial: "))
+    numero_inicial = int(input("Digite o número inicial: "))
 
-    if numero == 0 or numero == 1:
+    numero_final = int(input("Digite o número final: "))
 
-        print("Esse número é inválido")
+    numero_primario = numero_inicial
+
+    if numero_inicial < 2 or numero_final <= numero_inicial:
+
+        print("Combinação inválida!")
 
         continue
 
     else:
 
-        numero2 = int(input("Digite o número final: "))
+        for contador2 in range(numero_inicial, numero_final + 1):
 
-        if numero2 <= numero:
+            for contador3 in range(confirmacao, numero_inicial + 1):
 
-            print("Número final não pode ser menor ou igual ao número inicial")
+                if numero_inicial % contador3 != 0:
 
-            continue
+                    confirmacao += 1
 
-        else:
+                divisoes +=1
 
-            for contador2 in range(numero, numero2 + 1):
+            if confirmacao == numero_inicial:
 
-                for contador3 in range(confirmacao, numero + 1):
+                print(f"{numero_inicial} é um número primo e foram feitas {divisoes} divisões")
 
-                    if numero % contador3 != 0:
+                contagem_primos += 1
 
-                        confirmacao += 1
+            else:
 
-                    divisoes +=1
+                print(f"{numero_inicial} não é um número primo")
 
-                if confirmacao == numero:
+            confirmacao = 2
 
-                    print("%d é um número primo e foram feitas %d divisões" % (numero, divisoes))
+            contador3 = 2
 
-                else:
+            numero_inicial += 1
 
-                    print("%d não é um número primo" % numero)
+            divisoes = 0
 
-                confirmacao = 2
-
-                contador3 = 2
-
-                numero += 1
-
-                divisoes = 0
-
+    print(f"Existem ao todo {contagem_primos} números primos entre {numero_primario} e {numero_final}")
     print()
 
     contador = int(input("Digite 0 para interromper a execução: "))
