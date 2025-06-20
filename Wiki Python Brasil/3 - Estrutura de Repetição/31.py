@@ -24,7 +24,7 @@ while contador != 0:
 
             break
 
-    print("Total: %.2f" % preco_final)
+    print(f"Total: {preco_final:.2f}")
 
     while True:
 
@@ -40,7 +40,7 @@ while contador != 0:
 
             troco = valor_pagamento - preco_final
 
-            print("Troco: %.2f" % troco)
+            print(f"Troco: {troco:.2f}")
 
             break
 
