@@ -35,3 +35,5 @@ def desconto_irrf (salario: float):
     else:
 
         return 0
+
+# FIXME: NOT GOOD ABOVE 5K
