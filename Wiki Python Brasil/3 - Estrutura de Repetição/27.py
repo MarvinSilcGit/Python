@@ -16,7 +16,7 @@ while contador != 0:
 
     while quantidadeTurmas - contador2 + 1 > 0:
 
-        print("Digite a quantidade de alunos na turma %d:" % contador2)
+        print(f"Digite a quantidade de alunos na turma {contador2}:")
 
         quantidadeAlunos = int(input(""))
 
@@ -34,7 +34,7 @@ while contador != 0:
 
     mediaAlunos = mediaAlunos / quantidadeTurmas
 
-    print("A média de alunos por turma é %.2f" % mediaAlunos)
+    print(f"A média de alunos por turma é {mediaAlunos:.2f}")
 
     print()
 

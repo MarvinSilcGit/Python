@@ -22,7 +22,7 @@ while True:
 
             idade_media = idade_media / contador
 
-            print("A idade média foi %.2f anos" % idade_media)
+            print(f"A idade média foi {idade_media} anos")
 
             if idade_media <= 25:
 

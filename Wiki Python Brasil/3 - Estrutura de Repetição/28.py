@@ -10,7 +10,7 @@ while contador != 0:
 
     for contador2 in range(1, quantidade_cds + 1):
 
-        print("Digite o valor do %d° CD" % contador2)
+        print(f"Digite o valor do {contador2}° CD")
 
         valorCd = float(input(""))
 
@@ -18,7 +18,7 @@ while contador != 0:
 
     custo_medio = custo_total / quantidade_cds
 
-    print("O custo total foi %.2f, e o custo médio de cada CD é R$ %.2f" % (custo_total, custo_medio))
+    print(f"O custo total foi {custo_total:.2f}, e o custo médio de cada CD é R$ {custo_medio:.2f}")
 
     print()
 

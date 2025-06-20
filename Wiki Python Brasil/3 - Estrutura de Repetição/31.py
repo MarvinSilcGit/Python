@@ -12,9 +12,7 @@ while contador != 0:
 
     while True:
 
-        print("Digite o preço da mercadoria %d ou 0 para finalizar a compra: " % contador3)
-
-        preco = float(input(""))
+        preco = float(input(f"Digite o preço da mercadoria {contador3} ou 0 para finalizar a compra: \n"))
 
         preco_final += preco
 
