@@ -48,7 +48,7 @@ while contador != 0:
 
                 contador3 = 2
 
-                numero +=1
+                numero += 1
 
                 divisoes = 0
 
