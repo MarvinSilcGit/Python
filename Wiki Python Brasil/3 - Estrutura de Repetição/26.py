@@ -12,9 +12,7 @@ while contador != 0:
 
     for contador2 in range(1, numero_eleitores + 1):
 
-        print(f"Qual o voto do eleitor {contador2} ?")
-
-        voto = int(input("Candidato 1 - 23\nCandidato 2 - 15\nCandidato 3 - 18\n"))
+        voto = int(input(f"Qual o voto do eleitor {contador2} ?\nCandidato 1 - 23\nCandidato 2 - 15\nCandidato 3 - 18\n"))
 
         if voto == 23:
 

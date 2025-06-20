@@ -16,9 +16,7 @@ while contador != 0:
 
     while quantidadeTurmas - contador2 + 1 > 0:
 
-        print(f"Digite a quantidade de alunos na turma {contador2}:")
-
-        quantidadeAlunos = int(input(""))
+        quantidadeAlunos = int(input(f"Digite a quantidade de alunos na turma {contador2}:"))
 
         if quantidadeAlunos > 40 or quantidadeAlunos < 1:
 

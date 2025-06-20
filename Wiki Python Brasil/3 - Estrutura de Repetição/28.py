@@ -10,9 +10,7 @@ while contador != 0:
 
     for contador2 in range(1, quantidade_cds + 1):
 
-        print(f"Digite o valor do {contador2}° CD")
-
-        valorCd = float(input(""))
+        valorCd = float(input(f"Digite o valor do {contador2}° CD: "))
 
         custo_total += valorCd
 
