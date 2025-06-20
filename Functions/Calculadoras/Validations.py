@@ -2,13 +2,9 @@ def numero_primo (numero: int):
 
     confirmacao = 2
 
-    if numero == 0 or numero == 1:
+    if numero < 2:
 
         return False
-
-    if numero ==  2 or numero == 3:
-
-        return True
 
     else:
 
@@ -18,13 +14,7 @@ def numero_primo (numero: int):
 
                 confirmacao += 1
 
-        if confirmacao == numero:
-
-            return True
-
-        else:
-
-            return False
+        return confirmacao == numero
 
 
 def numero_par_impar (numero: int):
@@ -63,13 +53,7 @@ def validade_numero_decimal (numero: float):
 
         numero_decimal = str(numero)
 
-        if "." in numero_decimal:
-
-            return True
-
-        else:
-
-            return False
+        return '.' in numero_decimal
 
 
 def numero_fizz_buzz (numero_limite: int):
