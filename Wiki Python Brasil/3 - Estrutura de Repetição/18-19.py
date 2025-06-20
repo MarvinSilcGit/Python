@@ -40,4 +40,4 @@ if maior_numero == menor_numero:
 
 else:
 
-    print("O maior número foi %d e o menor número foi %d" % (maior_numero, menor_numero))
+    print(f"O maior número foi {maior_numero} e o menor número foi {menor_numero}")

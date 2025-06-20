@@ -4,8 +4,8 @@ for contador in range(10):
 
     if numero % 2 != 0:
 
-        print("O número %d é par" % numero)
+        print(f"O número {numero} é par")
 
     else:
 
-        print("O número %d é ímpar" % numero)
+        print(f"O número {numero} é ímpar")

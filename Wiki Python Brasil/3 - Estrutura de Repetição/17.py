@@ -6,4 +6,4 @@ for contador in range(numero, 1, -1):
 
     resultado_fatorial *= contador - 1
 
-print("Fatorial de %d é %d" % (numero, resultado_fatorial))
+print(f"Fatorial de {numero} é {resultado_fatorial}")

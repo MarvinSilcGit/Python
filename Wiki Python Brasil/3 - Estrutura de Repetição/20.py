@@ -16,6 +16,6 @@ while contador != 0:
 
         resultado_fatorial *= contador - 1
 
-    print("Fatorial de %d é %d" % (numero, resultado_fatorial))
+    print(f"Fatorial de {numero} é {resultado_fatorial}")
 
     contador = int(input("Digite 0 para interromper a execução: "))

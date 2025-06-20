@@ -8,4 +8,4 @@ for contador in range(5):
 
         numero_final = numero
 
-print("O maior número foi %d" % numero_final)
+print(f"O maior número foi {numero_final}")

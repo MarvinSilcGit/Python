@@ -12,4 +12,4 @@ for contador in range(1) :
 
     media = (numero1 + numero2 + numero3 + numero4 + numero5) / 5
 
-    print("O soma foi %.2f e a média foi %.2f" % ((numero1 + numero2 + numero3 + numero4 + numero5), media))
+    print(f"O soma foi {numero1 + numero2 + numero3 + numero4 + numero5}, e a média foi {media}")

@@ -16,4 +16,4 @@ while araja < bacalaca:
 
     print(bacalaca)
 
-print("Serão necessários pelos menos %d anos" % anos)
+print(f"Serão necessários pelos menos {anos} anos")
