@@ -1,37 +1,37 @@
-def desconto_irrf (salario_mensal: float):
+def desconto_irrf (salario: float):
 
-    faixas_irrf = {0: 397.84, 1: 924.39, 2: 913.62}
-
-    aliquotas_irrf = {0: 15, 1: 22.5, 2: 27.5}
+    salario = salario - 607.20
 
     desconto = 0
 
-    faixa_salarial = salario_mensal
+    if salario > 2428.80:
 
-    contador = 0
+        if salario <= 2826.65:
 
-    limite_insencao = 3036
+            desconto += salario / 100 * 7.5
 
-    faixa_salarial -= limite_insencao
+            desconto -= 182.16
 
-    if salario_mensal > limite_insencao:
+        elif salario <= 3751.05:
 
-        while faixa_salarial > 0:
+            desconto += salario / 100 * 15
 
-            if faixa_salarial <= faixas_irrf.get(contador):
+            desconto -= 394.16
 
-                desconto += faixa_salarial / 100 * aliquotas_irrf.get(contador)
+        elif salario <= 4664.68:
 
-            else:
+            desconto = salario / 100 * 22.5
 
-                desconto += faixas_irrf.get(contador) / 100 * aliquotas_irrf.get(contador)
+            desconto -= 675.49
 
-            faixa_salarial -= faixas_irrf.get(contador)
+        else:
 
-            contador += 1
+            desconto = salario / 100 * 27.5
 
-            if contador > 2:
+            desconto -= 908.73
 
-                break
+        return desconto
 
-    return desconto
+    else:
+
+        return 0

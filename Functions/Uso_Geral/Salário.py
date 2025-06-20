@@ -9,7 +9,7 @@ def salario_liquido (salario: float):
 
     salario_final -= desconto_inss(salario)
 
-    salario_final -= desconto_irrf(salario_final)
+    salario_final -= desconto_irrf(salario)
 
     return salario_final
 
