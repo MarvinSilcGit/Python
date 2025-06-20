@@ -2,20 +2,18 @@ numero = int(input("Fatorial de: "))
 
 resultado_fatorial = numero
 
-print("%d! =" % numero, end=" ")
+print(f"{numero}! =", end=" ")
 
 for contador in range(numero, 0, -1):
 
     if contador == 1:
 
-        print("%d" % contador, end=" = ")
-
-        break
+        print(f"{contador}", end=" = ")
 
     else:
 
         resultado_fatorial *= contador - 1
 
-        print("%d" % contador, end=" x ")
+        print(f"{contador}", end=" x ")
 
 print(resultado_fatorial)

@@ -32,4 +32,4 @@ if maior_temperatura == menor_temperatura:
 
 else:
 
-    print("O maior temperatura foi %.1f° e a menor temperatura foi %.1f°" % (maior_temperatura, menor_temperatura))
+    print(f"O maior temperatura foi {maior_temperatura:.1f}° e a menor temperatura foi {menor_temperatura:.1f}°")
