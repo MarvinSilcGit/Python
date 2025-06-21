@@ -2,34 +2,18 @@
 
 import random
 
-array, exchange, counter1 = [], [], 0
+array_0, array_1, og_array, joint_array, numero = [], [], [], [], 0
 
 for counter in range(0, random.randint(5, 30)):
 
-    array.append(random.randrange(0, 2))
+    numero = random.randrange(0, 2)
 
-print("The original Array is: ", array)
+    og_array.append(numero)
 
-while counter1 != len(array)-1:
+    array_0.append(numero) if numero == 0 else array_1.append(numero)
 
-    if array[counter1] > 0:
+joint_array = array_0 + array_1
 
-        exchange.append(array.pop(counter1))
+print("The original Array is: ", og_array)
 
-        counter1 = 0
-
-    else:
-
-        counter1 += 1
-
-        continue
-
-while True:
-
-    array.append(exchange.pop(0))
-
-    if len(exchange) == 0:
-
-        break
-
-print("The new Array sorted in Binary: ", array)
+print("The new Array sorted in Binary: ", joint_array)
