@@ -8,4 +8,4 @@ for contador in range(1996, 2024 + 1):
 
     juros_inicial = juros_inicial * 2
 
-    print("R$ %.2f de salário no ano de %d" % (salario, contador))
+    print(f"R$ {salario} de salário no ano de {contador}")

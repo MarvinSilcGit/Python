@@ -92,16 +92,16 @@ media_altura = media_altura / contador2
 
 media_peso = media_peso / contador2
 
-print("O cliente com o código %d teve a maior altura %.2f" % (codigo_pessoa_maior_altura, maior_altura))
+print(f"O cliente com o código {codigo_pessoa_maior_altura} teve a maior altura {maior_altura:.2f}")
 
-print("O cliente com o código %d teve a menor altura %.2f" % (codigo_pessoa_menor_altura, menor_altura))
+print(f"O cliente com o código {codigo_pessoa_menor_altura} teve a menor altura {menor_altura}")
 
-print("A média de altura foi %.2f" % media_altura)
+print(f"A média de altura foi {media_altura:.2f}")
 
 print()
 
-print("O cliente com o código %d teve o maior peso %.1f" % (codigo_pessoa_maior_peso, maior_peso))
+print(f"O cliente com o código {codigo_pessoa_maior_peso} teve o maior peso {maior_peso:.1f}")
 
-print("O cliente com o código %d teve o menor peso %.1f" % (codigo_pessoa_menor_peso, menor_peso))
+print(f"O cliente com o código {codigo_pessoa_maior_peso} teve o menor peso {menor_peso:.1f}")
 
-print("A média de peso foi %.1f" % media_peso)
+print(f"A média de peso foi {media_peso:.1f}")

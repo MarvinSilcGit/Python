@@ -12,8 +12,8 @@ else:
 
     print()
 
-    print("Vou montar a tabuada de %d, começando por %d e terrminando em %d:" % (tabuada, inicio_tabuada, fim_tabudada))
+    print(f"Vou montar a tabuada de {tabuada}, começando por {inicio_tabuada} e terrminando em {fim_tabudada}:")
 
     for contador in range(inicio_tabuada, fim_tabudada + 1):
 
-        print("%d x %d = %d " % (tabuada, contador, tabuada * contador))
+        print(f"{tabuada} x {contador} = {tabuada * contador}")

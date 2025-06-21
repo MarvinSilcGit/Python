@@ -48,6 +48,6 @@ while contador != 0:
 
     print()
 
-print("O aluno com o número %d teve a maior altura %.2f" % (numero_aluno_alto, maior_altura))
+print(f"O aluno com o número {numero_aluno_alto} teve a maior altura {maior_altura:.2f}")
 
-print("O aluno com o número %d teve a menor altura %.2f" % (numero_aluno_baixo, menor_altura))
+print(f"O aluno com o número {numero_aluno_baixo} teve a menor altura {menor_altura:.2f}")
