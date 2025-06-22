@@ -2,21 +2,21 @@
 
 def milhas_quilometros (milhas: float):
 
-    return f"{milhas:,.2f} Milhas/h equivalem à {milhas * 1.609:,.2f} KM/h"
+    return f"{milhas * 1.609:,.2f}"
 
 
 def milhas_pes (milhas: float):
 
-    return f"{milhas:,.2f} Milhas/h equivalem à {milhas * 1.467:,.2f} Pés/s"
+    return f"{milhas * 1.467:,.2f}"
 
 
 def milhas_metros (milhas: float):
 
-    return f"{milhas:,.2f} Milhas/h equivalem à {milhas / 2.237:,.2f} M/s"
+    return f"{milhas / 2.237:,.2f}"
 
 
 def milhas_nos (milhas: float):
 
-    return f"{milhas:,.2f} Milhas/h equivalem à {milhas / 1.151:,.2f} Nós"
+    return f"{milhas / 1.151:,.2f}"
 
 # Meters to many
