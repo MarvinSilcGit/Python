@@ -1,18 +1,16 @@
 def binary_decimal (numero: str):
 
-    tamanho_decimal = len(numero)
-
     decimal = 0
 
-    expoente = tamanho_decimal - 1
+    expoente = len(numero) - 1
 
-    for contador in numero:
+    for _ in numero:
 
-        if contador == "1":
+        if _ == "1":
 
             decimal += (2 ** expoente)
 
-        elif contador == "0":
+        elif _ == "0":
 
             decimal += 0
 
@@ -29,21 +27,19 @@ def binary_decimal (numero: str):
 
 def decimal_binary (numero: int):
 
-    resto = []
+    numero_binario = []
 
-    numero_decimal = numero
+    while numero != 0:
 
-    while numero_decimal != 0:
+        numero_binario.insert(0, str(numero % 2))
 
-        resto.insert(0, str(numero_decimal % 2))
+        numero = numero // 2
 
-        numero_decimal = numero_decimal // 2
+    numero_binario = ''.join(numero_binario)
 
-    resto = ''.join(resto)
+    numero_binario = int(numero_binario)
 
-    resto = int(resto)
-
-    return f"{resto}"
+    return f"{numero_binario}"
 
 #FIXME: terminar de consertar o código. Possivelmente, a abordagem utilizando o ATM não funciona
 def numero_algarismo_romano (numero: int):
@@ -68,4 +64,4 @@ def numero_algarismo_romano (numero: int):
 
     return numero_romano
 
-print(numero_algarismo_romano(900))
+#print(numero_algarismo_romano(900))
