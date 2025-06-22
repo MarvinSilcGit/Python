@@ -1,6 +1,6 @@
 def binary_decimal (numero: str):
 
-    decimal = 0
+    numero_decimal = 0
 
     expoente = len(numero) - 1
 
@@ -8,21 +8,17 @@ def binary_decimal (numero: str):
 
         if _ == "1":
 
-            decimal += (2 ** expoente)
-
-        elif _ == "0":
-
-            decimal += 0
+            numero_decimal += (2 ** expoente)
 
         else:
 
-            return 'Esse número não é binário'
+            numero_decimal += 0
 
         expoente -= 1
 
         numero = int(numero)
 
-    return f"{decimal}"
+    return f"{numero_decimal}"
 
 
 def decimal_binary (numero: int):

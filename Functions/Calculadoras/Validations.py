@@ -8,9 +8,9 @@ def numero_primo (numero: int):
 
     else:
 
-        for contador in range(confirmacao, numero + 1):
+        for _ in range(confirmacao, numero + 1):
 
-            if numero % contador != 0:
+            if numero % _ != 0:
 
                 confirmacao += 1
 
@@ -108,7 +108,7 @@ def triangulo_tipo (lado1: int, lado2: int, lado3: int):
 
 def palindromo (valor):
 
-    contador2 = 0
+    contador = 0
 
     if len(valor) <= 2:
 
@@ -116,16 +116,16 @@ def palindromo (valor):
 
     else:
 
-        for contador1 in range(0, len(valor)):
+        for _ in range(0, len(valor)):
 
-            if valor[contador1] == valor[- 1 - contador1]:
+            if valor[_] == valor[- 1 - _]:
 
-                contador2 += 1
+                contador += 1
 
-        if contador2 == len(valor):
+        if contador == len(valor):
 
-            return f"{valor:s} é palíndromo"
+            return True
 
         else:
 
-            return f"{valor:s} não é palíndromo"
+            return False
