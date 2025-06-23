@@ -1,5 +1,5 @@
 def desconto_irrf (salario: float):
-
+    """Função responável por calcular o desconto do irrf sobre o salário no ano de 2025."""
     salario = salario - 607.20
 
     desconto = 0

@@ -1,5 +1,5 @@
 def desconto_inss (salario_mensal: float):
-
+    """Função responável por calcular o desconto do inss sobre o salário no ano de 2025."""
     faixas_inss = {0: 1518, 1: 1275.88, 2: 1396.94, 3: 3966.57}
 
     aliquotas_inss = {0: 7.5, 1: 9, 2: 12, 3: 14}

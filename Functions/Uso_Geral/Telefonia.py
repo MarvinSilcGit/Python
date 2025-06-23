@@ -1,5 +1,5 @@
 def estado_ddd (ddd):
-
+    """Função que armazena a lista de ddd do Brasil e sua respectiva região."""
     dict_ddd_estado = {"68": "Acre", "96": "Amapá", "92": "Amazonas", "97": "Amazonas", "91": "Pará",
                              "93": "Pará", "94": "Pará", "69": "Rondônia", "95": "Roraima", "63": "Tocantins",
                              "61": "Distrito Federal", "62": "Goiás", "64": "Goiás", "65": "Mato Grosso",
@@ -26,7 +26,7 @@ def estado_ddd (ddd):
 
 
 def lista_ddd():
-
+    """Função que armazena a lista de ddd do Brasil."""
     ddd = ['11', '12', '13', '14', '15', '17', '16', '17', '18', '19', '21', '22', '24', '27', '28', '31',
                  '32', '33', '34', '35', '37', '38', '41', '42', '43', '44', '45', '46', '47', '48', '49', '51',
                  '53', '54', '55', '61', '62', '63', '64', '65', '66', '67', '68', '71', '73', '74', '75', '77',
@@ -37,7 +37,7 @@ def lista_ddd():
 
 
 def formatar_numero_telefone_movel (numero: str):
-
+    """Função responsável por formatar o número de telefone móvel para o padrão brasileiro."""
     if not estado_ddd(numero[0:2]) or len(numero) != 11:
 
         return "Número inválido"
@@ -70,7 +70,7 @@ def formatar_numero_telefone_movel (numero: str):
 
 
 def gerador_numero_telefone_movel ():
-
+    """Função responsável por gerar números móveis aleatórios."""
     import random as aleatorio
 
     numero_telefone_movel = ''
@@ -99,7 +99,7 @@ def gerador_numero_telefone_movel ():
 
 
 def formatar_numero_telefone_fixo (numero: str):
-
+    """Função responsável por formatar o número de telefone fixo para o padrão brasileiro."""
     if not estado_ddd(numero[0:2]) or len(numero) != 10:
 
         return "Número inválido"
@@ -132,7 +132,7 @@ def formatar_numero_telefone_fixo (numero: str):
 
 
 def gerador_numero_telefone_fixo ():
-
+    """Função responsável por gerar números fixos aleatórios."""
     import random as aleatorio
 
     numero_telefone_fixo = ''
