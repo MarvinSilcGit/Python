@@ -91,11 +91,11 @@ def validar_cnpj(cnpj: str):
 
         if cnpj == cnpj_validador:
 
-            return f"O CNPJ {cnpj} é válido"
+            return True
 
         else:
 
-            return f"O CNPJ {cnpj} é inválido"
+            return False
 #print(validar_cnpj('59120772000100')) FIXME: fazer funcionar onde o módulo do resultado da posicão é igual a 10
 
 def gerador_cnpj ():
