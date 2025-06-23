@@ -1,15 +1,19 @@
 from Functions.Calculadoras.Validations import validade_numero_decimal
 
 
-def atm_machine (valor_pagamento: int):
+def atm_machine (valor_saque: int):
 
-    if validade_numero_decimal(valor_pagamento):
+    resultado = []
 
-        return 'Valores não podem ser decimais'
+    try:
+
+        valor_saque = int(valor_saque)
+
+    except ValueError:
+
+        return 'Não são permitidos letras ou números decimais'
 
     else:
-
-        resultado = []
 
         dict_contagem_cedulas = {200: 0, 100: 0, 50: 0, 20: 0, 10: 0, 5: 0, 2: 0, 1: 0}
 
@@ -17,11 +21,11 @@ def atm_machine (valor_pagamento: int):
 
         contador = 0
 
-        while valor_pagamento != 0:
+        while valor_saque != 0:
 
-            if valor_pagamento >= lista_cedulas[contador]:
+            if valor_saque >= lista_cedulas[contador]:
 
-                valor_pagamento -= lista_cedulas[contador]
+                valor_saque -= lista_cedulas[contador]
 
                 resultado.append(lista_cedulas[contador])
 
@@ -29,17 +33,16 @@ def atm_machine (valor_pagamento: int):
 
                 contador += 1
 
-        for contador2 in dict_contagem_cedulas:
+        for _ in dict_contagem_cedulas:
 
-            dict_contagem_cedulas.update({contador2: resultado.count(contador2)})
+            dict_contagem_cedulas.update({_: resultado.count(_)})
 
         return dict_contagem_cedulas
 
-"""
-#How to acess values
-valor_saque = int(input("Digite o valor de saque: "))
+#How to acess the function
+"""quantidade_saque = input("Digite o valor de saque: ")
 
-lista = atm_machine(valor_saque)
+lista = atm_machine(quantidade_saque)
 
 for cont in lista:
 
