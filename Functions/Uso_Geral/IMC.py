@@ -1,3 +1,3 @@
 def calculo_imc (peso: float, altura: float):
 
-    return peso / altura ** 2
+    return f"{peso / altura ** 2:.1f}"

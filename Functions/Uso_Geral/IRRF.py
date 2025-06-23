@@ -30,7 +30,7 @@ def desconto_irrf (salario: float):
 
             desconto -= 908.73
 
-        return desconto
+        return f"{desconto:.2f}"
 
     else:
 

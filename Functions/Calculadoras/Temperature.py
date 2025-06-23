@@ -2,80 +2,80 @@ def fahrenheit_celsius (temperatura: float):
 
     temperatura_celsius = (temperatura - 32) * 5 / 9
 
-    return f"A temperatura em {temperatura:,.1f}° Fahrenheit equivale à {temperatura_celsius:,.1f}° Celsius"
+    return f"{temperatura_celsius:,.1f}"
 
 def fahrenheit_kelvin (temperatura: float):
 
     temperatura_kelvin = (temperatura - 32) * 5 / 9 + 273.15
 
-    return f"A temperatura em {temperatura:,.1f}° Fahrenheit equivale à {temperatura_kelvin:,.1f}° Kelvin"
+    return f"{temperatura_kelvin:,.1f}"
 
 
 def fahrenheit_rankine (temperatura: float):
 
     temperatura_rankine = temperatura + 459.67
 
-    return f"A temperatura em {temperatura:,.1f}° Fahrenheit equivale à {temperatura_rankine:,.1f}° Rankine"
+    return f"{temperatura_rankine:,.1f}"
 
 
 def celsius_fahrenheit (temperatura: float):
 
     temperatura_fahrenheit = (temperatura * 5 / 9) + 32
 
-    return f"A temperatura em {temperatura:,.1f}° Celsius equivale à {temperatura_fahrenheit:,.1f}° Fahrenheit"
+    return f"{temperatura_fahrenheit:,.1f}"
 
 
 def celsius_kelvin (temperatura: float):
 
     temperatura_kelvin = temperatura + 273.15
 
-    return f"A temperatura em {temperatura:,.1f}° Celsius equivale à {temperatura_kelvin:,.1f}° Kelvin"
+    return f"{temperatura_kelvin:,.1f}"
 
 
 def celsius_rankine (temperatura: float):
 
     temperatura_rankine = (temperatura - 491.67) * 5 / 9
 
-    return f"A temperatura em {temperatura:,.1f}° Celsius equivale à {temperatura_rankine:,.1f}° Rankine"
+    return f"{temperatura_rankine:,.1f}"
 
 
 def kelvin_fahrenheit (temperatura: float):
 
     temperatura_fahrenheit = (temperatura - 273.15) * 9 / 5 + 32
 
-    return f"A temperatura em {temperatura:,.1f}° Kelvin equivale à {temperatura_fahrenheit:,.1f}° Fahrenheit"
+    return f"{temperatura_fahrenheit:,.1f}"
 
 
 def kelvin_celsius (temperatura: float):
 
     temperatura_celsius = temperatura - 273.15
 
-    return f"A temperatura em {temperatura:,.1f}° Kelvin equivale à {temperatura_celsius:,.1f}° Celsius"
+    return f"{temperatura_celsius:,.1f}"
 
 
 def kelvin_rankine (temperatura: float):
 
     temperatura_rankine = temperatura * 9 / 5
 
-    return f"A temperatura em {temperatura:,.1f}° Kelvin equivale à {temperatura_rankine:,.1f}° Rankine"
+    return f"{temperatura_rankine:,.1f}"
 
 
 def rankine_fahrenheit (temperatura: float):
 
     temperatura_fahrenheit = temperatura - 459.67
 
-    return f"A temperatura em {temperatura:,.1f}° Rankine equivale à {temperatura_fahrenheit:,.1f}° Fahrenheit"
+    return f"{temperatura_fahrenheit:,.1f}"
 
 
 def rankine_celsius (temperatura: float):
 
     temperatura_celsius = (temperatura - 491.67) * 5 / 9
 
-    return f"A temperatura em {temperatura:,.1f}° Rankine equivale à {temperatura_celsius:,.1f}° Celsius"
+    return f"{temperatura_celsius:,.1f}"
 
 
 def rankine_kelvin (temperatura: float):
 
     temperatura_kelvin = temperatura * 5 / 9
 
-    return f"A temperatura em {temperatura:,.1f}° Rankine equivale à {temperatura_kelvin:,.1f}° Kelvin"
+    return f"{temperatura_kelvin:,.1f}"

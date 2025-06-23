@@ -28,4 +28,4 @@ def desconto_inss (salario_mensal: float):
 
             break
 
-    return desconto
+    return f"{desconto:.2f}"

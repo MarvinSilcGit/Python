@@ -64,19 +64,19 @@ def numero_fizz_buzz (numero_limite: int):
 
     if numero_limite % 3 == 0 and numero_limite % 5 == 0 and numero_limite != 0:
 
-        return f"O número {numero_limite:d} é FizzBuzz"
+        return f"FizzBuzz"
 
     elif numero_limite % 3 == 0:
 
-        return f"O número {numero_limite:d} é Fizz"
+        return f"Fizz"
 
     elif numero_limite % 5 == 0:
 
-        return f"O número {numero_limite:d} é Buzz"
+        return f"Buzz"
 
     else:
 
-        return f"O número {numero_limite:d} não é nem Fizz nem Buzz"
+        return f"Nem Fizz, nem Buzz"
 
 
 def triangulo_tipo (lado1: int, lado2: int, lado3: int):
@@ -95,15 +95,15 @@ def triangulo_tipo (lado1: int, lado2: int, lado3: int):
 
             if lado1 == lado2 == lado3:
 
-                return "Esse é um triângulo equilátero"
+                return "Equilátero"
 
             elif lado1 != lado2 != lado3 != lado1:
 
-                return "Esse é um triângulo escaleno"
+                return "Escaleno"
 
             elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
 
-                return "Esse é um triângulo isosceles"
+                return "Isosceles"
 
 
 def palindromo (valor):

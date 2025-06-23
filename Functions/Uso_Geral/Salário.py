@@ -11,9 +11,4 @@ def salario_liquido (salario: float):
 
     salario_final -= desconto_irrf(salario)
 
-    return salario_final
-
-
-sl = salario_liquido(float(input("Digite seu salário: ")))
-
-print(f"O seu salário líquido é: R$ {sl:,.2f}")
+    return f"{salario_final:.2f}"
