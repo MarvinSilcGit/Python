@@ -28,7 +28,7 @@ def desconto_inss (salario_mensal: float):
 
             break
 
-    return f"{desconto}"
+    return desconto
 
 
 def desconto_irrf (salario: float):
@@ -63,7 +63,7 @@ def desconto_irrf (salario: float):
 
             desconto -= 908.73
 
-        return f"{desconto:.2f}"
+        return desconto
 
     else:
 
@@ -73,13 +73,13 @@ def desconto_irrf (salario: float):
 
 def salario_liquido (salario: float):
     """Função responável por calcular o salário líquido no ano de 2025."""
-    salario_final = salario
+    inss = desconto_inss(salario)
 
-    salario_final -= desconto_inss(salario_final)
+    irrf = desconto_irrf(salario)
 
-    salario_final -= desconto_irrf(salario_final)
+    salario_final = salario - inss - irrf
 
     return salario_final
 
-sl = salario_liquido(10000)
-print(sl)
+sl = salario_liquido(6512)
+print(f"{sl:.2f}")
