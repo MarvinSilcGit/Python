@@ -1,6 +1,5 @@
 from Functions.Calculadoras.Validations import validade_numero_decimal
 
-
 def atm_machine (valor_saque: int):
     """Função responável por imitar a função saque de um caixa eletrônico."""
     resultado = []
@@ -45,8 +44,8 @@ def atm_machine (valor_saque: int):
 
 #lista = atm_machine(quantidade_saque)
 
-#for cont in lista:
+#for _ in lista:
 
-#   print(f"{lista[cont]} cédulas de {cont}" if lista[cont] > 1 else f"{lista[cont]} cédula de {cont}")""
+#   print(f"{lista[_]} cédulas de {_}" if lista[_] > 1 else f"{lista[_]} cédula de {_}")
 
 #print(atm_machine)
