@@ -1,6 +1,6 @@
 import math
 
-from Validations import numero_par_impar
+from Functions.Calculadoras.Validations import numero_par_impar
 
 
 def resto_divisao (valor1: float, valor2: float):
