@@ -82,4 +82,3 @@ def salario_liquido (salario: float):
     return salario_final
 
 sl = salario_liquido(6512)
-print(f"{sl:.2f}")
