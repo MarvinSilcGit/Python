@@ -1,5 +1,5 @@
 def binary_decimal (numero: str):
-
+    """Função que converte número binário em número decimal."""
     numero_decimal = 0
 
     expoente = len(numero) - 1
@@ -18,24 +18,40 @@ def binary_decimal (numero: str):
 
         numero = int(numero)
 
-    return f"{numero_decimal}"
+    return numero_decimal
 
 
 def decimal_binary (numero: int):
-
+    """Função que converte número decimal em número binário."""
     numero_binario = []
 
     while numero != 0:
 
-        numero_binario.insert(0, str(numero % 2))
+        try:
 
-        numero = numero // 2
+            numero_binario.insert(0, str(numero % 2))
 
-    numero_binario = ''.join(numero_binario)
+        except TypeError:
 
-    numero_binario = int(numero_binario)
+            return 'Somente números são permitidos'
 
-    return f"{numero_binario}"
+        else:
+
+            numero = numero // 2
+
+        numero_binario = ''.join(numero_binario)
+
+        try:
+
+            numero_binario = int(numero_binario)
+
+        except ValueError:
+
+            return 'Somente números inteiros são permitidos'
+
+        else:
+
+            return numero_binario
 
 #FIXME: terminar de consertar o código. Possivelmente, a abordagem utilizando o ATM não funciona
 def numero_algarismo_romano (numero: int):
