@@ -16,9 +16,17 @@ def binary_decimal (numero: str):
 
         expoente -= 1
 
-        numero = int(numero)
+        try:
 
-    return numero_decimal
+            numero = int(numero)
+
+        except ValueError:
+
+            return 'Somente números são permitidos'
+
+        else:
+
+            return numero_decimal
 
 
 def decimal_binary (numero: int):
