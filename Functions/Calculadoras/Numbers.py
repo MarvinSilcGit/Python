@@ -83,9 +83,7 @@ def raiz_quadrada (numero: float):
 
         return "número imaginário"
 
-    resultado_raiz_quadrada = (base + numero / base) / 2
-
-    resultado_raiz_quadrada **= 2
+    resultado_raiz_quadrada = ((base + numero / base) / 2) ** 2
 
     while resultado_raiz_quadrada * resultado_raiz_quadrada - numero > 0.001:
 
