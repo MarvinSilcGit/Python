@@ -3,52 +3,52 @@
 
 def metro_quilometro (metro: float):
 
-    return f"{metro / 1000:,.2f}"
+    return metro / 1000
 
 
 def metro_centimetro (metro: float):
 
-    return f"{metro * 100:,.2f}"
+    return metro * 100
 
 
 def metro_milimetro (metro: float):
 
-    return f"{metro * 1000:,.2f}"
+    return metro * 1000
 
 
 def metro_micrometro (metro: float):
 
-    return f"{metro * 1e+6:.2e}"
+    return metro * 1e+6
 
 
 def metro_nanometro (metro: float):
 
-    return f"{metro * 1e+9:.2e}"
+    return metro * 1e+9
 
 
 def metro_milha (metro: float):
 
-    return f"{metro / 1609:,.2f}"
+    return metro / 1609
 
 
 def metro_jarda (metro: float):
 
-    return f"{metro * 1.094:,.2f}"
+    return metro * 1.094
 
 
 def metro_pe (metro: float):
 
-    return f"{metro * 3.281:,.2f}"
+    return metro * 3.281
 
 
 def metro_polegada (metro: float):
 
-    return f"{metro * 39.37:,.2f}"
+    return metro * 39.37
 
 
 def metro_milha_nautica (metro: float):
 
-    return f"{metro / 1852:,.2f}"
+    return metro / 1852
 
 
 ## Kilometers to many
@@ -56,52 +56,52 @@ def metro_milha_nautica (metro: float):
 
 def quilometro_metro (kilometros: float):
 
-    return f'{kilometros * 1000:,.2f}'
+    return kilometros * 1000
 
 
 def quilometro_centimetro (kilometros: float):
 
-    return f'{kilometros * 100000:,.2f}'
+    return kilometros * 100000
 
 
 def quilometro_milimetro (kilometros: float):
 
-    return f'{kilometros * 1e+6:.2e}'
+    return kilometros * 1e+6
 
 
 def quilometro_micrometro (kilometros: float):
 
-    return f'{kilometros * 1e+9:.2e}'
+    return kilometros * 1e+9
 
 
 def quilometro_nanometro (kilometros: float):
 
-    return f'{kilometros * 1e+12:.2e}'
+    return kilometros * 1e+12
 
 
 def quilometro_milha (kilometros: float):
 
-    return f'{kilometros / 1.609:,.2f}'
+    return kilometros / 1.609
 
 
 def quilometro_jarda (kilometros: float):
 
-    return f'{kilometros * 1094:,.2f}'
+    return kilometros * 1094
 
 
 def quilometro_pe (kilometros: float):
 
-    return f'{kilometros * 3281:,.2f}'
+    return kilometros * 3281
 
 
 def quilometro_polegada (kilometros: float):
 
-    return f'{kilometros * 39370:,.2f}'
+    return kilometros * 39370
 
 
 def quilometro_milha_nautica (kilometros: float):
 
-    return f'{kilometros / 1.852:,.2f}'
+    return kilometros / 1.852
 
 
 # Centimeters to many
@@ -109,52 +109,52 @@ def quilometro_milha_nautica (kilometros: float):
 
 def centimetro_quilometro (centimetro: float):
 
-    return f'{centimetro / 100000:.2e}'
+    return centimetro / 100000
 
 
 def centimetro_metro (centimetro: float):
 
-    return f'{centimetro / 100:,.2f}'
+    return centimetro / 100
 
 
 def centimetro_milimetro (centimetro: float):
 
-    return f'{centimetro * 10:,.2f}'
+    return centimetro * 10
 
 
 def centimetro_micrometro (centimetro: float):
 
-    return f'{centimetro * 10000:,.2f}'
+    return centimetro * 10000
 
 
 def centimetro_nanometro (centimetro: float):
 
-    return f'{centimetro * 1e+07:.2e}'
+    return centimetro * 1e+07
 
 
 def centimetro_milha (centimetro: float):
 
-    return f'{centimetro / 160900:.2e}'
+    return centimetro / 160900
 
 
 def centimetro_jarda (centimetro: float):
 
-    return f'{centimetro / 91.44:,.2f}'
+    return centimetro / 91.44
 
 
 def centimetro_pe (centimetro: float):
 
-    return f'{centimetro / 30.48:,.2f}'
+    return centimetro / 30.48
 
 
 def centimetro_polegada (centimetro: float):
 
-    return f'{centimetro / 2.54:,.2f}'
+    return centimetro / 2.54
 
 
 def centimetro_milha_nautica (centimetro: float):
 
-    return f'{centimetro / 185200:.2e}'
+    return centimetro / 185200
 
 
 # Milimeters to many
@@ -162,52 +162,52 @@ def centimetro_milha_nautica (centimetro: float):
 
 def milimetro_quilometro (milimetros: float):
 
-    return f'{milimetros / 1e+6:.2e}'
+    return milimetros / 1e+6
 
 
 def milimetro_metro (milimetros: float):
 
-    return f'{milimetros / 1000:,.2f}'
+    return milimetros / 1000
 
 
 def milimetro_centimetro (milimetros: float):
 
-    return f'{milimetros / 10:,.2f}'
+    return milimetros / 10
 
 
 def milimetro_micrometro (milimetros: float):
 
-    return f'{milimetros * 1000:,.2f}'
+    return milimetros * 1000
 
 
 def milimetro_nanometro (milimetros: float):
 
-    return f'{milimetros * 1e+06:.2e}'
+    return milimetros * 1e+06
 
 
 def milimetro_milha (milimetros: float):
 
-    return f'{milimetros / 1.609e+6:.2e}'
+    return milimetros / 1.609e+6
 
 
 def milimetro_jarda (milimetros: float):
 
-    return f'{milimetros / 914.4:,.2f}'
+    return milimetros / 914.4
 
 
 def milimetro_pe (milimetros: float):
 
-    return f'{milimetros / 304.8:,.3f}'
+    return milimetros / 304.8
 
 
 def milimetro_polegada (milimetros: float):
 
-    return f'{milimetros / 25.4:,.2f}'
+    return milimetros / 25.4
 
 
 def milimetro_milha_nautica (milimetros: float):
 
-    return f'{milimetros / 1.852e+6:.2e}'
+    return milimetros / 1.852e+6
 
 
 # Micrometers to many

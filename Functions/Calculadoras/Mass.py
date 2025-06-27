@@ -2,34 +2,34 @@
 
 def quilograma_tonelada (quilo: float):
 
-    return f"{quilo / 1000:,.2f}"
+    return quilo / 1000
 
 
 def quilograma_grama (quilo: float):
 
-    return f"{quilo * 1000:,.2f}"
+    return quilo * 1000
 
 
 def quilograma_miligrama (quilo: float):
 
-    return f"{quilo * 1e+6:,.2e}"
+    return quilo * 1e+6
 
 
 def quilograma_micrograma (quilo: float):
 
-    return f"{quilo * 1e+9:,.2e}"
+    return quilo * 1e+9
 
 
 def quilograma_libra (quilo: float):
 
-    return f"{quilo * 2.205:,.2f}"
+    return quilo * 2.205
 
 
 def quilograma_onca (quilo: float):
 
-    return f"{quilo * 35.274:,.2f}"
+    return quilo * 35.274
 
 
 def quilograma_arroba (quilo: float):
 
-    return f"{quilo / 15:,.2f}"
+    return quilo / 15

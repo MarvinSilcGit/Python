@@ -35,7 +35,7 @@ def resto_divisao (valor1: float, valor2: float):
 
                 resto += 1
 
-        return f"{resto}"
+        return resto
 
 
 def resto_inteiro_divisao (valor1: float, valor2: float):
@@ -72,7 +72,7 @@ def resto_inteiro_divisao (valor1: float, valor2: float):
 
                 resto += 1
 
-        return f"{resto_inteiro}"
+        return resto_inteiro
 
 
 def raiz_quadrada (numero: float):
@@ -104,7 +104,7 @@ def calculo_fatorial (numero: int):
 
         resultado_fatorial *= contador - 1
 
-    return f"{resultado_fatorial}"
+    return resultado_fatorial
 
 
 def calculo_porcentagem_representante (valor1: float, valor2: float):
