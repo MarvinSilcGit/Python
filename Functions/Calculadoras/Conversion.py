@@ -47,19 +47,19 @@ def decimal_binary (numero: int):
 
             numero = numero // 2
 
-        numero_binario = ''.join(numero_binario)
+    numero_binario = ''.join(numero_binario)
 
-        try:
+    try:
 
-            numero_binario = int(numero_binario)
+        numero_binario = int(numero_binario)
 
-        except ValueError:
+    except ValueError:
 
-            return 'Somente números inteiros são permitidos'
+        return 'Somente números inteiros'
 
-        else:
+    else:
 
-            return numero_binario
+        return numero_binario
 
 #FIXME: terminar de consertar o código. Possivelmente, a abordagem utilizando o ATM não funciona
 def numero_algarismo_romano (numero: int):

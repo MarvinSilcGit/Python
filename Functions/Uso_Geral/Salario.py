@@ -80,5 +80,3 @@ def salario_liquido (salario: float):
     salario_final = salario - inss - irrf
 
     return salario_final
-
-sl = salario_liquido(6512)

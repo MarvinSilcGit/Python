@@ -76,4 +76,4 @@ def equacao_segundo_grau_bhaskara (coeficiente_a: int, coeficiente_b: int, coefi
                 else:
 
                     return f"Equação completa. A raiz positiva é {x_1}. A raiz negativa é {x_2}"
-print(equacao_segundo_grau_bhaskara(3, -6, -8))
+#print(equacao_segundo_grau_bhaskara(3, -6, -8))
