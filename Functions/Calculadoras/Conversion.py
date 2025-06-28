@@ -1,63 +1,65 @@
 def binary_decimal (numero: str):
     """Função que converte número binário em número decimal."""
-    numero_decimal = 0
-
-    expoente = len(numero) - 1
-
-    for _ in numero:
-
-        if _ == "1":
-
-            numero_decimal += (2 ** expoente)
-
-        else:
-
-            numero_decimal += 0
-
-        expoente -= 1
-
-        try:
-
-            numero = int(numero)
-
-        except ValueError:
-
-            return 'Somente números são permitidos'
-
-        else:
-
-            return numero_decimal
-
-
-def decimal_binary (numero: int):
-    """Função que converte número decimal em número binário."""
-    numero_binario = []
-
-    while numero != 0:
-
-        try:
-
-            numero_binario.insert(0, str(numero % 2))
-
-        except TypeError:
-
-            return 'Somente números são permitidos'
-
-        else:
-
-            numero = numero // 2
-
-    numero_binario = ''.join(numero_binario)
-
     try:
 
-        numero_binario = int(numero_binario)
+        numero = int(numero)
 
     except ValueError:
 
-        return 'Somente números inteiros'
+        return 'Somente números inteiros são permitidos'
 
     else:
+
+        numero = str(numero)
+
+        numero = list(numero)
+
+        for cont in numero:
+
+            if '2' == cont or '3' == cont or '4' == cont or '5' == cont or '6' == cont or '7' == cont or '8' == cont or '9' == cont:
+
+                return 'Somente 0 ou 1'
+
+        numero_decimal = 0
+
+        expoente = len(numero) - 1
+
+        for _ in numero:
+
+            if _ == "1":
+
+                numero_decimal += (2 ** expoente)
+
+            elif _ == "0":
+
+                numero_decimal += 0
+
+            expoente -= 1
+
+        return numero_decimal
+
+
+def decimal_binary (numero: str):
+    """Função que converte número decimal em número binário."""
+    try:
+
+        numero = int(numero)
+
+    except ValueError:
+
+        return 'Somente números inteiros são permitidos'
+
+    else:
+
+        numero_binario = []
+
+        while numero != 0:
+
+            numero_binario.insert(0, str(numero % 2))
+
+            numero //= 2
+
+        numero_binario = int(''.join(numero_binario))
 
         return numero_binario
 
