@@ -1,10 +1,5 @@
 from Alfabeto import listagem_alfabeto
 
-dict_nivel_categorias = {1: [["rugby", "polo aquático", "hipismo", "tênis de mesa"],
-                             ["assistente social", "professor", "metalúrgico", "pedagogo"],
-                             ["gramado", "porto seguro", "caribe", "santa cruz de cabrália"],
-                             ["baixolão", "órgão", "ukelele", "zabumba"]]}
-
 dict_palavras_dicas = {"esgrima": "É um esporte olímpico que utiliza uma lâmina pontiaguda para acertar o corpo do adversário, principalmente a cabeça",
                        "boliche": "É um esporte olímpico que consiste em derrubar 10 objetos brancos no fim da pista com uma bola de diversas cores",
                        "baseball": "É um esporte olímpico cujo o objetivo é tomar a base adversária, sendo alinhadas em forma de losango",
@@ -20,27 +15,23 @@ dict_palavras_dicas = {"esgrima": "É um esporte olímpico que utiliza uma lâmi
                        "violino": "Muito utilizado na música clássica e possui uma versão com a marca Estradivários",
                        "sanfona": "Muito utilizado no nordeste Brasileiro, tendo que aperta e soltar para o som sair",
                        "atabaque": "Instrumento de percussão de origem Africana, muito utilizado no axé e candomblé" ,
-                       "flauta": "Instrumento de sopro que muitas crianças já tiveram e tem o adjetivo doce"}
-
-list_dicas_mediano  = [["É um esporte que é semelhante o futebol americano",
-                   "Esporte que tem o objetivo de marcar pontos jogando na piscina com água",
-                   "Praticado com um equino e um domador",
-                   "Praticado com uma raquete em um mesa"],
-
-                  ["Responsável por acolhimento social e familiar para famílias e pessoas carentes",
-                   "O profissional que ensina por essência",
-                   "trabalha com materiais pesados, principalmente metais",
-                   "responsável por desenvolver boas práticas escolares"],
-
-                  ["Cidadezinha turística no sul do Brasil",
-                   "Onde os portugueses primeiro atracaram no Brasil",
-                   "Conhecido pelas águas cristalinas da américa central",
-                   "A Alemanha tomou como base para a copa de 2014"],
-
-                  ["Contrabaixo acústico",
-                   "Utilizado em igrejas católicas e cristãs americanas",
-                   "semelhante ao cavaquinho, mas que não é do Brasil",
-                   "Percussão utilizada na músicas nordestinas"]]
+                       "flauta": "Instrumento de sopro que muitas crianças já tiveram e tem o adjetivo doce" ,
+                       "rugby": "É um esporte que é semelhante ao futebol americano",
+                       "polo aquático": "Esporte que tem o objetivo de marcar pontos jogando na piscina com água",
+                       "hipismo": "Praticado com um equino e um domador",
+                       "tênis de mesa": "Praticado com uma raquete em um mesa",
+                       "assistente social": "Responsável por acolhimento social e familiar para famílias e pessoas carentes",
+                       "profissional": "O profissional que ensina por essência",
+                       "metalúrgico": "trabalha com materiais pesados, principalmente metais",
+                       "pedagogo": "responsável por desenvolver boas práticas escolares",
+                       "gramado": "Cidadezinha turística no sul do Brasil",
+                       "porto seguro": "Onde os portugueses primeiro atracaram no Brasil",
+                       "caribe": "Região conhecida pelas águas cristalinas da américa central",
+                       "santa cruz de cabrália": "A Alemanha tomou como base para a copa de 2014",
+                       "baixolão": "Contrabaixo acústico",
+                       "órgão": "Utilizado em igrejas católicas e cristãs americanas",
+                       "ukelele": "instrumento semelhante ao cavaquinho, popular do havaí",
+                       "zabumba": "Percussão utilizada na músicas nordestinas"}
 
 while True:
 
