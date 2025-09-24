@@ -6,7 +6,6 @@ if numero <= 1:
 
     print("Esse número é inválido")
 
-
 else:
 
     for contador in range(confirmacao, numero + 1):
