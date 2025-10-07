@@ -49,25 +49,35 @@ def validar_cpf (cpf: str):
 
         contador = 10
 
-        lista_posicoes_cpf = [resultado_posicao_j, resultado_posicao_k]
+        for contador2 in cpf_validador:
 
-        for contador2 in lista_posicoes_cpf:
+            resultado_posicao_j += int(contador2) * contador
 
-            for contador3 in cpf_validador:
+            contador -= 1
 
-                lista_posicoes_cpf[contador2] += int(contador3) * contador
+        if resultado_posicao_j % 11 < 2:
 
-                contador -= 1
+            cpf_validador += '0'
 
-            if lista_posicoes_cpf[contador2] % 11 < 2:
+        elif 2 <= resultado_posicao_j % 11 <= 10: # equals to: elif resultado_posicao_j % 11 >= 2 and resultado_posicao_j % 11 <= 10:
 
-                cpf_validador += '0'
+            cpf_validador += str(11 - (resultado_posicao_j % 11))
 
-            elif 2 <= lista_posicoes_cpf[contador2] % 11 <= 10: # equals to: elif lista_posicoes[contador2] % 11 >= 2 and lista_posicoes[contador2]  % 11 <= 10:
+        contador = 11
 
-                cpf_validador += str(11 - (lista_posicoes_cpf[contador2] % 11))
+        for contador2 in cpf_validador:
 
-            contador = 11
+            resultado_posicao_k += int(contador2) * contador
+
+            contador -= 1
+
+        if resultado_posicao_k % 11 < 2:
+
+            cpf_validador += '0'
+
+        elif 2 <= resultado_posicao_k % 11 <= 10:  # equals to: elif resultado_posicao_k >= 2 and resultado_posicao_k <= 10:
+
+            cpf_validador += str(11 - (resultado_posicao_k % 11))
 
         if cpf_convertido == cpf_validador:
 
