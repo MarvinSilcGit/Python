@@ -79,14 +79,8 @@ def validar_cpf (cpf: str):
 
             cpf_validador += str(11 - (resultado_posicao_k % 11))
 
-        if cpf_convertido == cpf_validador:
+        return cpf_convertido == cpf_validador
 
-            return True
-
-        else:
-
-            return False
-print(validar_cpf('28754564824'))
 
 def gerador_cpf ():
     """Função responsável por gerar CPFs aleatórios."""
@@ -105,10 +99,14 @@ def gerador_cpf ():
 
 def local_emissao_cpf (cpf: str):
     """Função responsável por informar o local de emissão do CPF."""
-    dicionario_estados = {"1": "Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins", "2": "Pará, Amazonas, Acre, Amapá, Rondônia ou Roraíma",
+    dicionario_estados = {"1": "Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins",
+                          "2": "Pará, Amazonas, Acre, Amapá, Rondônia ou Roraíma",
                           "3": "Ceará, Maranhão ou Piauí",
-                          "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas", "5": "Bahia ou Sergipe", "6": "Minas Gerais",
-                          "7": "Rio de Janeiro ou Espírito Santo", "8": "São Paulo",
+                          "4": "Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas",
+                          "5": "Bahia ou Sergipe",
+                          "6": "Minas Gerais",
+                          "7": "Rio de Janeiro ou Espírito Santo",
+                          "8": "São Paulo",
                           "9":"Paraná ou Santa Catarina"}
 
 
