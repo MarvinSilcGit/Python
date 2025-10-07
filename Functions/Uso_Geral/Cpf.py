@@ -1,5 +1,5 @@
 def formatar_cpf (cpf: str):
-    """Função responsável por formatar o número do CNPJ."""
+    """Função responsável por formatar o número do CPF."""
     if len(cpf) == 11:
 
         cpf = list(cpf)
@@ -31,6 +31,8 @@ def validar_cpf (cpf: str):
     """Função responsável por verificar a validade do número do CPF."""
     try:
 
+        cpf_convertido = list(str(cpf))
+
         cpf = int(cpf)
 
     except ValueError:
@@ -39,11 +41,7 @@ def validar_cpf (cpf: str):
 
     else:
 
-        cpf = str(cpf)
-
-        cpf_validador = list(cpf[0:9])
-
-        cpf_validador = ''.join(cpf_validador)
+        cpf_validador = cpf_convertido[0:9]
 
         resultado_posicao_j = 0
 
@@ -51,47 +49,37 @@ def validar_cpf (cpf: str):
 
         contador = 10
 
-        for contador2 in cpf_validador:
+        lista_posicoes_cpf = [resultado_posicao_j, resultado_posicao_k]
 
-            resultado_posicao_j += int(contador2) * contador
+        for contador2 in lista_posicoes_cpf:
 
-            contador -= 1
+            for contador3 in cpf_validador:
 
-        if resultado_posicao_j % 11 < 2:
+                lista_posicoes_cpf[contador2] += int(contador3) * contador
 
-            cpf_validador += '0'
+                contador -= 1
 
-        elif 2 <= resultado_posicao_j % 11 <= 10: # equals to: elif resultado_posicao_j >= 2 and resultado_posicao_j <= 10:
+            if lista_posicoes_cpf[contador2] % 11 < 2:
 
-            cpf_validador += str(11 - (resultado_posicao_j % 11))
+                cpf_validador += '0'
 
-        contador = 11
+            elif 2 <= lista_posicoes_cpf[contador2] % 11 <= 10: # equals to: elif lista_posicoes[contador2] % 11 >= 2 and lista_posicoes[contador2]  % 11 <= 10:
 
-        for contador2 in cpf_validador:
+                cpf_validador += str(11 - (lista_posicoes_cpf[contador2] % 11))
 
-            resultado_posicao_k += int(contador2) * contador
+            contador = 11
 
-            contador -= 1
-
-        if resultado_posicao_k % 11 < 2:
-
-            cpf_validador += '0'
-
-        elif 2 <= resultado_posicao_k % 11 <= 10: # equals to: elif resultado_posicao_k >= 2 and resultado_posicao_k <= 10:
-
-            cpf_validador += str(11 - (resultado_posicao_k % 11))
-
-        if cpf == cpf_validador:
+        if cpf_convertido == cpf_validador:
 
             return True
 
         else:
 
             return False
-
+print(validar_cpf('28754564824'))
 
 def gerador_cpf ():
-    """Função responsável por gerar CNPJs aleatórios."""
+    """Função responsável por gerar CPFs aleatórios."""
     import random as aleatoriedade
 
     cpf = ''
@@ -115,5 +103,3 @@ def local_emissao_cpf (cpf: str):
 
 
     return f'O CPF foi emitido em: {dicionario_estados.get(cpf[8])}'
-
-print(local_emissao_cpf('06288231509'))
