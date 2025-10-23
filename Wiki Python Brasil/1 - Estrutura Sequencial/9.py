@@ -1,4 +1,4 @@
-fahrenheit = float(input("Digite a temperautra para ser convertida de fahrenheit para celsius: "))
+fahrenheit = float(input("Digite a temperatura para ser convertida de fahrenheit para celsius: "))
 
 celsius = (fahrenheit - 32) / 1.8
 

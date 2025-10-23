@@ -1,6 +1,6 @@
 precoMercadoria = float(input("Digite o preço da mercadoria: "))
 
-desconto = float(input("Digite a pocentagem de desconto: "))
+desconto = float(input("Digite a porcentagem de desconto: "))
 
 valorDesconto = (desconto / 10 ) * (precoMercadoria / 10)
 
