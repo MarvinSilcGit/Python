@@ -4,7 +4,7 @@ fahrenheit = (celsius * 1.8) + 32
 
 print("A temperatura em %.1f° celsius equivale à %.1f° fahrenheit" % (celsius, fahrenheit))
 
-fahrenheit = float(input("Digite a temperautra para ser convertida de fahrenheit para celsius: "))
+fahrenheit = float(input("Digite a temperatura para ser convertida de fahrenheit para celsius: "))
 
 celsius = (fahrenheit - 32) / 1.8
 

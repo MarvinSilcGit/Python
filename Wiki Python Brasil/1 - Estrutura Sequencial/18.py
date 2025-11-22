@@ -4,9 +4,9 @@ if tamanho_arquivo < 1:
 
     print("Valor inválido!")
 
-velecidade_link = float(input("Digite a velocidade de sua conexão em megabits: "))
+velocidade_link = float(input("Digite a velocidade de sua conexão em megabits: "))
 
-tempo_download = (tamanho_arquivo / (velecidade_link / 8))
+tempo_download = (tamanho_arquivo / (velocidade_link / 8))
 
 if tempo_download >= 60:
 
