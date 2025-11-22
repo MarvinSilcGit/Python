@@ -1,31 +1,42 @@
 def formatar_cpf (cpf: str):
     """Função responsável por formatar o número do CPF."""
-    if len(cpf) == 11:
 
-        cpf = list(cpf)
+    try:
 
-        for contador in range(14):
+        validade_cpf = int(cpf)
 
-            if contador == 3:
+    except ValueError:
 
-                cpf.insert(contador, '.')
-
-            elif contador == 7:
-
-                cpf.insert(contador, '.')
-
-            elif contador == 11:
-
-                cpf.insert(contador, '-')
-
-        cpf = ''.join(cpf)
-
-        return cpf
+        return 'Somente números são permitidos'
 
     else:
 
-        return 'CPF inválido'
+        if len(cpf) == 11:
 
+            cpf = list(cpf)
+
+            for contador in range(14):
+
+                if contador == 3:
+
+                    cpf.insert(contador, '.')
+
+                elif contador == 7:
+
+                    cpf.insert(contador, '.')
+
+                elif contador == 11:
+
+                    cpf.insert(contador, '-')
+
+            cpf = ''.join(cpf)
+
+            return cpf
+
+        else:
+
+            return 'CPF inválido'
+print(formatar_cpf(input('Digite o CPF: ')))
 
 def validar_cpf (cpf: str):
     """Função responsável por verificar a validade do número do CPF."""

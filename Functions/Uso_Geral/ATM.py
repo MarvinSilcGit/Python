@@ -1,7 +1,7 @@
 from Functions.Calculadoras.Validations import validade_numero_decimal
 
 def atm_machine (valor_saque: int):
-    """Função responável por imitar a função saque de um caixa eletrônico."""
+    """Função responsável por imitar a função saque de um caixa eletrônico."""
     resultado = []
 
     try:

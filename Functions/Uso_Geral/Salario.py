@@ -1,5 +1,5 @@
 def desconto_inss (salario_mensal: float):
-    """Função responável por calcular o desconto do inss sobre o salário no ano de 2025."""
+    """Função responsável por calcular o desconto do inss sobre o salário no ano de 2025."""
     faixas_inss = {0: 1518, 1: 1275.88, 2: 1396.94, 3: 3966.57}
 
     aliquotas_inss = {0: 7.5, 1: 9, 2: 12, 3: 14}
@@ -32,7 +32,7 @@ def desconto_inss (salario_mensal: float):
 
 
 def desconto_irrf (salario: float):
-    """Função responável por calcular o desconto do irrf sobre o salário no ano de 2025."""
+    """Função responsável por calcular o desconto do irrf sobre o salário no ano de 2025."""
     salario = salario - 607.20
 
     desconto = 0
@@ -72,7 +72,7 @@ def desconto_irrf (salario: float):
 # FIXME: NOT GOOD ABOVE 5K
 
 def salario_liquido (salario: float):
-    """Função responável por calcular o salário líquido no ano de 2025."""
+    """Função responsável por calcular o salário líquido no ano de 2025."""
     inss = desconto_inss(salario)
 
     irrf = desconto_irrf(salario)
