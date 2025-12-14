@@ -36,10 +36,11 @@ def formatar_cpf (cpf: str):
         else:
 
             return 'CPF inválido'
-print(formatar_cpf(input('Digite o CPF: ')))
+
 
 def validar_cpf (cpf: str):
     """Função responsável por verificar a validade do número do CPF."""
+
     try:
 
         cpf_convertido = list(str(cpf))
@@ -95,6 +96,7 @@ def validar_cpf (cpf: str):
 
 def gerador_cpf ():
     """Função responsável por gerar CPFs aleatórios."""
+
     import random as aleatoriedade
 
     cpf = ''
